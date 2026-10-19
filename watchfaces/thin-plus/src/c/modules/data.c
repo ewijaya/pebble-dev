@@ -9,7 +9,7 @@ typedef struct {
   bool enable_bt;
   bool enable_battery;
   bool enable_second_hand;
-  bool enable_steps;
+  bool enable_steps; // Unused, replaced by slots
 
   GColor color_background;
   GColor color_hour_minutes;
@@ -17,6 +17,11 @@ typedef struct {
   GColor color_notches;
   GColor color_month_day;
   GColor color_date;
+
+  // Append only, older saved configs are a prefix of this struct
+  uint8_t slot_top;
+  uint8_t slot_left;
+  uint8_t slot_bottom;
 } AppConfig;
 
 // Cache for speed
@@ -37,6 +42,11 @@ void data_init() {
     persist_delete(SK_AppConfig);
     persist_write_int(SK_MIGRATION_1, 1);
   }
+
+  // Set before reading so configs saved before slots existed keep these
+  s_app_config.slot_top = SlotTypeNone;
+  s_app_config.slot_left = SlotTypeNone;
+  s_app_config.slot_bottom = SlotTypeSteps;
 
   if(!persist_exists(SK_AppConfig)) {
     // Set defaults
@@ -131,4 +141,27 @@ GColor data_get_color(uint32_t key) {
   }
 
   return GColorBlack;
+}
+
+void data_set_slot(uint32_t key, SlotType type) {
+  if (key == MESSAGE_KEY_SlotTop) {
+    s_app_config.slot_top = type;
+  } else if (key == MESSAGE_KEY_SlotLeft) {
+    s_app_config.slot_left = type;
+  } else if (key == MESSAGE_KEY_SlotBottom) {
+    s_app_config.slot_bottom = type;
+  }
+}
+
+SlotType data_get_slot(uint32_t key) {
+  int type = SlotTypeNone;
+  if (key == MESSAGE_KEY_SlotTop) {
+    type = s_app_config.slot_top;
+  } else if (key == MESSAGE_KEY_SlotLeft) {
+    type = s_app_config.slot_left;
+  } else if (key == MESSAGE_KEY_SlotBottom) {
+    type = s_app_config.slot_bottom;
+  }
+
+  return (type < SlotTypeCount) ? type : SlotTypeNone;
 }

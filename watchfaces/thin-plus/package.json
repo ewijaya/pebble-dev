@@ -40,7 +40,10 @@
       "ColorSeconds",
       "ColorNotches",
       "ColorMonthDay",
-      "ColorDate"
+      "ColorDate",
+      "SlotTop",
+      "SlotLeft",
+      "SlotBottom"
     ],
     "enableMultiJS": true,
     "displayName": "Thin+",

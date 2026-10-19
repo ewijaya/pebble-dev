@@ -1,5 +1,13 @@
 #include "comm.h"
 
+// Clay sends select values as strings
+static SlotType get_slot(DictionaryIterator *iter, uint32_t key) {
+  Tuple *t = dict_find(iter, key);
+  if (!t) return SlotTypeNone;
+
+  return (t->type == TUPLE_CSTRING) ? atoi(t->value->cstring) : (int)t->value->int32;
+}
+
 static void in_recv_handler(DictionaryIterator *iter, void *context) {
   APP_LOG(APP_LOG_LEVEL_INFO, "Config message received");
 
@@ -11,7 +19,9 @@ static void in_recv_handler(DictionaryIterator *iter, void *context) {
     MESSAGE_KEY_EnableSecondHand,
     packet_get_boolean(iter, MESSAGE_KEY_EnableSecondHand)
   );
-  data_set_enable(MESSAGE_KEY_EnableSteps, packet_get_boolean(iter, MESSAGE_KEY_EnableSteps));
+  data_set_slot(MESSAGE_KEY_SlotTop, get_slot(iter, MESSAGE_KEY_SlotTop));
+  data_set_slot(MESSAGE_KEY_SlotLeft, get_slot(iter, MESSAGE_KEY_SlotLeft));
+  data_set_slot(MESSAGE_KEY_SlotBottom, get_slot(iter, MESSAGE_KEY_SlotBottom));
   data_set_color(
     MESSAGE_KEY_ColorBackground,
     GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorBackground))

@@ -5,6 +5,7 @@
 #include "../modules/data.h"
 #include "../modules/health.h"
 #include "../modules/scalable.h"
+#include "../modules/slots.h"
 
 void main_window_push();
 

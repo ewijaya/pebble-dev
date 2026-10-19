@@ -20,8 +20,8 @@ typedef struct {
 } SimpleTime;
 
 static Window *s_main_window;
-static TextLayer *s_weekday_layer, *s_day_in_month_layer, *s_month_layer, *s_step_layer;
-static Layer *s_canvas_layer, *s_bg_layer;
+static TextLayer *s_weekday_layer, *s_day_in_month_layer, *s_month_layer;
+static Layer *s_canvas_layer, *s_bg_layer, *s_slots_layer;
 
 // One each of these to represent the current time and an animated pseudo-time
 static SimpleTime s_current_time, s_anim_time;
@@ -44,14 +44,9 @@ static void tick_handler(struct tm *tick_time, TimeUnits changed) {
   strftime(s_weekday_buffer, sizeof(s_weekday_buffer), "%a", tick_time);
   strftime(s_month_buffer, sizeof(s_month_buffer), "%b", tick_time);
 
-  int steps = health_get_step_count();
-  static char s_steps_buffer[8];
-  snprintf(s_steps_buffer, sizeof(s_steps_buffer), "%d", steps);
-
   text_layer_set_text(s_weekday_layer, s_weekday_buffer);
   text_layer_set_text(s_day_in_month_layer, s_day_buffer);
   text_layer_set_text(s_month_layer, s_month_buffer);
-  text_layer_set_text(s_step_layer, s_steps_buffer);
 
   // Finally
   layer_mark_dirty(s_canvas_layer);
@@ -184,6 +179,10 @@ static void bg_update_proc(Layer *layer, GContext *ctx) {
     GCornerNone
   );
 #endif
+}
+
+static void slots_update_proc(Layer *layer, GContext *ctx) {
+  slots_draw(ctx);
 }
 
 static GPoint make_hand_point(int quantity, int intervals, int len, GPoint center) {
@@ -324,11 +323,8 @@ static void window_load(Window *window) {
   text_layer_set_text_color(s_month_layer, date_color);
   text_layer_set_background_color(s_month_layer, GColorClear);
 
-  s_step_layer = text_layer_create(scl_center_x(scl_grect(0, 700, 1000, 300)));
-  text_layer_set_font(s_step_layer, scl_get_font(SFI_MediumBold));
-  text_layer_set_text_color(s_step_layer, date_color);
-  text_layer_set_text_alignment(s_step_layer, GTextAlignmentCenter);
-  text_layer_set_background_color(s_step_layer, GColorClear);
+  s_slots_layer = layer_create(bounds);
+  layer_set_update_proc(s_slots_layer, slots_update_proc);
 
   s_canvas_layer = layer_create(bounds);
   layer_set_update_proc(s_canvas_layer, draw_proc);
@@ -337,11 +333,11 @@ static void window_load(Window *window) {
 static void window_unload(Window *window) {
   layer_destroy(s_canvas_layer);
   layer_destroy(s_bg_layer);
+  layer_destroy(s_slots_layer);
 
   text_layer_destroy(s_weekday_layer);
   text_layer_destroy(s_day_in_month_layer);
   text_layer_destroy(s_month_layer);
-  text_layer_destroy(s_step_layer);
 
   window_destroy(s_main_window);
 }
@@ -385,7 +381,7 @@ void main_window_push() {
 
 void main_window_reload_config() {
   // Health may have been enabled after launch
-  if (data_get_enable(MESSAGE_KEY_EnableSteps)) {
+  if (slots_uses(SlotTypeSteps) || slots_uses(SlotTypeHeartRate)) {
     health_init();
   }
 
@@ -412,7 +408,7 @@ void main_window_reload_config() {
   }
 
   battery_state_service_unsubscribe();
-  if (data_get_enable(MESSAGE_KEY_EnableBattery)) {
+  if (data_get_enable(MESSAGE_KEY_EnableBattery) || slots_uses(SlotTypeBattery)) {
     battery_state_service_subscribe(batt_handler);
   }
 
@@ -424,21 +420,18 @@ void main_window_reload_config() {
   text_layer_set_text_color(s_weekday_layer, date_color);
   text_layer_set_text_color(s_day_in_month_layer, month_day_color);
   text_layer_set_text_color(s_month_layer, date_color);
-  text_layer_set_text_color(s_step_layer, date_color);
 
   Layer *window_layer = window_get_root_layer(s_main_window);
   layer_remove_from_parent(text_layer_get_layer(s_day_in_month_layer));
   layer_remove_from_parent(text_layer_get_layer(s_weekday_layer));
   layer_remove_from_parent(text_layer_get_layer(s_month_layer));
-  layer_remove_from_parent(text_layer_get_layer(s_step_layer));
+  layer_remove_from_parent(s_slots_layer);
   if (data_get_enable(MESSAGE_KEY_EnableDate)) {
     layer_add_child(window_layer, text_layer_get_layer(s_day_in_month_layer));
     layer_add_child(window_layer, text_layer_get_layer(s_weekday_layer));
     layer_add_child(window_layer, text_layer_get_layer(s_month_layer));
   }
-  if (data_get_enable(MESSAGE_KEY_EnableSteps) && health_is_health_available()) {
-    layer_add_child(window_layer, text_layer_get_layer(s_step_layer));
-  }
+  layer_add_child(window_layer, s_slots_layer);
 
   layer_add_child(window_layer, s_canvas_layer);
 }

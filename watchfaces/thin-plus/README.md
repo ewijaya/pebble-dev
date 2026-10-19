@@ -16,7 +16,8 @@ adjust which features you want from the following:
 - Show dis/connected indicator
 - Show battery level
 - Show seconds hand
-- Show step count
+- Complications at the top, left and bottom: steps, heart rate, battery or
+  digital time
 
 ![](screenshots/basalt-charging-1.png)
 ![](screenshots/basalt-steps.png)

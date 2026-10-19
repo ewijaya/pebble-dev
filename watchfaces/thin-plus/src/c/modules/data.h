@@ -2,6 +2,17 @@
 
 #include <pebble.h>
 
+// Persisted and sent by config.js - only ever append new types
+typedef enum {
+  SlotTypeNone = 0,
+  SlotTypeSteps,
+  SlotTypeHeartRate,
+  SlotTypeBattery,
+  SlotTypeTime,
+
+  SlotTypeCount
+} SlotType;
+
 void data_init();
 
 void data_deinit();
@@ -13,3 +24,7 @@ bool data_get_enable(uint32_t key);
 void data_set_color(uint32_t key, GColor color);
 
 GColor data_get_color(uint32_t key);
+
+void data_set_slot(uint32_t key, SlotType type);
+
+SlotType data_get_slot(uint32_t key);
