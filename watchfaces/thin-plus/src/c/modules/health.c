@@ -10,6 +10,8 @@ static void health_handler(HealthEventType event, void *context) {
 }
 
 void health_init() {
+  if (s_health_available) return;
+
   s_health_available = health_service_events_subscribe(health_handler, NULL);
 
   if (s_health_available) {

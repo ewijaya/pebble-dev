@@ -11,11 +11,7 @@ static void init() {
   comm_init();
   data_init();
   scalable_init();
-  
-  if (data_get_enable(MESSAGE_KEY_EnableSteps)) {
-    health_init();
-  }
-  
+
   main_window_push();
 }
 

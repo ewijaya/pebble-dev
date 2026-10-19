@@ -31,7 +31,7 @@ module.exports = [
       },
       {
         "type": "toggle",
-        "label": "Show second hand (uses more power)",
+        "label": "Show second hand (for 15s after a wrist flick)",
         "messageKey": "EnableSecondHand",
         "defaultValue": true
       },

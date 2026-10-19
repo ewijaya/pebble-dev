@@ -2,6 +2,10 @@
 
 #define MARGIN             scl_x(35)
 #define THICKNESS          scl_x(20)
+// Stroke widths must be odd, even values get rounded down when drawing
+#define STROKE_WIDTH       (THICKNESS | 1)
+#define STROKE_WIDTH_SEC   (STROKE_WIDTH - 2)
+#define SECONDS_DURATION   15000
 #define ANIMATION_DELAY    300
 #define ANIMATION_DURATION 1000
 #define HAND_LENGTH_SEC    scl_x(440)
@@ -23,7 +27,8 @@ static Layer *s_canvas_layer, *s_bg_layer;
 static SimpleTime s_current_time, s_anim_time;
 
 static char s_weekday_buffer[8], s_month_buffer[8], s_day_buffer[3];
-static bool s_animating, s_is_connected;
+static bool s_animating, s_is_connected, s_show_seconds;
+static AppTimer *s_seconds_timer;
 
 /******************************* Event Services *******************************/
 
@@ -50,6 +55,44 @@ static void tick_handler(struct tm *tick_time, TimeUnits changed) {
 
   // Finally
   layer_mark_dirty(s_canvas_layer);
+}
+
+static void update_time() {
+  time_t t = time(NULL);
+  tick_handler(localtime(&t), SECOND_UNIT);
+}
+
+static void subscribe_tick() {
+  tick_timer_service_unsubscribe();
+  tick_timer_service_subscribe(s_show_seconds ? SECOND_UNIT : MINUTE_UNIT, tick_handler);
+}
+
+static void seconds_timer_handler(void *context) {
+  s_seconds_timer = NULL;
+  s_show_seconds = false;
+  subscribe_tick();
+  layer_mark_dirty(s_canvas_layer);
+}
+
+// Second hand only runs for a while after a wrist flick to save battery
+static void show_seconds() {
+  if (!data_get_enable(MESSAGE_KEY_EnableSecondHand)) return;
+
+  if (s_seconds_timer) {
+    app_timer_reschedule(s_seconds_timer, SECONDS_DURATION);
+  } else {
+    s_seconds_timer = app_timer_register(SECONDS_DURATION, seconds_timer_handler, NULL);
+  }
+
+  if (!s_show_seconds) {
+    s_show_seconds = true;
+    subscribe_tick();
+    update_time();
+  }
+}
+
+static void accel_tap_handler(AccelAxisType axis, int32_t direction) {
+  show_seconds();
 }
 
 static void bt_handler(bool connected) {
@@ -106,34 +149,27 @@ static void bg_update_proc(Layer *layer, GContext *ctx) {
   GColor bg_color = data_get_color(MESSAGE_KEY_ColorBackground);
   GColor notch_color = data_get_color(MESSAGE_KEY_ColorNotches);
 
+  graphics_context_set_stroke_width(ctx, STROKE_WIDTH);
   for (int h = 0; h < 12; h++) {
-    for (int y = 0; y < THICKNESS; y++) {
-      for (int x = 0; x < THICKNESS; x++) {
-        const int angle = (TRIG_MAX_ANGLE * h) / 12;
-        const int nom = (int32_t)(3 * HAND_LENGTH_SEC);
-        GPoint point = (GPoint) {
-          .x = (int16_t)(sin_lookup(angle) * nom / TRIG_MAX_RATIO) + center.x,
-          .y = (int16_t)(-cos_lookup(angle) * nom / TRIG_MAX_RATIO) + center.y,
-        };
+    const int angle = (TRIG_MAX_ANGLE * h) / 12;
+    const int nom = (int32_t)(3 * HAND_LENGTH_SEC);
+    GPoint point = (GPoint) {
+      .x = (int16_t)(sin_lookup(angle) * nom / TRIG_MAX_RATIO) + center.x,
+      .y = (int16_t)(-cos_lookup(angle) * nom / TRIG_MAX_RATIO) + center.y,
+    };
 
-        if (data_get_enable(MESSAGE_KEY_EnableBattery)) {
-          if (h < batt_hours) {
-            graphics_context_set_stroke_color(ctx, notch_color);
-          } else {
-            // Empty segment
-            graphics_context_set_stroke_color(ctx, PBL_IF_COLOR_ELSE(GColorDarkGray, GColorBlack));
-          }
-        } else {
-          // No battery indicator, show all
-          graphics_context_set_stroke_color(ctx, notch_color);
-        }
-        graphics_draw_line(
-          ctx,
-          GPoint(center.x + x, center.y + y),
-          GPoint(point.x + x, point.y + y)
-        );
+    if (data_get_enable(MESSAGE_KEY_EnableBattery)) {
+      if (h < batt_hours) {
+        graphics_context_set_stroke_color(ctx, notch_color);
+      } else {
+        // Empty segment
+        graphics_context_set_stroke_color(ctx, PBL_IF_COLOR_ELSE(GColorDarkGray, GColorBlack));
       }
+    } else {
+      // No battery indicator, show all
+      graphics_context_set_stroke_color(ctx, notch_color);
     }
+    graphics_draw_line(ctx, center, point);
   }
 
   // Make markers by cutting out the middle
@@ -212,68 +248,35 @@ static void draw_proc(Layer *layer, GContext *ctx) {
   GColor month_day_color = data_get_color(MESSAGE_KEY_ColorMonthDay);
 
   // Draw hands
+  graphics_context_set_antialiased(ctx, true);
+  graphics_context_set_stroke_width(ctx, STROKE_WIDTH);
   graphics_context_set_stroke_color(ctx, hour_min_color);
-  for (int y = 0; y < THICKNESS; y++) {
-    for (int x = 0; x < THICKNESS; x++) {
-      graphics_draw_line(
-        ctx,
-        GPoint(center.x + x, center.y + y),
-        GPoint(minute_hand_short.x + x, minute_hand_short.y + y)
-      );
-      graphics_draw_line(
-        ctx,
-        GPoint(center.x + x, center.y + y),
-        GPoint(hour_hand_short.x + x, hour_hand_short.y + y)
-      );
-    }
-  }
+  graphics_draw_line(ctx, center, minute_hand_short);
+  graphics_draw_line(ctx, center, hour_hand_short);
+
   graphics_context_set_stroke_color(ctx, notch_color);
-  for (int y = 0; y < THICKNESS; y++) {
-    for (int x = 0; x < THICKNESS; x++) {
-      graphics_draw_line(
-        ctx,
-        GPoint(minute_hand_short.x + x, minute_hand_short.y + y),
-        GPoint(minute_hand_long.x + x, minute_hand_long.y + y)
-      );
-      graphics_draw_line(
-        ctx,
-        GPoint(hour_hand_short.x + x, hour_hand_short.y + y),
-        GPoint(hour_hand_long.x + x, hour_hand_long.y + y)
-      );
-    }
-  }
+  graphics_draw_line(ctx, minute_hand_short, minute_hand_long);
+  graphics_draw_line(ctx, hour_hand_short, hour_hand_long);
 
   // Draw second hand
-  if (data_get_enable(MESSAGE_KEY_EnableSecondHand)) {
-    // Use loops
-    for (int y = 0; y < THICKNESS - 1; y++) {
-      for (int x = 0; x < THICKNESS - 1; x++) {
-        graphics_context_set_stroke_color(ctx, second_color);
-        graphics_draw_line(
-          ctx,
-          GPoint(center.x + x, center.y + y),
-          GPoint(second_hand_short.x + x, second_hand_short.y + y)
-        );
+  if (s_show_seconds) {
+    graphics_context_set_stroke_width(ctx, STROKE_WIDTH_SEC);
+    graphics_context_set_stroke_color(ctx, second_color);
+    graphics_draw_line(ctx, center, second_hand_short);
 
-        // Draw second hand tip
-        graphics_context_set_stroke_color(ctx, month_day_color);
-        graphics_draw_line(
-          ctx,
-          GPoint(second_hand_short.x + x, second_hand_short.y + y),
-          GPoint(second_hand_long.x + x, second_hand_long.y + y)
-        );
-      }
-    }
+    // Draw second hand tip
+    graphics_context_set_stroke_color(ctx, month_day_color);
+    graphics_draw_line(ctx, second_hand_short, second_hand_long);
   }
 
   // Center
   graphics_context_set_fill_color(ctx, notch_color);
-  graphics_fill_circle(ctx, GPoint(center.x + 1, center.y + 1), 4);
+  graphics_fill_circle(ctx, center, 4);
 
   // Draw black if disconnected
   if (data_get_enable(MESSAGE_KEY_EnableBT) && !s_is_connected) {
     graphics_context_set_fill_color(ctx, bg_color);
-    graphics_fill_circle(ctx, GPoint(center.x + 1, center.y + 1), 3);
+    graphics_fill_circle(ctx, center, 3);
   }
 }
 
@@ -377,21 +380,28 @@ void main_window_push() {
   animate(ANIMATION_DURATION, ANIMATION_DELAY, &hands_impl, true);
 
   main_window_reload_config();
+  show_seconds();
 }
 
 void main_window_reload_config() {
-  time_t t = time(NULL);
-  struct tm *tm_now = localtime(&t);
-  s_current_time.hours = tm_now->tm_hour;
-  s_current_time.minutes = tm_now->tm_min;
-  s_current_time.seconds = tm_now->tm_sec;
-
-  tick_timer_service_unsubscribe();
-  if (data_get_enable(MESSAGE_KEY_EnableSecondHand)) {
-    tick_timer_service_subscribe(SECOND_UNIT, tick_handler);
-  } else {
-    tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
+  // Health may have been enabled after launch
+  if (data_get_enable(MESSAGE_KEY_EnableSteps)) {
+    health_init();
   }
+
+  update_time();
+
+  accel_tap_service_unsubscribe();
+  if (data_get_enable(MESSAGE_KEY_EnableSecondHand)) {
+    accel_tap_service_subscribe(accel_tap_handler);
+  } else {
+    s_show_seconds = false;
+    if (s_seconds_timer) {
+      app_timer_cancel(s_seconds_timer);
+      s_seconds_timer = NULL;
+    }
+  }
+  subscribe_tick();
 
   connection_service_unsubscribe();
   if (data_get_enable(MESSAGE_KEY_EnableBT)) {
