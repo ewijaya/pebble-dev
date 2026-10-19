@@ -1,8 +1,8 @@
 # Thin+ — current store listing
 
-Status: **1.2.0 published and publicly listed**. All seven emulators passed,
-and the owner approved all sideloaded PT2 checks. Store-flow confirmation is
-pending. [Release evidence](release-1.2.0.md).
+Status: **1.3.0 published and publicly listed**. All seven native emulators passed,
+and the owner approved the updated sideloaded PT2 checks and previews. Store-flow
+installation, settings and theme application are also owner-confirmed. [Release evidence](release-1.3.0.md).
 
 ## Fields
 
@@ -11,7 +11,7 @@ pending. [Release evidence](release-1.2.0.md).
 - **Category:** Faces
 - **Author:** Edward Wijaya
 - **Price:** Free
-- **Version:** 1.2.0
+- **Version:** 1.3.0
 - **Platforms:** aplite, basalt, chalk, diorite, emery, flint, gabbro
 - **Source:** https://github.com/ewijaya/pebble-dev/tree/watchface/thin-plus/watchfaces/thin-plus
 - **Website:** Leave empty.
@@ -22,23 +22,43 @@ Thin, plus: a clean analog watchface with splashes of color and the information 
 
 Keep it minimal: hide the date and leave any or all complication slots empty.
 
+- Three complication slots—top, left and bottom—show steps, heart rate, battery percentage, digital time, distance, active calories, ISO week number, a second time zone, weather or nothing.
+- Three date styles: Full (weekday, day and month), Day only, or Weekday and day. The date can also be hidden completely.
+- Weather in Celsius or Fahrenheit, using your phone's location only when a Weather slot is selected. It refreshes about every 30 minutes and hides readings older than three hours. Weather by Open-Meteo: https://open-meteo.com/
+- A second time zone with named zones and daylight-saving adjustments where supported. Other phone runtimes offer a fixed UTC offset, adjusted manually for daylight saving.
+- An optional step-goal ring follows the edge of the face. Automatic uses Pebble Health’s typical daily step count, with a 7,500-step fallback when unavailable or zero. Custom lets you choose a whole-number target from 1,000 to 100,000 and keeps it when you switch modes. Off by default, with a customizable color.
 - Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.
 - A second hand appears for 15 seconds after launch or a wrist flick. On Pebble Time 2, you can also enable a screen tap to show it. Tap detection is off by default and may use more battery.
-- Three complication slots—top, left and bottom—show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.
-- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.
-- Custom colors for the background, hands and tips, center dot, date, battery hour markers, charging highlight and larger disconnect indicator.
+- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper, plus individual color controls.
 - Hour markers double as a battery indicator. An optional charging highlight changes the filled markers' color while charging.
 - Optional low-battery-only display: show selected battery percentages below 20%, and hide them at 20% or higher. Off by default; independent of the hour-marker battery indicator.
-- Optional date and disconnected indicator, with a choice of the original small indicator or a larger colored center ring. Disconnect vibration can be switched off.
+- Optional disconnected indicator, with a choice of the original small indicator or a larger colored center ring. Disconnect vibration can be switched off.
 - Timeline Quick View hides the bottom complication during an event peek and restores it afterward on supported rectangular watches.
 - Hands open at the current time by default. Enable “Animate hands when the face opens” if you prefer the opening sweep.
 
-Available for all seven Pebble platforms. Settings adapt to your watch's capabilities; heart-rate slots stay blank when the sensor is unavailable. Digital time follows your 12- or 24-hour preference.
+Available for all seven Pebble platforms. Settings adapt to your watch's capabilities; health features require Pebble Health, and heart-rate slots stay blank when a sensor is unavailable. Distance follows your km/mi preference. Both time complications follow your 12- or 24-hour preference.
+
+Existing settings are preserved when updating. New complications are optional, the step ring starts off, and Full keeps the original date layout.
 
 Based on Thin by Chris Lewis.
 Original Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d
 
-## Release notes — 1.2.0
+## Release notes — 1.3.0
+
+More information when you want it. A simpler face when you don't.
+
+- New complications: distance, active calories, ISO week number, a second time zone and weather.
+- Open-Meteo temperature in °C or °F, refreshed about every 30 minutes while selected. Weather uses phone location and hides readings older than three hours.
+- Second time zone supports named zones with daylight-saving updates where available, or a fixed UTC-offset fallback.
+- Optional step-goal ring with a customizable color. Automatic uses typical daily steps, falling back to 7,500; Custom accepts a daily goal from 1,000 to 100,000. Switching modes keeps your custom target.
+- New Date style setting: Full, Day only, or Weekday and day. It appears only while Show current date is on.
+- Existing saved settings and appearance are preserved. The step ring defaults to off and the date defaults to Full.
+
+Supports all seven Pebble platforms; health features depend on the watch.
+
+Based on Thin by Chris Lewis.
+
+## Release notes — 1.2.0 (historical)
 
 More control, with settings that fit your watch.
 
@@ -97,13 +117,14 @@ The Emery banner uses the minimal Classic face and Edward's selected tagline: **
 
 ## Release status and remaining check
 
-Release **1.2.0** (`e62d92c454904747b53fe0ea`) is published and publicly listed.
-The public download matches the owner-tested candidate. The updated description
-and notes are verified in all seven public catalogs and the canonical page.
-Existing artwork and listed visibility were preserved.
+Release **1.3.0** (`0eacf6a087fb4fc38af9f2d7`) is published and publicly listed.
+All seven fresh public catalogs select it as latest. The public download matches
+the owner-tested candidate. Description and notes are verified in the catalogs;
+the canonical webpage initially retained cached 1.2.0 content. Existing artwork
+and listed visibility were preserved.
 
-The owner approved all six checks on the sideloaded PT2 candidate. Installation
-from the store, opening settings and applying a theme remain to be confirmed for
-1.2.0. No commit, push or tag was performed for this release.
+The owner approved the updated sideloaded PT2 checks, then confirmed installing
+1.3.0 from the store, opening settings and applying a theme. Release source is
+identified by the `thin-plus-v1.3.0` GitHub tag.
 
-Evidence: `../dist/verification/1.2.0/publication/`.
+Evidence: `../dist/verification/1.3.0/publication/`.

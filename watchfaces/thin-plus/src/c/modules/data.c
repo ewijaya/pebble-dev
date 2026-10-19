@@ -35,6 +35,15 @@ typedef struct {
   GColor color_charging;
   bool enable_charging_color;
   bool enable_startup_anim;
+  // 1.3.0 fields: the original 1.2.0 prefix is exactly 27 bytes.
+  bool enable_step_ring;
+  GColor color_step_ring;
+  uint8_t weather_units;
+  int16_t tz_offset_minutes;
+  bool tz_offset_known;
+  uint8_t date_style;
+  uint8_t step_goal_mode;
+  uint32_t custom_step_goal;
 } AppConfig;
 
 // Cache for speed
@@ -73,6 +82,14 @@ void data_init() {
   s_app_config.color_charging = GColorClear;
   s_app_config.enable_charging_color = false;
   s_app_config.enable_startup_anim = false;
+  s_app_config.enable_step_ring = false;
+  s_app_config.color_step_ring = GColorClear;
+  s_app_config.weather_units = 0;
+  s_app_config.tz_offset_minutes = 0;
+  s_app_config.tz_offset_known = false;
+  s_app_config.date_style = DateStyleFull;
+  s_app_config.step_goal_mode = StepGoalAutomatic;
+  s_app_config.custom_step_goal = STEP_GOAL_DEFAULT;
 
   if(!persist_exists(SK_AppConfig)) {
     // Set defaults
@@ -115,6 +132,9 @@ void data_init() {
   if (gcolor_equal(s_app_config.color_disconnected, GColorClear)) {
     s_app_config.color_disconnected = PBL_IF_COLOR_ELSE(GColorRed, GColorWhite);
   }
+  if (gcolor_equal(s_app_config.color_step_ring, GColorClear)) {
+    s_app_config.color_step_ring = s_app_config.color_notches;
+  }
   if (gcolor_equal(s_app_config.color_charging, GColorClear)) {
     s_app_config.color_charging = PBL_IF_COLOR_ELSE(GColorGreen, GColorWhite);
   }
@@ -126,7 +146,9 @@ void data_deinit() {
 
 void data_set_enable(uint32_t key, bool b) {
   // Can't use switch with MESSAGE_KEY_ constants directly
-  if (key == MESSAGE_KEY_EnableDate) {
+  if (key == MESSAGE_KEY_EnableStepRing) {
+    s_app_config.enable_step_ring = b;
+  } else if (key == MESSAGE_KEY_EnableDate) {
     s_app_config.enable_date = b;
   } else if (key == MESSAGE_KEY_EnableBT) {
     s_app_config.enable_bt = b;
@@ -154,7 +176,9 @@ void data_set_enable(uint32_t key, bool b) {
 }
 
 bool data_get_enable(uint32_t key) {
-  if (key == MESSAGE_KEY_EnableDate) {
+  if (key == MESSAGE_KEY_EnableStepRing) {
+    return s_app_config.enable_step_ring;
+  } else if (key == MESSAGE_KEY_EnableDate) {
     return s_app_config.enable_date;
   } else if (key == MESSAGE_KEY_EnableBT) {
     return s_app_config.enable_bt;
@@ -184,7 +208,9 @@ bool data_get_enable(uint32_t key) {
 }
 
 void data_set_color(uint32_t key, GColor color) {
-  if (key == MESSAGE_KEY_ColorBackground) {
+  if (key == MESSAGE_KEY_ColorStepRing) {
+    s_app_config.color_step_ring = color;
+  } else if (key == MESSAGE_KEY_ColorBackground) {
     s_app_config.color_background = color;
   } else if (key == MESSAGE_KEY_ColorHourMinutes) {
     s_app_config.color_hour_minutes = color;
@@ -212,7 +238,9 @@ void data_set_color(uint32_t key, GColor color) {
 }
 
 GColor data_get_color(uint32_t key) {
-  if (key == MESSAGE_KEY_ColorBackground) {
+  if (key == MESSAGE_KEY_ColorStepRing) {
+    return s_app_config.color_step_ring;
+  } else if (key == MESSAGE_KEY_ColorBackground) {
     return s_app_config.color_background;
   } else if (key == MESSAGE_KEY_ColorHourMinutes) {
     return s_app_config.color_hour_minutes;
@@ -262,4 +290,47 @@ SlotType data_get_slot(uint32_t key) {
   }
 
   return (type < SlotTypeCount) ? type : SlotTypeNone;
+}
+
+void data_set_timezone(int offset_minutes) {
+  s_app_config.tz_offset_known = offset_minutes >= -720 && offset_minutes <= 840;
+  if (s_app_config.tz_offset_known) s_app_config.tz_offset_minutes = offset_minutes;
+}
+
+bool data_get_timezone(int *offset_minutes) {
+  *offset_minutes = s_app_config.tz_offset_minutes;
+  return s_app_config.tz_offset_known;
+}
+
+void data_set_weather_units(int units) {
+  if (units == 0 || units == 1) s_app_config.weather_units = units;
+}
+
+int data_get_weather_units(void) {
+  return s_app_config.weather_units;
+}
+
+void data_set_date_style(int style) {
+  if (style >= DateStyleFull && style <= DateStyleWeekdayDay) s_app_config.date_style = style;
+}
+
+DateStyle data_get_date_style(void) {
+  return s_app_config.date_style <= DateStyleWeekdayDay ? s_app_config.date_style : DateStyleFull;
+}
+
+void data_set_step_goal_mode(int mode) {
+  if (mode == StepGoalAutomatic || mode == StepGoalCustom) s_app_config.step_goal_mode = mode;
+}
+
+int data_get_step_goal_mode(void) {
+  return s_app_config.step_goal_mode == StepGoalCustom ? StepGoalCustom : StepGoalAutomatic;
+}
+
+void data_set_custom_step_goal(int goal) {
+  if (goal >= STEP_GOAL_MIN && goal <= STEP_GOAL_MAX) s_app_config.custom_step_goal = goal;
+}
+
+int data_get_custom_step_goal(void) {
+  const uint32_t goal = s_app_config.custom_step_goal;
+  return goal >= STEP_GOAL_MIN && goal <= STEP_GOAL_MAX ? (int)goal : STEP_GOAL_DEFAULT;
 }

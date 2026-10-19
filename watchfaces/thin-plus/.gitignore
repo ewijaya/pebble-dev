@@ -1,1 +1,5 @@
 marketing/
+__pycache__/
+
+# New release evidence lives under the repo-wide ignored dist/ directory.
+# Previously tracked store/evidence and store/releases history is retained.

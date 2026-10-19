@@ -1,0 +1,55 @@
+name: Thin+ checks
+
+on:
+  push:
+    paths:
+      - 'watchfaces/thin-plus/**'
+  pull_request:
+    paths:
+      - 'watchfaces/thin-plus/**'
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: watchfaces/thin-plus
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.9.26'
+      - name: Install Linux dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libsdl2-2.0-0 libglib2.0-0 libpixman-1-0 zlib1g libsndio7.0
+      - name: Install pinned Pebble tool and SDK
+        run: |
+          uv tool install --python /usr/bin/python3 pebble-tool==5.0.40
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          "$HOME/.local/bin/pebble" sdk install 4.33.1
+          "$HOME/.local/bin/pebble" --version
+      - name: Install app dependencies
+        run: npm ci
+      - name: Clean build for all seven platforms
+        run: |
+          pebble clean
+          pebble build
+      - name: Host and Clay tests
+        run: |
+          python3 tests/test_low_battery.py
+          python3 tests/test_settings.py
+          python3 tests/test_interactions.py
+          python3 tests/test_complications.py
+          python3 tests/test_health.py
+          python3 tests/test_step_ring.py
+          node tests/test_custom_clay.js
+          node tests/test_weather.js
+          node tests/test_phone.js
+          node tests/check_settings_size.js

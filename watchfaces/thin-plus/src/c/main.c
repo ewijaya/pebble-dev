@@ -2,6 +2,7 @@
 
 #include "modules/comm.h"
 #include "modules/data.h"
+#include "modules/weather.h"
 #include "modules/scalable.h"
 
 #include "windows/main_window.h"
@@ -10,6 +11,7 @@ static void init() {
   setlocale(LC_ALL, "");
   comm_init();
   data_init();
+  weather_init();
   scalable_init();
 
   main_window_push();

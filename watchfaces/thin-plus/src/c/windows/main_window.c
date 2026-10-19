@@ -1,4 +1,6 @@
 #include "main_window.h"
+#include "../modules/refresh.h"
+#include "../modules/step_ring.h"
 
 #define MARGIN             scl_x(35)
 #define THICKNESS          scl_x(20)
@@ -29,6 +31,7 @@ static Layer *s_canvas_layer, *s_bg_layer, *s_slots_layer;
 static SimpleTime s_current_time, s_anim_time;
 
 static char s_weekday_buffer[8], s_month_buffer[8], s_day_buffer[3];
+static GRect s_full_day_frame;
 static bool s_animating, s_is_connected, s_show_seconds;
 static AppTimer *s_seconds_timer;
 
@@ -50,6 +53,10 @@ static void tick_handler(struct tm *tick_time, TimeUnits changed) {
   text_layer_set_text(s_day_in_month_layer, s_day_buffer);
   text_layer_set_text(s_month_layer, s_month_buffer);
 
+  if (changed & MINUTE_UNIT) {
+    main_window_refresh_data();
+    refresh_poll();
+  }
   // Finally
   layer_mark_dirty(s_canvas_layer);
 }
@@ -203,6 +210,7 @@ static void bg_update_proc(Layer *layer, GContext *ctx) {
     GCornerNone
   );
 #endif
+  step_ring_draw(ctx, bounds, MARGIN);
 }
 
 #if defined(PBL_RECT) && !defined(PBL_PLATFORM_APLITE)
@@ -353,6 +361,7 @@ static void window_load(Window *window) {
   text_layer_set_text_color(s_day_in_month_layer, month_day_color);
   text_layer_set_text_alignment(s_day_in_month_layer, GTextAlignmentCenter);
   text_layer_set_background_color(s_day_in_month_layer, GColorClear);
+  s_full_day_frame = layer_get_frame(text_layer_get_layer(s_day_in_month_layer));
 
   s_month_layer = text_layer_create(
     GRect(x_offset, y_offset + scl_y_pp({.o = 260, .e = 250, .g = 250}), text_s, text_s)
@@ -369,6 +378,7 @@ static void window_load(Window *window) {
 }
 
 static void window_unload(Window *window) {
+  health_set_update_handler(NULL);
 #if defined(PBL_TOUCH)
   touch_service_unsubscribe();
 #endif
@@ -432,8 +442,11 @@ void main_window_push() {
 }
 
 void main_window_reload_config() {
+  health_set_update_handler(main_window_refresh_data);
   // Health may have been enabled after launch
-  if (slots_uses(SlotTypeSteps) || slots_uses(SlotTypeHeartRate)) {
+  if (slots_uses(SlotTypeSteps) || slots_uses(SlotTypeHeartRate) ||
+      slots_uses(SlotTypeDistance) || slots_uses(SlotTypeActiveCalories) ||
+      data_get_enable(MESSAGE_KEY_EnableStepRing)) {
     health_init();
   }
 
@@ -483,13 +496,31 @@ void main_window_reload_config() {
   layer_remove_from_parent(text_layer_get_layer(s_weekday_layer));
   layer_remove_from_parent(text_layer_get_layer(s_month_layer));
   layer_remove_from_parent(s_slots_layer);
+  const DateStyle date_style = data_get_date_style();
+  GRect day_frame = s_full_day_frame;
+  if (date_style == DateStyleDayOnly) {
+    // Center the visible numeral, accounting for each font's top bearing.
+#if defined(PBL_PLATFORM_EMERY) || defined(PBL_PLATFORM_GABBRO)
+    const int numeral_center = 19;
+#else
+    const int numeral_center = 15;
+#endif
+    day_frame.origin.y = layer_get_bounds(window_layer).size.h / 2 - numeral_center;
+  }
+  layer_set_frame(text_layer_get_layer(s_day_in_month_layer), day_frame);
   if (data_get_enable(MESSAGE_KEY_EnableDate)) {
     layer_add_child(window_layer, text_layer_get_layer(s_day_in_month_layer));
-    layer_add_child(window_layer, text_layer_get_layer(s_weekday_layer));
-    layer_add_child(window_layer, text_layer_get_layer(s_month_layer));
+    if (date_style != DateStyleDayOnly) layer_add_child(window_layer, text_layer_get_layer(s_weekday_layer));
+    if (date_style == DateStyleFull) layer_add_child(window_layer, text_layer_get_layer(s_month_layer));
   }
   layer_add_child(window_layer, s_slots_layer);
 
   layer_add_child(window_layer, s_canvas_layer);
+  refresh_poll();
 }
 
+
+void main_window_refresh_data(void) {
+  if (s_slots_layer) layer_mark_dirty(s_slots_layer);
+  if (s_bg_layer && data_get_enable(MESSAGE_KEY_EnableStepRing)) layer_mark_dirty(s_bg_layer);
+}
