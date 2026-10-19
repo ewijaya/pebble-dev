@@ -19,6 +19,10 @@ static void in_recv_handler(DictionaryIterator *iter, void *context) {
     MESSAGE_KEY_EnableSecondHand,
     packet_get_boolean(iter, MESSAGE_KEY_EnableSecondHand)
   );
+  data_set_enable(
+    MESSAGE_KEY_EnableThickHands,
+    packet_get_boolean(iter, MESSAGE_KEY_EnableThickHands)
+  );
   data_set_slot(MESSAGE_KEY_SlotTop, get_slot(iter, MESSAGE_KEY_SlotTop));
   data_set_slot(MESSAGE_KEY_SlotLeft, get_slot(iter, MESSAGE_KEY_SlotLeft));
   data_set_slot(MESSAGE_KEY_SlotBottom, get_slot(iter, MESSAGE_KEY_SlotBottom));

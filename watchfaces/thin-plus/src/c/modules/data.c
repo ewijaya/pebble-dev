@@ -22,6 +22,7 @@ typedef struct {
   uint8_t slot_top;
   uint8_t slot_left;
   uint8_t slot_bottom;
+  bool enable_thick_hands;
 } AppConfig;
 
 // Cache for speed
@@ -47,6 +48,7 @@ void data_init() {
   s_app_config.slot_top = SlotTypeNone;
   s_app_config.slot_left = SlotTypeNone;
   s_app_config.slot_bottom = SlotTypeSteps;
+  s_app_config.enable_thick_hands = false;
 
   if(!persist_exists(SK_AppConfig)) {
     // Set defaults
@@ -90,6 +92,8 @@ void data_set_enable(uint32_t key, bool b) {
     s_app_config.enable_second_hand = b;
   } else if (key == MESSAGE_KEY_EnableSteps) {
     s_app_config.enable_steps = b;
+  } else if (key == MESSAGE_KEY_EnableThickHands) {
+    s_app_config.enable_thick_hands = b;
   }
 }
 
@@ -104,6 +108,8 @@ bool data_get_enable(uint32_t key) {
     return s_app_config.enable_second_hand;
   } else if (key == MESSAGE_KEY_EnableSteps) {
     return s_app_config.enable_steps;
+  } else if (key == MESSAGE_KEY_EnableThickHands) {
+    return s_app_config.enable_thick_hands;
   }
 
   return false;

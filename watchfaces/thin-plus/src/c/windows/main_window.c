@@ -4,8 +4,10 @@
 #define THICKNESS          scl_x(20)
 // Stroke widths must be odd, even values get rounded down when drawing
 #define STROKE_WIDTH       (THICKNESS | 1)
+#define STROKE_WIDTH_THICK (STROKE_WIDTH + 2)
 #define STROKE_WIDTH_SEC   (STROKE_WIDTH - 2)
 #define SECONDS_DURATION   15000
+#define TIP_LENGTH         (MARGIN + 2)
 #define ANIMATION_DELAY    300
 #define ANIMATION_DURATION 1000
 #define HAND_LENGTH_SEC    scl_x(440)
@@ -193,6 +195,26 @@ static GPoint make_hand_point(int quantity, int intervals, int len, GPoint cente
   };
 }
 
+// Point part way along a line, rounded, so it stays on the line actually drawn
+static GPoint point_along(GPoint from, GPoint to, int num, int den) {
+  const int dx = (to.x - from.x) * num;
+  const int dy = (to.y - from.y) * num;
+  return GPoint(
+    from.x + (dx + ((dx < 0) ? -den : den) / 2) / den,
+    from.y + (dy + ((dy < 0) ? -den : den) / 2) / den
+  );
+}
+
+// Draw the full hand, then the tip over its end sharing the same end point and line
+static void draw_hand(GContext *ctx, GPoint center, GPoint end, int len, GColor shaft_color,
+                      GColor tip_color) {
+  graphics_context_set_stroke_color(ctx, shaft_color);
+  graphics_draw_line(ctx, center, end);
+
+  graphics_context_set_stroke_color(ctx, tip_color);
+  graphics_draw_line(ctx, point_along(center, end, len - TIP_LENGTH, len), end);
+}
+
 static int hours_to_minutes(int hours_out_of_12) {
   return (hours_out_of_12 * 60) / 12;
 }
@@ -203,19 +225,9 @@ static void draw_proc(Layer *layer, GContext *ctx) {
 
   SimpleTime mode_time = (s_animating) ? s_anim_time : s_current_time;
 
-  int len_sec = HAND_LENGTH_SEC;
-  int len_min = HAND_LENGTH_MIN;
-  int len_hour = HAND_LENGTH_HOUR;
-
   // Plot hand ends
-  GPoint second_hand_long = make_hand_point(mode_time.seconds, 60, len_sec, center);
-  GPoint minute_hand_long = make_hand_point(mode_time.minutes, 60, len_min, center);
-
-  // Plot shorter overlaid hands
-  len_sec -= (MARGIN + 2);
-  len_min -= (MARGIN + 2);
-  GPoint second_hand_short = make_hand_point(mode_time.seconds, 60, len_sec, center);
-  GPoint minute_hand_short = make_hand_point(mode_time.minutes, 60, len_min, center);
+  GPoint second_hand_end = make_hand_point(mode_time.seconds, 60, HAND_LENGTH_SEC, center);
+  GPoint minute_hand_end = make_hand_point(mode_time.minutes, 60, HAND_LENGTH_MIN, center);
 
   float minute_angle = TRIG_MAX_ANGLE * mode_time.minutes / 60;
   float hour_angle;
@@ -228,16 +240,9 @@ static void draw_proc(Layer *layer, GContext *ctx) {
   hour_angle += (minute_angle / TRIG_MAX_ANGLE) * (TRIG_MAX_ANGLE / 12);
 
   // Hour is more accurate
-  GPoint hour_hand_long = (GPoint) {
-    .x = (int16_t)(sin_lookup(hour_angle) * (int32_t)len_hour / TRIG_MAX_RATIO) + center.x,
-    .y = (int16_t)(-cos_lookup(hour_angle) * (int32_t)len_hour / TRIG_MAX_RATIO) + center.y,
-  };
-
-  // Shorter hour overlay
-  len_hour -= (MARGIN + 2);
-  GPoint hour_hand_short = (GPoint) {
-    .x = (int16_t)(sin_lookup(hour_angle) * (int32_t)len_hour / TRIG_MAX_RATIO) + center.x,
-    .y = (int16_t)(-cos_lookup(hour_angle) * (int32_t)len_hour / TRIG_MAX_RATIO) + center.y,
+  GPoint hour_hand_end = (GPoint) {
+    .x = (int16_t)(sin_lookup(hour_angle) * (int32_t)HAND_LENGTH_HOUR / TRIG_MAX_RATIO) + center.x,
+    .y = (int16_t)(-cos_lookup(hour_angle) * (int32_t)HAND_LENGTH_HOUR / TRIG_MAX_RATIO) + center.y,
   };
 
   GColor bg_color = data_get_color(MESSAGE_KEY_ColorBackground);
@@ -248,34 +253,26 @@ static void draw_proc(Layer *layer, GContext *ctx) {
 
   // Draw hands
   graphics_context_set_antialiased(ctx, true);
-  graphics_context_set_stroke_width(ctx, STROKE_WIDTH);
-  graphics_context_set_stroke_color(ctx, hour_min_color);
-  graphics_draw_line(ctx, center, minute_hand_short);
-  graphics_draw_line(ctx, center, hour_hand_short);
-
-  graphics_context_set_stroke_color(ctx, notch_color);
-  graphics_draw_line(ctx, minute_hand_short, minute_hand_long);
-  graphics_draw_line(ctx, hour_hand_short, hour_hand_long);
+  const bool thick = data_get_enable(MESSAGE_KEY_EnableThickHands);
+  graphics_context_set_stroke_width(ctx, thick ? STROKE_WIDTH_THICK : STROKE_WIDTH);
+  draw_hand(ctx, center, minute_hand_end, HAND_LENGTH_MIN, hour_min_color, notch_color);
+  draw_hand(ctx, center, hour_hand_end, HAND_LENGTH_HOUR, hour_min_color, notch_color);
 
   // Draw second hand
   if (s_show_seconds) {
     graphics_context_set_stroke_width(ctx, STROKE_WIDTH_SEC);
-    graphics_context_set_stroke_color(ctx, second_color);
-    graphics_draw_line(ctx, center, second_hand_short);
-
-    // Draw second hand tip
-    graphics_context_set_stroke_color(ctx, month_day_color);
-    graphics_draw_line(ctx, second_hand_short, second_hand_long);
+    draw_hand(ctx, center, second_hand_end, HAND_LENGTH_SEC, second_color, month_day_color);
   }
 
   // Center
   graphics_context_set_fill_color(ctx, notch_color);
-  graphics_fill_circle(ctx, center, 4);
+  const int center_radius = thick ? 5 : 4;
+  graphics_fill_circle(ctx, center, center_radius);
 
   // Draw black if disconnected
   if (data_get_enable(MESSAGE_KEY_EnableBT) && !s_is_connected) {
     graphics_context_set_fill_color(ctx, bg_color);
-    graphics_fill_circle(ctx, center, 3);
+    graphics_fill_circle(ctx, center, center_radius - 1);
   }
 }
 

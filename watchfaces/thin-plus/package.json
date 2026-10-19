@@ -43,7 +43,8 @@
       "ColorDate",
       "SlotTop",
       "SlotLeft",
-      "SlotBottom"
+      "SlotBottom",
+      "EnableThickHands"
     ],
     "enableMultiJS": true,
     "displayName": "Thin+",

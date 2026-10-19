@@ -43,6 +43,12 @@ module.exports = [
         "label": "Show second hand (for 15s after a wrist flick)",
         "messageKey": "EnableSecondHand",
         "defaultValue": true
+      },
+      {
+        "type": "toggle",
+        "label": "Thicker hour and minute hands",
+        "messageKey": "EnableThickHands",
+        "defaultValue": false
       }
     ]
   },
