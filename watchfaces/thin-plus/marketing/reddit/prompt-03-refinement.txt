@@ -1,0 +1,12 @@
+Precise localized correction of the FIRST image, the Thin+ "One face. Seven moods." carousel slide. Preserve its entire composition, seven watches, exact wording, theme labels, background, fonts, watch positions, sizes and lighting. Change ONLY the tiny watchface center-dot/tip colors and any missing case buttons described below.
+Inputs 2 is official PT2 hardware. Inputs 3, 4, 5 are actual native Neon, Paper and Lime watchface screenshots for precise display details.
+All seven silver PT2s must have EXACTLY THREE distinct textured silver buttons down the RIGHT case edge, and ONE left back button. In particular add the missing third lower-right button to Lime, Mono and Paper; keep proportions consistent.
+Make the theme details accurate:
+Classic top watch: center dot is solid DARK RED (#AA0000), with no white spot/glint or ring. Seconds hand dark red, seconds tip orange.
+Neon: solid WHITE center dot, magenta seconds hand, bright YELLOW seconds tip (not orange).
+Ocean: solid WHITE center dot, orange seconds hand, YELLOW seconds tip.
+Sunset: solid WHITE center dot, coral/red-orange seconds hand, YELLOW seconds tip.
+Lime: solid WHITE center dot, pink-red seconds hand, yellow-green seconds tip.
+Mono: solid WHITE center dot, white seconds and white tip.
+Paper: solid BLACK center dot (currently incorrectly red), red seconds hand and BLUE seconds tip.
+Do not change the hour/minute hands or their tips, backgrounds, markers, clocks or remove any theme. Keep all text exactly unchanged including the final full stop in "Based on Thin by Chris Lewis." Same portrait canvas.

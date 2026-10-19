@@ -1,0 +1,200 @@
+[
+  {
+    "platform": "emery",
+    "case": "migration-option-off-20",
+    "file": "emery-migration-option-off-20.png",
+    "sha256": "9ac29c50fb39656a6b31a3758b329797e3fdb193f25cc44ec86be9413a0caed4"
+  },
+  {
+    "platform": "emery",
+    "case": "defaults",
+    "file": "emery-defaults.png",
+    "sha256": "86ad8dacca014ae323d3e617060577d60ddc7f019a1ffba1d0b7a1153061fe23"
+  },
+  {
+    "platform": "emery",
+    "case": "20-hidden",
+    "file": "emery-20-hidden.png",
+    "sha256": "04c04ba1a485222333391315a0da40b84935732853726f02d73b61c175c004fe"
+  },
+  {
+    "platform": "emery",
+    "case": "19-visible",
+    "file": "emery-19-visible.png",
+    "sha256": "c32dd3fac1da9cc96f7958f51e44ad040921300b1c04a577546158f8b36ed85c"
+  },
+  {
+    "platform": "emery",
+    "case": "20-hidden-again",
+    "file": "emery-20-hidden-again.png",
+    "sha256": "5b6fb74479c21e0f06f781803ba59848db368759ad00351bdf468847a5df5a8c"
+  },
+  {
+    "platform": "emery",
+    "case": "persisted-low-only-20",
+    "file": "emery-persisted-low-only-20.png",
+    "sha256": "5b6fb74479c21e0f06f781803ba59848db368759ad00351bdf468847a5df5a8c"
+  },
+  {
+    "platform": "emery",
+    "case": "option-off-20",
+    "file": "emery-option-off-20.png",
+    "sha256": "50cd83956a6093e46ef0642a9588b7a5f182cc7b16663b7c727bab1cbea5e0ae"
+  },
+  {
+    "platform": "aplite",
+    "case": "defaults",
+    "file": "aplite-defaults.png",
+    "sha256": "aabcfbe48e2720f16a9167c6b6a724ad726b6e412d361998533b842be787fd8d"
+  },
+  {
+    "platform": "aplite",
+    "case": "20-hidden",
+    "file": "aplite-20-hidden.png",
+    "sha256": "2e90c8607aa95440ad11b6761a2545601a85903594561855f68590e355ffc47c"
+  },
+  {
+    "platform": "aplite",
+    "case": "10-visible",
+    "file": "aplite-10-visible.png",
+    "sha256": "3eaa65163143546361f0f3db60b9875c5e719db6d689f8318bad378e3c907151"
+  },
+  {
+    "platform": "aplite",
+    "case": "20-hidden-again",
+    "file": "aplite-20-hidden-again.png",
+    "sha256": "2e90c8607aa95440ad11b6761a2545601a85903594561855f68590e355ffc47c"
+  },
+  {
+    "platform": "basalt",
+    "case": "defaults",
+    "file": "basalt-defaults.png",
+    "sha256": "42590aaba68da6bfc42db61c50d5eed439f02fa98b56d37502d06083f3b137b0"
+  },
+  {
+    "platform": "basalt",
+    "case": "20-hidden",
+    "file": "basalt-20-hidden.png",
+    "sha256": "7d88dc3bcf0f8c10f6ad13923b1033cb4cf798346ad45bcbb8d0ca0c1f190769"
+  },
+  {
+    "platform": "basalt",
+    "case": "10-visible",
+    "file": "basalt-10-visible.png",
+    "sha256": "a88d39dbef6ecf916ed0ce675453f347df47f99600c785b935f6ae3cda987afa"
+  },
+  {
+    "platform": "basalt",
+    "case": "20-hidden-again",
+    "file": "basalt-20-hidden-again.png",
+    "sha256": "7d88dc3bcf0f8c10f6ad13923b1033cb4cf798346ad45bcbb8d0ca0c1f190769"
+  },
+  {
+    "platform": "chalk",
+    "case": "defaults",
+    "file": "chalk-defaults.png",
+    "sha256": "e627bad11768dd0123ce0cea2ada575b9683142b3fea1bb213d41dd63b4c680e"
+  },
+  {
+    "platform": "chalk",
+    "case": "20-hidden",
+    "file": "chalk-20-hidden.png",
+    "sha256": "631069b20594785473ccfd9324e70f62e8a6065ec66874ecccf4daff63fc4b34"
+  },
+  {
+    "platform": "chalk",
+    "case": "10-visible",
+    "file": "chalk-10-visible.png",
+    "sha256": "cd0725a148bca6aa4326708a72a3a13fc3621c844fd1a4a4b438b59a8b687f64"
+  },
+  {
+    "platform": "chalk",
+    "case": "20-hidden-again",
+    "file": "chalk-20-hidden-again.png",
+    "sha256": "631069b20594785473ccfd9324e70f62e8a6065ec66874ecccf4daff63fc4b34"
+  },
+  {
+    "platform": "diorite",
+    "case": "defaults",
+    "file": "diorite-defaults.png",
+    "sha256": "b7604c4c97c4c0c8d62c1195817eec48870ed10e278fff03fc7cfc8479c54221"
+  },
+  {
+    "platform": "diorite",
+    "case": "20-hidden",
+    "file": "diorite-20-hidden.png",
+    "sha256": "749ea9af7ed0368908b7eb4a96e0f083963016331935cfeecc0f18556a896021"
+  },
+  {
+    "platform": "diorite",
+    "case": "10-visible",
+    "file": "diorite-10-visible.png",
+    "sha256": "c83a7db0790188eb0e67adabfaa30ecefe5743f4841dcf4f6ff6dee17919dbf1"
+  },
+  {
+    "platform": "diorite",
+    "case": "20-hidden-again",
+    "file": "diorite-20-hidden-again.png",
+    "sha256": "749ea9af7ed0368908b7eb4a96e0f083963016331935cfeecc0f18556a896021"
+  },
+  {
+    "platform": "flint",
+    "case": "defaults",
+    "file": "flint-defaults.png",
+    "sha256": "7866db01681dd801d27e8e77b5c28bd8f41c6518dca0d7a4288b30ae42246214"
+  },
+  {
+    "platform": "flint",
+    "case": "20-hidden",
+    "file": "flint-20-hidden.png",
+    "sha256": "c6acdbb8133d941b5b99e7a0b2a1607a08cd801f0c5211bc8a0b25f34a68181f"
+  },
+  {
+    "platform": "flint",
+    "case": "19-visible",
+    "file": "flint-19-visible.png",
+    "sha256": "2ebe6b5355bcdd80e5a9a16662952b32a51d8b1e4bd4fd8552de01020b03bb27"
+  },
+  {
+    "platform": "flint",
+    "case": "20-hidden-again",
+    "file": "flint-20-hidden-again.png",
+    "sha256": "c6acdbb8133d941b5b99e7a0b2a1607a08cd801f0c5211bc8a0b25f34a68181f"
+  },
+  {
+    "platform": "gabbro",
+    "case": "defaults",
+    "file": "gabbro-defaults.png",
+    "sha256": "b3d26c8cc963e82229e135401a1d7bc7264d5e4a0f0668d7f95c055350d4f467"
+  },
+  {
+    "platform": "gabbro",
+    "case": "20-hidden",
+    "file": "gabbro-20-hidden.png",
+    "sha256": "7fa4fb5f9000e30096a8744d80b9144635e368d70b0dd6b65a796467376b8ec1"
+  },
+  {
+    "platform": "gabbro",
+    "case": "19-visible",
+    "file": "gabbro-19-visible.png",
+    "sha256": "9b4cb0447063ba5be9b8361dfe84642411a1916719f81a90d6c9d1a162e1b3e9"
+  },
+  {
+    "platform": "gabbro",
+    "case": "20-hidden-again",
+    "file": "gabbro-20-hidden-again.png",
+    "sha256": "b5b0ca6d4a3f2c7b0edeafea4211725c96f10b2fa2670c18bcf498c0cfb3a9b0"
+  },
+  {
+    "platform": "emery",
+    "case": "persisted-low-only-20-settled",
+    "file": "emery-persisted-low-only-20-settled.png",
+    "sha256": "ab5afda87c582e1369395d0161886ef9d63fc0716222fce5c029eddf8a91976c"
+  },
+  {
+    "platform": "emery",
+    "case": "persisted-low-only-19-settled",
+    "file": "emery-persisted-low-only-19-settled.png",
+    "sha256": "c5e47e2f74311e890c2746b93200caeafd221edef0d9861bdb4b25824fa588e2"
+  }
+]

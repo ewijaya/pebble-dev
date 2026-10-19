@@ -1,34 +1,62 @@
 # Thin+
 
-A fork of [Thin](../thin) by Chris Lewis.
+Thin, plus: a clean analog Pebble watchface with splashes of color and the
+information you choose.
 
-Simple, customizable Pebble watchface with splashes of color. 
+![Minimal Classic on Pebble Time 2](screenshots/emery.png)
+![Ocean with digital time and steps on Pebble Time 2](screenshots/emery-medium.png)
+![Sunset with all complications and thicker hands on Pebble Time 2](screenshots/emery-rich.png)
 
-Runs on all Pebble watches.
+## Features
 
-![](screenshots/aplite.png) ![](screenshots/basalt.png)
+- Smooth, anti-aliased hands, precisely aligned tips, and optional thicker
+  hour and minute hands.
+- A battery-friendly second hand, shown for 15 seconds after launch or a
+  wrist flick. Otherwise, the face updates once a minute.
+- Three complication slots (top, left and bottom): steps, heart rate,
+  battery percentage, digital time or none. Numbers only, without labels.
+- Classic, Neon, Ocean, Sunset, Lime, Mono and Paper themes, plus Custom.
+- Individual colors for the background, hands, tips, center dot, hour
+  markers, empty battery markers and date.
+- Hour markers that show battery level, optional date and disconnected
+  indicator.
 
-Use the config page (powered by [Clay](https://github.com/pebble/clay) to
-adjust which features you want from the following:
+Keep it minimal: hide the date and leave any or all complication slots empty.
 
-- Show weekday/month
-- Show day of the month
-- Show dis/connected indicator
-- Show battery level
-- Show seconds hand
-- Complications at the top, left and bottom: steps, heart rate, battery or
-  digital time
+Settings are provided by [Clay](https://github.com/pebble/clay).
+Colors and health readings depend on the watch's capabilities.
 
-![](screenshots/basalt-charging-1.png)
-![](screenshots/basalt-steps.png)
+## Platforms
 
-## History
+Targets aplite, basalt, chalk, diorite, emery, flint and gabbro. The release
+preparation includes an install, default rendering and crash-log smoke test
+for each platform; this does not verify the phone settings page on every watch.
 
-GitHub stats prior to being moved to `pebble-dev`:
+![Gabbro](screenshots/gabbro.png)
+![Chalk](screenshots/chalk.png)
+![Basalt](screenshots/basalt.png)
+![Aplite](screenshots/aplite.png)
 
-![](screenshots/ghstats.png)
+## Build
 
-## TODO
+With the Pebble SDK installed, run `pebble build`. The bundle is
+`build/thin-plus.pbw`. Run `pebble clean` before rebuilding after changing
+the message keys in `package.json`.
 
-- [ ] Support `flint` once `pebble-clay` does
-- [ ] Custom colors!
+## Release preparation
+
+[Thin+ 1.1.0 is available on the Pebble App Store](https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3).
+The release is published and publicly listed. Version 1.1.0 passed builds and
+emulator checks on all seven platforms. Its physical PT2 store-install and
+settings check is pending; the owner previously confirmed that flow for 1.0.0.
+See [listing draft](store/listing.md) and [release manifest](store/manifest.md)
+for assets, validation evidence and approval status.
+
+Version 1.1.0 adds an option to show selected battery complications only below
+20%. It defaults to off and is independent of the hour-marker battery display.
+See [behavior and test notes](docs/LOW-BATTERY-COMPLICATION.md).
+
+## Credit
+
+Based on [Thin by Chris Lewis](https://apps.repebble.com/thin_550ccb556caaed4e0100006d).
+Thin+ is maintained by Edward Wijaya.

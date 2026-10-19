@@ -27,6 +27,7 @@ typedef struct {
   GColor color_center_dot;
   GColor color_second_tip;
   GColor color_battery_empty;
+  bool battery_only_when_low;
 } AppConfig;
 
 // Cache for speed
@@ -57,6 +58,7 @@ void data_init() {
   s_app_config.color_center_dot = GColorClear;
   s_app_config.color_second_tip = GColorClear;
   s_app_config.color_battery_empty = GColorClear;
+  s_app_config.battery_only_when_low = false;
 
   if(!persist_exists(SK_AppConfig)) {
     // Set defaults
@@ -116,6 +118,8 @@ void data_set_enable(uint32_t key, bool b) {
     s_app_config.enable_steps = b;
   } else if (key == MESSAGE_KEY_EnableThickHands) {
     s_app_config.enable_thick_hands = b;
+  } else if (key == MESSAGE_KEY_BatteryOnlyWhenLow) {
+    s_app_config.battery_only_when_low = b;
   }
 }
 
@@ -132,6 +136,8 @@ bool data_get_enable(uint32_t key) {
     return s_app_config.enable_steps;
   } else if (key == MESSAGE_KEY_EnableThickHands) {
     return s_app_config.enable_thick_hands;
+  } else if (key == MESSAGE_KEY_BatteryOnlyWhenLow) {
+    return s_app_config.battery_only_when_low;
   }
 
   return false;

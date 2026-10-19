@@ -1,0 +1,113 @@
+{
+  "gate": "A",
+  "status": "approved",
+  "date": "2026-10-19",
+  "approved_by": "Edward Wijaya",
+  "confirmation": "I approve all",
+  "scope": [
+    "icon",
+    "screenshot selection",
+    "banner",
+    "listing text"
+  ],
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "approved_asset_sha256": {
+    "icons/menu-icon-25.png": "d4c6d3a988f0d77359acbc4d75f01369887dee730c4fbcf6717bb0194badf0e3",
+    "icons/thin-plus-144.png": "bf5eae58979c7fcbf0244510df3d477f49f3f8b469ff5c2a76ef54ece175c6df",
+    "icons/thin-plus-80.png": "e099b693d1561f2a584ad344a95c2beb8a97d4598bdf701ca5df81b254223b39",
+    "screenshots/aplite-classic.png": "a24ad417f1f5282afa64eb3481ce536049468ea775aac6c215d6c4116052fc38",
+    "screenshots/basalt-classic.png": "616bf5ee5419440a672e9c371da0d9bfb4213611e31a2ca7ea0064cd709117d8",
+    "screenshots/chalk-classic.png": "20d23fd7e0278ab9a11f6bc151bcec1048426172b8c15db43bec3eb7d0c10753",
+    "screenshots/diorite-classic.png": "2d9507a648e610f3dd741ec3098275ed32aefa9045ca57cc9277316e3731ece2",
+    "screenshots/emery-01-classic.png": "45040a370b2142ddf36b418a97250b630414081723e4ad534e76d09fe1f2307a",
+    "screenshots/emery-02-neon.png": "073db32697426c21ad367306e0a6ea5066d30aeba08530485f96b594bfe1929e",
+    "screenshots/emery-03-ocean.png": "b49ad18c077b6030ff2d6945736b44bbea770ddc87fac2aa776d010d25bf9709",
+    "screenshots/emery-04-paper.png": "7bf647bef5ed9dcf60c0319fd94cf8fe8ffa7b610301fff40d5d83cb8caeaea2",
+    "screenshots/emery-05-sunset.png": "1e6d7c26c83104112100635eb888dfed8ca8530ea65b840748669a1a62e2df5c",
+    "screenshots/emery-06-sunset-thick-40.png": "1aa8dd6d488435e15938be0f2b9ac611eb5b27cefdc18ff47cd95a70991d3453",
+    "screenshots/flint-classic.png": "e56181de53a8888d425ba8567717c14e03876ea98a9ce1dde58a50a0c2ed5e03",
+    "screenshots/gabbro-classic.png": "8127db90ea4f648661383be559b8dffba2e85ccb6ccdc7288411dcda21876a15",
+    "banner-emery-720x320.png": "e900d7a78e9b59f86fb5ab931b72cf08700be2f505c7b03abeaf2323c1a90072"
+  },
+  "approved_listing_content_sha256": "cd8f8db6cfbe7849e7eb80e6dcaaaaeaec498d32921c4553a0e9e2b571b6899f",
+  "store_actions_performed": [
+    {
+      "action": "create listing and upload approved PBW/assets",
+      "authorization": "can you do all that progammatically from your side?",
+      "app_id": "b0a4b28dbe9440c3b19f68e3",
+      "release_id": "c652f752f6254eb694d76511",
+      "visibility": "unlisted",
+      "is_published": false
+    },
+    {
+      "action": "update listing/platform descriptions and release notes credit",
+      "authorization": "Use just Based on Thin by Chris Lewis",
+      "visibility": "unlisted",
+      "is_published": false
+    },
+    {
+      "action": "Save approved small and large icons through edit endpoint after user reported missing dashboard icon",
+      "evidence": "store-icon-update.json",
+      "visibility": "unlisted",
+      "is_published": false
+    },
+    {
+      "action": "Publish existing release 1.0.0 while preserving unlisted visibility",
+      "authorization": "okay relese them",
+      "published_date": "2026-10-19T04:27:32.008",
+      "evidence": "release-publication.json",
+      "is_published": true,
+      "visibility": "unlisted"
+    },
+    {
+      "action": "Change visibility to listed after PT2 confirmation",
+      "authorization": "confirm... make the list  listing publicly listed",
+      "evidence": "listed-publication.json",
+      "is_published": true,
+      "visibility": "listed"
+    }
+  ],
+  "next_step": "Obtain separate authorization before committing release materials, pushing, or tagging.",
+  "gate_b": "complete: owner confirmed PT2 store-install/settings/theme test",
+  "gate_c": "complete: explicitly authorized and publicly listed",
+  "commit_push_tag_authorization": "not granted by this Gate A approval",
+  "listing_amendments": [
+    {
+      "instruction": "Use just \"Based on Thin by Chris Lewis\"; omit the permission wording.",
+      "previous_content_sha256": "7b36cc6356488d83339270efe223eaac626a8b392a9ed164b0e7ca3da42c472f",
+      "revised_content_sha256": "9430be2f1f615b6aaacef01b9113ed3b2d7ef625920a8cc42bfb633bd57a1acc",
+      "scope": "listing description, release notes and README credit",
+      "uploaded_description_and_notes_verified": true
+    },
+    {
+      "instruction": "Show that users can hide complications; use minimalist screenshot layouts.",
+      "previous_content_sha256": "9430be2f1f615b6aaacef01b9113ed3b2d7ef625920a8cc42bfb633bd57a1acc",
+      "revised_content_sha256": "8e37eda9cdaea3007762cd2ae40a3c6151b6f874b52117ca8991273c2ff3cef6",
+      "scope": "11 replacement screenshots, README images and a minimal-layout sentence in the description",
+      "banner": "unchanged pending tagline selection",
+      "superseded_screenshot_directory": "evidence/previous-screenshots",
+      "provenance": "evidence/minimal-screenshot-provenance.json"
+    },
+    {
+      "instruction": "Use \"Based on Thin by Chris Lewis.\" with the full stop; use tagline \"The Thin you love. More ways to make it yours.\"",
+      "previous_content_sha256": "8e37eda9cdaea3007762cd2ae40a3c6151b6f874b52117ca8991273c2ff3cef6",
+      "revised_content_sha256": "cd8f8db6cfbe7849e7eb80e6dcaaaaeaec498d32921c4553a0e9e2b571b6899f",
+      "banner_sha256": "c76821402b87f5e6462930383a1fffdea0e3df3420bc3ce18c109db0448a4f3d",
+      "superseded_banner": "evidence/previous-screenshots/banner-emery-720x320.png",
+      "uploaded_text_and_banner_verified": true
+    },
+    {
+      "instruction": "Use an assortment of minimal, medium and rich screenshots; use a rectangular store icon instead of a circular dial.",
+      "scope": "23 store screenshots and rectangular 80\u00d780/144\u00d7144 store icons",
+      "screenshot_selection": "screenshot-selection.json",
+      "screenshot_selection_sha256": "ce23b4e57461e89d6c4457a44b018f9a256510dc7cd2453006fb3c6345752425",
+      "store_icon_sha256": {
+        "thin-plus-80.png": "0548b561741985fe09f9fe710c3964b544881e784e04b365b3ac3f636188961d",
+        "thin-plus-144.png": "e6e23f82d151acc0c1ebcaaf8501aaccdab0f58402002d747723f9f4b77bd283",
+        "thin-plus.svg": "a02c015bc49273a2939cd70605d42fff0ceb85d0fc66915227743e9a77049ca1"
+      },
+      "previous_store_icons": "evidence/previous-icons/",
+      "embedded_menu_icon_and_release_pbw": "unchanged"
+    }
+  ]
+}

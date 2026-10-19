@@ -1,0 +1,47 @@
+{
+  "status": "Approved and applied to live listing; see verification.json",
+  "platform": "emery",
+  "source_pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "source_pbw_version": "1.0.0",
+  "capture": "Native unscaled emulator PNG; released PBW; real AppMessage settings; wrist-tap input; live clock",
+  "settings": {
+    "ColorBackground": "000000",
+    "ColorHourMinutes": "AAAAAA",
+    "ColorSeconds": "AA0000",
+    "ColorNotches": "FFFFFF",
+    "ColorMonthDay": "FFAA00",
+    "ColorDate": "FFFFFF",
+    "ColorHandTips": "FFFFFF",
+    "ColorCenterDot": "AA0000",
+    "ColorSecondTip": "FFAA00",
+    "ColorBatteryEmpty": "555555",
+    "Theme": "custom",
+    "EnableDate": false,
+    "EnableBT": false,
+    "EnableBattery": false,
+    "EnableSecondHand": true,
+    "EnableThickHands": false,
+    "SlotTop": "0",
+    "SlotLeft": "0",
+    "SlotBottom": "0"
+  },
+  "physical_watch_test": "Not performed for this artwork revision",
+  "files": {
+    "banner-emery-720x320.png": "660a4834a75454c1dde2bd30005be23d1850e00e7c92b2368c35fed8836f051e",
+    "emery-01-classic-red-center.png": "685088e0bc29b1282fe39b66dc2e7519b3c901a781514ae3a99f5f7141c7261e"
+  },
+  "verification": {
+    "native_screenshot_dimensions": [
+      200,
+      228
+    ],
+    "banner_dimensions": [
+      720,
+      320
+    ],
+    "banner_face_pixels_match_native_capture": true,
+    "center_color": "AA0000 (dark red, matching Classic seconds hand)",
+    "published_pbw_unchanged": true,
+    "store_mutations": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "method": "Built-in imagegen; model version not exposed",
+  "type": "Generated promotional product mockups",
+  "assets": [
+    {
+      "file": "generated/01-heritage.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 1720758,
+      "sha256": "04d8f4d1273925899bf52c32477d51c8350722e666abbfb755690030c5a8d9d7"
+    },
+    {
+      "file": "generated/02-personal-choice.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 1734291,
+      "sha256": "3344ba4eb0cbe429d8faa364c3da7cc9ef91e7155db1bbde55e3726255cc734b"
+    },
+    {
+      "file": "generated/03-seven-moods.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 1679498,
+      "sha256": "69ff50919eb2ab29b8f961d1ea9e34e75bbea1b5d72976bfdcbbe38157a545bf"
+    }
+  ],
+  "prompts": [
+    "prompt-01-refinement.txt",
+    "prompt-01.txt",
+    "prompt-02-refinement.txt",
+    "prompt-02.txt",
+    "prompt-03-final-colors.txt",
+    "prompt-03-refinement.txt",
+    "prompt-03.txt"
+  ],
+  "hardware_sources": "references/sources.json",
+  "native_screen_provenance": "screens/provenance.json"
+}

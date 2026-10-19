@@ -1,0 +1,47 @@
+{
+  "pbw": "/home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/dist/releases/1.1.0/thin-plus.pbw",
+  "version": "1.1.0",
+  "uuid": "0e83e240-01b8-469b-a51b-b2a0e767fefb",
+  "display_name": "Thin+",
+  "bytes": 521806,
+  "sha256": "15e75184f8381cc19a94fbbcd192323251a2ae9bd0cf5e1676d64b22c50131fd",
+  "zip_integrity": true,
+  "platform_bytes": {
+    "aplite": {
+      "pebble-app.bin": 10796,
+      "app_resources.pbpack": 19204,
+      "manifest.json": 354
+    },
+    "basalt": {
+      "pebble-app.bin": 10900,
+      "app_resources.pbpack": 19240,
+      "manifest.json": 353
+    },
+    "chalk": {
+      "pebble-app.bin": 10864,
+      "app_resources.pbpack": 19240,
+      "manifest.json": 352
+    },
+    "diorite": {
+      "pebble-app.bin": 10892,
+      "app_resources.pbpack": 19240,
+      "manifest.json": 353
+    },
+    "emery": {
+      "pebble-app.bin": 10916,
+      "app_resources.pbpack": 19240,
+      "manifest.json": 354
+    },
+    "flint": {
+      "pebble-app.bin": 10892,
+      "app_resources.pbpack": 19240,
+      "manifest.json": 354
+    },
+    "gabbro": {
+      "pebble-app.bin": 10872,
+      "app_resources.pbpack": 19240,
+      "manifest.json": 354
+    }
+  },
+  "scope": "Static PBW/source validation only; no build, emulator or PT2 test performed."
+}

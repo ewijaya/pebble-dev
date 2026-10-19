@@ -1,0 +1,110 @@
+{
+  "authorization": "User: \"can you do all that progammatically from your side?\" following Gate A approval and the hidden/unlisted setup/upload/read-only-verification handoff.",
+  "scope": "Create unlisted Thin+ with the approved assets and an unpublished 1.0.0 release. No release publication, listing in search, commit, push or tag.",
+  "request_fields": {
+    "name": "Thin+",
+    "type": "watchface",
+    "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis, published with his permission.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+    "source": "https://github.com/ewijaya/pebble-dev/tree/watchface/thin-plus/watchfaces/thin-plus",
+    "website": "",
+    "version": "1.0.0",
+    "expectedUuid": "0e83e240-01b8-469b-a51b-b2a0e767fefb",
+    "releaseNotes": "First release of Thin+.\n\nAdds smooth hands with aligned tips, an optional thicker-hand style, a second hand that appears briefly after launch or a wrist flick, three configurable complication slots, seven themes and individual color controls. Includes the original Thin's hour-marker battery display. Supports all seven Pebble platforms.\n\nBased on Thin by Chris Lewis, published with his permission.",
+    "visibility": "unlisted",
+    "isPublished": "false",
+    "generateIcons": "false"
+  },
+  "uploads": [
+    {
+      "field": "pbwFile",
+      "path": "build/thin-plus.pbw",
+      "bytes": 519559,
+      "sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517"
+    },
+    {
+      "field": "iconSmall",
+      "path": "store/icons/thin-plus-80.png",
+      "bytes": 4764,
+      "sha256": "e099b693d1561f2a584ad344a95c2beb8a97d4598bdf701ca5df81b254223b39"
+    },
+    {
+      "field": "iconLarge",
+      "path": "store/icons/thin-plus-144.png",
+      "bytes": 9227,
+      "sha256": "bf5eae58979c7fcbf0244510df3d477f49f3f8b469ff5c2a76ef54ece175c6df"
+    },
+    {
+      "field": "screenshots_aplite",
+      "path": "store/screenshots/aplite-classic.png",
+      "bytes": 1485,
+      "sha256": "a24ad417f1f5282afa64eb3481ce536049468ea775aac6c215d6c4116052fc38"
+    },
+    {
+      "field": "screenshots_basalt",
+      "path": "store/screenshots/basalt-classic.png",
+      "bytes": 1759,
+      "sha256": "616bf5ee5419440a672e9c371da0d9bfb4213611e31a2ca7ea0064cd709117d8"
+    },
+    {
+      "field": "screenshots_chalk",
+      "path": "store/screenshots/chalk-classic.png",
+      "bytes": 2389,
+      "sha256": "20d23fd7e0278ab9a11f6bc151bcec1048426172b8c15db43bec3eb7d0c10753"
+    },
+    {
+      "field": "screenshots_diorite",
+      "path": "store/screenshots/diorite-classic.png",
+      "bytes": 1480,
+      "sha256": "2d9507a648e610f3dd741ec3098275ed32aefa9045ca57cc9277316e3731ece2"
+    },
+    {
+      "field": "screenshots_emery",
+      "path": "store/screenshots/emery-01-classic.png",
+      "bytes": 2502,
+      "sha256": "45040a370b2142ddf36b418a97250b630414081723e4ad534e76d09fe1f2307a"
+    },
+    {
+      "field": "screenshots_emery",
+      "path": "store/screenshots/emery-02-neon.png",
+      "bytes": 2800,
+      "sha256": "073db32697426c21ad367306e0a6ea5066d30aeba08530485f96b594bfe1929e"
+    },
+    {
+      "field": "screenshots_emery",
+      "path": "store/screenshots/emery-03-ocean.png",
+      "bytes": 2576,
+      "sha256": "b49ad18c077b6030ff2d6945736b44bbea770ddc87fac2aa776d010d25bf9709"
+    },
+    {
+      "field": "screenshots_emery",
+      "path": "store/screenshots/emery-04-paper.png",
+      "bytes": 2485,
+      "sha256": "7bf647bef5ed9dcf60c0319fd94cf8fe8ffa7b610301fff40d5d83cb8caeaea2"
+    },
+    {
+      "field": "screenshots_emery",
+      "path": "store/screenshots/emery-06-sunset-thick-40.png",
+      "bytes": 2562,
+      "sha256": "1aa8dd6d488435e15938be0f2b9ac611eb5b27cefdc18ff47cd95a70991d3453"
+    },
+    {
+      "field": "screenshots_flint",
+      "path": "store/screenshots/flint-classic.png",
+      "bytes": 1587,
+      "sha256": "e56181de53a8888d425ba8567717c14e03876ea98a9ce1dde58a50a0c2ed5e03"
+    },
+    {
+      "field": "screenshots_gabbro",
+      "path": "store/screenshots/gabbro-classic.png",
+      "bytes": 4074,
+      "sha256": "8127db90ea4f648661383be559b8dffba2e85ccb6ccdc7288411dcda21876a15"
+    },
+    {
+      "field": "banner_emery",
+      "path": "store/banner-emery-720x320.png",
+      "bytes": 8151,
+      "sha256": "e900d7a78e9b59f86fb5ab931b72cf08700be2f505c7b03abeaf2323c1a90072"
+    }
+  ],
+  "existing_uuid_matches": 0
+}

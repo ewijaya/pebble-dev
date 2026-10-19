@@ -1,0 +1,7 @@
+{
+  "scratch": "/tmp/thin-plus-1.1.0-diz26g82/thin-plus",
+  "version": "1.1.0",
+  "source_base_commit": "56012e58e2e6f7fe6aea894c352ad45c451ef85f",
+  "prior_release_pbw": "/home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/dist/releases/1.0.0/thin-plus.pbw",
+  "prior_release_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517"
+}

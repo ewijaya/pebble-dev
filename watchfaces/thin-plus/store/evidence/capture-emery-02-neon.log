@@ -1,0 +1,111 @@
+
+COMMAND: pebble build
+
+up to date, audited 4 packages in 443ms
+
+found 0 vulnerabilities
+
+up to date, audited 4 packages in 489ms
+
+found 0 vulnerabilities
+Setting top to                           : /tmp/thin-plus-release-t2dzre_1/thin-plus 
+Setting out to                           : /tmp/thin-plus-release-t2dzre_1/thin-plus/build 
+Checking for program 'webpack'           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/node_modules/.bin/webpack 
+Found Pebble SDK for gabbro in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/gabbro 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for flint in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/flint 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for emery in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/emery 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for diorite in:         : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/diorite 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for chalk in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/chalk 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for basalt in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/basalt 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for aplite in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/aplite 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+'configure' finished successfully (0.256s)
+Waf: Entering directory `/tmp/thin-plus-release-t2dzre_1/thin-plus/build'
+[22/24] Compiling gabbro | c: src/c/modules/data.c -> build/src/c/modules/data.c.51.o
+[23/24] Linking gabbro | cprogram: build/src/c/main.c.51.o build/src/c/modules/comm.c.51.o build/src/c/modules/data.c.51.o build/src/c/modules/health.c.51.o build/src/c/modules/scalable.c.51.o build/src/c/modules/slots.c.51.o build/src/c/windows/main_window.c.51.o build/gabbro/appinfo.auto.c.51.o build/gabbro/src/resource_ids.auto.c.51.o build/src/message_keys.auto.c.51.o -> build/gabbro/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/gabbro/pebble-app.elf has a LOAD segment with RWX permissions
+
+[24/24] Processing gabbro | memory_usage_report: build/gabbro/pebble-app.elf build/gabbro/app_resources.pbpack
+-------------------------------------------------------
+GABBRO APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10815 bytes / 128.0KB
+Free RAM available (heap):      120257 bytes
+------------------------------------------------------- 
+[43/45] Compiling flint | c: src/c/modules/data.c -> build/src/c/modules/data.c.52.o
+[59/66] Compiling emery | c: src/c/modules/data.c -> build/src/c/modules/data.c.53.o
+[65/66] Linking emery | cprogram: build/src/c/main.c.53.o build/src/c/modules/comm.c.53.o build/src/c/modules/data.c.53.o build/src/c/modules/health.c.53.o build/src/c/modules/scalable.c.53.o build/src/c/modules/slots.c.53.o build/src/c/windows/main_window.c.53.o build/emery/appinfo.auto.c.53.o build/emery/src/resource_ids.auto.c.53.o build/src/message_keys.auto.c.53.o -> build/emery/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/emery/pebble-app.elf has a LOAD segment with RWX permissions
+
+[66/66] Processing emery | memory_usage_report: build/emery/pebble-app.elf build/emery/app_resources.pbpack
+-------------------------------------------------------
+EMERY APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10859 bytes / 128.0KB
+Free RAM available (heap):      120213 bytes
+------------------------------------------------------- 
+[85/87] Compiling diorite | c: src/c/modules/data.c -> build/src/c/modules/data.c.54.o
+[106/108] Compiling chalk | c: src/c/modules/data.c -> build/src/c/modules/data.c.55.o
+[107/108] Linking chalk | cprogram: build/src/c/main.c.55.o build/src/c/modules/comm.c.55.o build/src/c/modules/data.c.55.o build/src/c/modules/health.c.55.o build/src/c/modules/scalable.c.55.o build/src/c/modules/slots.c.55.o build/src/c/windows/main_window.c.55.o build/chalk/appinfo.auto.c.55.o build/chalk/src/resource_ids.auto.c.55.o build/src/message_keys.auto.c.55.o -> build/chalk/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/chalk/pebble-app.elf has a LOAD segment with RWX permissions
+
+[108/108] Processing chalk | memory_usage_report: build/chalk/pebble-app.elf build/chalk/app_resources.pbpack
+-------------------------------------------------------
+CHALK APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10807 bytes / 64.0KB
+Free RAM available (heap):      54729 bytes
+------------------------------------------------------- 
+[125/129] Compiling basalt | c: src/c/modules/data.c -> build/src/c/modules/data.c.56.o
+[128/129] Linking basalt | cprogram: build/src/c/main.c.56.o build/src/c/modules/comm.c.56.o build/src/c/modules/data.c.56.o build/src/c/modules/health.c.56.o build/src/c/modules/scalable.c.56.o build/src/c/modules/slots.c.56.o build/src/c/windows/main_window.c.56.o build/basalt/appinfo.auto.c.56.o build/basalt/src/resource_ids.auto.c.56.o build/src/message_keys.auto.c.56.o -> build/basalt/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/basalt/pebble-app.elf has a LOAD segment with RWX permissions
+
+[129/129] Processing basalt | memory_usage_report: build/basalt/pebble-app.elf build/basalt/app_resources.pbpack
+-------------------------------------------------------
+BASALT APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10843 bytes / 64.0KB
+Free RAM available (heap):      54693 bytes
+------------------------------------------------------- 
+[143/150] Compiling aplite | c: src/c/modules/data.c -> build/src/c/modules/data.c.57.o
+[154/166] Compiling gabbro | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/gabbro/pebble-app.raw.bin: build/gabbro/pebble-app.elf -> build/gabbro/pebble-app.raw.bin
+[155/166] Compiling emery | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/emery/pebble-app.raw.bin: build/emery/pebble-app.elf -> build/emery/pebble-app.raw.bin
+[160/166] Compiling chalk | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/chalk/pebble-app.raw.bin: build/chalk/pebble-app.elf -> build/chalk/pebble-app.raw.bin
+[161/166] Compiling basalt | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/basalt/pebble-app.raw.bin: build/basalt/pebble-app.elf -> build/basalt/pebble-app.raw.bin
+[162/166] Processing gabbro | inject-metadata: build/gabbro/pebble-app.raw.bin build/gabbro/pebble-app.elf build/gabbro/app_resources.pbpack -> build/gabbro/pebble-app.bin
+[163/166] Processing emery | inject-metadata: build/emery/pebble-app.raw.bin build/emery/pebble-app.elf build/emery/app_resources.pbpack -> build/emery/pebble-app.bin
+[164/166] Processing basalt | inject-metadata: build/basalt/pebble-app.raw.bin build/basalt/pebble-app.elf build/basalt/app_resources.pbpack -> build/basalt/pebble-app.bin
+[165/166] Processing chalk | inject-metadata: build/chalk/pebble-app.raw.bin build/chalk/pebble-app.elf build/chalk/app_resources.pbpack -> build/chalk/pebble-app.bin
+[166/166] Creating app_bundle:  -> build/thin-plus.pbw
+Waf: Leaving directory `/tmp/thin-plus-release-t2dzre_1/thin-plus/build'
+'build' finished successfully (1.257s)
+
+COMMAND: pebble install --emulator emery build/thin-plus.pbw
+Installing app...
+App install succeeded.
+
+COMMAND: pebble emu-battery --emulator emery --percent 80
+
+COMMAND: pebble emu-steps --emulator emery 6432
+
+COMMAND: pebble emu-tap --emulator emery
+
+COMMAND: pebble screenshot --emulator emery --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/screenshots/emery-02-neon.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]  15.7 KiB/s 0:00:00
+N/A%[=                                                    ] 146.0 KiB/s 0:00:00
+N/A%[=                                                    ] 144.9 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/screenshots/emery-02-neon.png

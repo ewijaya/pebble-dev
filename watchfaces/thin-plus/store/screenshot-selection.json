@@ -1,0 +1,463 @@
+{
+  "instruction": "An assortment of minimalistic, medium-richness and super-rich screenshots.",
+  "captures": [
+    {
+      "platform": "emery",
+      "file": "emery-01-classic-minimal.png",
+      "level": "minimal",
+      "sha256": "685088e0bc29b1282fe39b66dc2e7519b3c901a781514ae3a99f5f7141c7261e",
+      "configuration": {
+        "ColorBackground": "000000",
+        "ColorHourMinutes": "AAAAAA",
+        "ColorSeconds": "AA0000",
+        "ColorNotches": "FFFFFF",
+        "ColorMonthDay": "FFAA00",
+        "ColorDate": "FFFFFF",
+        "ColorHandTips": "FFFFFF",
+        "ColorCenterDot": "AA0000",
+        "ColorSecondTip": "FFAA00",
+        "ColorBatteryEmpty": "555555",
+        "Theme": "custom",
+        "EnableDate": false,
+        "EnableBT": false,
+        "EnableBattery": false,
+        "EnableSecondHand": true,
+        "EnableThickHands": false,
+        "SlotTop": "0",
+        "SlotLeft": "0",
+        "SlotBottom": "0"
+      },
+      "capture_source": "../revisions/classic-red-center/provenance.json",
+      "appearance": "Classic colors with dark-red center dot and visible seconds hand; no complications or date"
+    },
+    {
+      "platform": "emery",
+      "file": "emery-02-neon-date-only.png",
+      "level": "light",
+      "sha256": "13a240dbdd4064d787875a2a27941e7f6a3f1407359703b1e7c44df5eededa40",
+      "configuration": {
+        "platform": "emery",
+        "name": "emery-02-neon-date-only",
+        "theme": "neon",
+        "slots": [
+          "None",
+          "None",
+          "None"
+        ],
+        "date": true,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "emery-02-neon-date-only.png",
+        "sha256": "13a240dbdd4064d787875a2a27941e7f6a3f1407359703b1e7c44df5eededa40",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "minimal-screenshot-provenance.json"
+    },
+    {
+      "platform": "emery",
+      "file": "emery-03-ocean-medium.png",
+      "level": "medium",
+      "sha256": "2ce3c1abbcacbed014ba0eb1009378eb945165ee776684a52d051f5e9dd73164",
+      "configuration": {
+        "platform": "emery",
+        "name": "emery-03-ocean-medium",
+        "theme": "ocean",
+        "slots": [
+          "Time",
+          "None",
+          "Steps"
+        ],
+        "date": false,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "emery-03-ocean-medium.png",
+        "sha256": "2ce3c1abbcacbed014ba0eb1009378eb945165ee776684a52d051f5e9dd73164",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "medium-screenshot-provenance.json"
+    },
+    {
+      "platform": "emery",
+      "file": "emery-04-paper-rich.png",
+      "level": "rich",
+      "sha256": "7bf647bef5ed9dcf60c0319fd94cf8fe8ffa7b610301fff40d5d83cb8caeaea2",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "emery-04-paper.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    },
+    {
+      "platform": "emery",
+      "file": "emery-05-sunset-rich.png",
+      "level": "rich",
+      "sha256": "1aa8dd6d488435e15938be0f2b9ac611eb5b27cefdc18ff47cd95a70991d3453",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "emery-06-sunset-thick-40.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    },
+    {
+      "platform": "gabbro",
+      "file": "gabbro-classic-minimal.png",
+      "level": "minimal",
+      "sha256": "264b9135b6b7cf418a5b077b5eff5ed3f60056341e87a5944fadab735625db44",
+      "configuration": {
+        "platform": "gabbro",
+        "name": "gabbro-classic-minimal",
+        "theme": "classic",
+        "slots": [
+          "None",
+          "None",
+          "None"
+        ],
+        "date": false,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "gabbro-classic-minimal.png",
+        "sha256": "264b9135b6b7cf418a5b077b5eff5ed3f60056341e87a5944fadab735625db44",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "minimal-screenshot-provenance.json"
+    },
+    {
+      "platform": "gabbro",
+      "file": "gabbro-classic-medium.png",
+      "level": "medium",
+      "sha256": "a5f6f1b0e8552dfd74567e90a3ea89395e600f0af469620451f2d1e24648ef59",
+      "configuration": {
+        "platform": "gabbro",
+        "name": "gabbro-classic-medium",
+        "theme": "classic",
+        "slots": [
+          "Time",
+          "None",
+          "None"
+        ],
+        "date": true,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "gabbro-classic-medium.png",
+        "sha256": "a5f6f1b0e8552dfd74567e90a3ea89395e600f0af469620451f2d1e24648ef59",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "medium-screenshot-provenance.json"
+    },
+    {
+      "platform": "gabbro",
+      "file": "gabbro-classic-rich.png",
+      "level": "rich",
+      "sha256": "8127db90ea4f648661383be559b8dffba2e85ccb6ccdc7288411dcda21876a15",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "gabbro-classic.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    },
+    {
+      "platform": "chalk",
+      "file": "chalk-classic-minimal.png",
+      "level": "minimal",
+      "sha256": "c29ef5ecf2ac6de763e79db2aaa9169b4e305690cc20cb384c6e19988c04b9e2",
+      "configuration": {
+        "platform": "chalk",
+        "name": "chalk-classic-minimal",
+        "theme": "classic",
+        "slots": [
+          "None",
+          "None",
+          "None"
+        ],
+        "date": false,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "chalk-classic-minimal.png",
+        "sha256": "c29ef5ecf2ac6de763e79db2aaa9169b4e305690cc20cb384c6e19988c04b9e2",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "minimal-screenshot-provenance.json"
+    },
+    {
+      "platform": "chalk",
+      "file": "chalk-classic-medium.png",
+      "level": "medium",
+      "sha256": "b410079cecdda8ecb60e616305e43f90c75968849fdfda710856f182870d2825",
+      "configuration": {
+        "platform": "chalk",
+        "name": "chalk-classic-medium",
+        "theme": "classic",
+        "slots": [
+          "Time",
+          "None",
+          "None"
+        ],
+        "date": true,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "chalk-classic-medium.png",
+        "sha256": "b410079cecdda8ecb60e616305e43f90c75968849fdfda710856f182870d2825",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "medium-screenshot-provenance.json"
+    },
+    {
+      "platform": "chalk",
+      "file": "chalk-classic-rich.png",
+      "level": "rich",
+      "sha256": "20d23fd7e0278ab9a11f6bc151bcec1048426172b8c15db43bec3eb7d0c10753",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "chalk-classic.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    },
+    {
+      "platform": "basalt",
+      "file": "basalt-classic-minimal.png",
+      "level": "minimal",
+      "sha256": "90d2e46af92ea1aa9ce5cff04082323b3d04f13d829a7cdf4b751c938c7ba506",
+      "configuration": {
+        "platform": "basalt",
+        "name": "basalt-classic-minimal",
+        "theme": "classic",
+        "slots": [
+          "None",
+          "None",
+          "None"
+        ],
+        "date": false,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "basalt-classic-minimal.png",
+        "sha256": "90d2e46af92ea1aa9ce5cff04082323b3d04f13d829a7cdf4b751c938c7ba506",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "minimal-screenshot-provenance.json"
+    },
+    {
+      "platform": "basalt",
+      "file": "basalt-classic-medium.png",
+      "level": "medium",
+      "sha256": "c9037216b413fb1fd3545dbae479eaebbe53aaa6c22814af4ea0843eea383275",
+      "configuration": {
+        "platform": "basalt",
+        "name": "basalt-classic-medium",
+        "theme": "classic",
+        "slots": [
+          "Time",
+          "None",
+          "None"
+        ],
+        "date": true,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "basalt-classic-medium.png",
+        "sha256": "c9037216b413fb1fd3545dbae479eaebbe53aaa6c22814af4ea0843eea383275",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "medium-screenshot-provenance.json"
+    },
+    {
+      "platform": "basalt",
+      "file": "basalt-classic-rich.png",
+      "level": "rich",
+      "sha256": "616bf5ee5419440a672e9c371da0d9bfb4213611e31a2ca7ea0064cd709117d8",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "basalt-classic.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    },
+    {
+      "platform": "aplite",
+      "file": "aplite-classic-minimal.png",
+      "level": "minimal",
+      "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "configuration": {
+        "platform": "aplite",
+        "name": "aplite-classic-minimal",
+        "theme": "classic",
+        "slots": [
+          "None",
+          "None",
+          "None"
+        ],
+        "date": false,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "aplite-classic-minimal.png",
+        "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "minimal-screenshot-provenance.json"
+    },
+    {
+      "platform": "aplite",
+      "file": "aplite-classic-medium.png",
+      "level": "medium",
+      "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "configuration": {
+        "platform": "aplite",
+        "name": "aplite-classic-medium",
+        "theme": "classic",
+        "slots": [
+          "Time",
+          "None",
+          "None"
+        ],
+        "date": true,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "aplite-classic-medium.png",
+        "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "medium-screenshot-provenance.json"
+    },
+    {
+      "platform": "aplite",
+      "file": "aplite-classic-rich.png",
+      "level": "rich",
+      "sha256": "a24ad417f1f5282afa64eb3481ce536049468ea775aac6c215d6c4116052fc38",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "aplite-classic.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    },
+    {
+      "platform": "diorite",
+      "file": "diorite-classic-minimal.png",
+      "level": "minimal",
+      "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "configuration": {
+        "platform": "diorite",
+        "name": "diorite-classic-minimal",
+        "theme": "classic",
+        "slots": [
+          "None",
+          "None",
+          "None"
+        ],
+        "date": false,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "diorite-classic-minimal.png",
+        "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "minimal-screenshot-provenance.json"
+    },
+    {
+      "platform": "diorite",
+      "file": "diorite-classic-medium.png",
+      "level": "medium",
+      "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "configuration": {
+        "platform": "diorite",
+        "name": "diorite-classic-medium",
+        "theme": "classic",
+        "slots": [
+          "Time",
+          "None",
+          "None"
+        ],
+        "date": true,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "diorite-classic-medium.png",
+        "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "medium-screenshot-provenance.json"
+    },
+    {
+      "platform": "diorite",
+      "file": "diorite-classic-rich.png",
+      "level": "rich",
+      "sha256": "2d9507a648e610f3dd741ec3098275ed32aefa9045ca57cc9277316e3731ece2",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "diorite-classic.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    },
+    {
+      "platform": "flint",
+      "file": "flint-classic-minimal.png",
+      "level": "minimal",
+      "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "configuration": {
+        "platform": "flint",
+        "name": "flint-classic-minimal",
+        "theme": "classic",
+        "slots": [
+          "None",
+          "None",
+          "None"
+        ],
+        "date": false,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "flint-classic-minimal.png",
+        "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "minimal-screenshot-provenance.json"
+    },
+    {
+      "platform": "flint",
+      "file": "flint-classic-medium.png",
+      "level": "medium",
+      "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "configuration": {
+        "platform": "flint",
+        "name": "flint-classic-medium",
+        "theme": "classic",
+        "slots": [
+          "Time",
+          "None",
+          "None"
+        ],
+        "date": true,
+        "seconds": false,
+        "thick": false,
+        "battery_markers": false,
+        "battery": 80,
+        "file": "flint-classic-medium.png",
+        "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+        "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+      },
+      "capture_source": "medium-screenshot-provenance.json"
+    },
+    {
+      "platform": "flint",
+      "file": "flint-classic-rich.png",
+      "level": "rich",
+      "sha256": "e56181de53a8888d425ba8567717c14e03876ea98a9ce1dde58a50a0c2ed5e03",
+      "capture_source": "screenshot-provenance.json",
+      "original_file": "flint-classic.png",
+      "configuration": "Top digital time, left battery, bottom steps where supported, date and battery markers; Sunset also has thick hands and 40% battery. Native emulator image, copied without edits."
+    }
+  ],
+  "count": 23,
+  "emery_count": 5,
+  "other_platform_count_each": 3,
+  "screenshots_native_unscaled": true,
+  "pbw_sha256": "15e75184f8381cc19a94fbbcd192323251a2ae9bd0cf5e1676d64b22c50131fd",
+  "release_version": "1.1.0",
+  "artwork_reused": "Approved 1.0.0 gallery and Classic dark-red-center amendment; presentation behavior unchanged in 1.1.0."
+}

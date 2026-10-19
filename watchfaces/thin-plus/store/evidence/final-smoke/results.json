@@ -1,0 +1,96 @@
+{
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "platforms": [
+    {
+      "platform": "aplite",
+      "install": "passed",
+      "default_render": "visually inspected; passed",
+      "size": [
+        144,
+        168
+      ],
+      "log_start_utc": "2026-10-19T03:53:19Z",
+      "log_end_utc": "2026-10-19T03:53:46Z",
+      "runtime_log_bytes": 0,
+      "crash_messages": 0
+    },
+    {
+      "platform": "basalt",
+      "install": "passed",
+      "default_render": "visually inspected; passed",
+      "size": [
+        144,
+        168
+      ],
+      "log_start_utc": "2026-10-19T03:53:53Z",
+      "log_end_utc": "2026-10-19T03:54:20Z",
+      "runtime_log_bytes": 0,
+      "crash_messages": 0
+    },
+    {
+      "platform": "chalk",
+      "install": "passed",
+      "default_render": "visually inspected; passed",
+      "size": [
+        180,
+        180
+      ],
+      "log_start_utc": "2026-10-19T03:54:27Z",
+      "log_end_utc": "2026-10-19T03:54:53Z",
+      "runtime_log_bytes": 0,
+      "crash_messages": 0
+    },
+    {
+      "platform": "diorite",
+      "install": "passed",
+      "default_render": "visually inspected; passed",
+      "size": [
+        144,
+        168
+      ],
+      "log_start_utc": "2026-10-19T03:55:01Z",
+      "log_end_utc": "2026-10-19T03:55:27Z",
+      "runtime_log_bytes": 0,
+      "crash_messages": 0
+    },
+    {
+      "platform": "emery",
+      "install": "passed",
+      "default_render": "visually inspected; passed",
+      "size": [
+        200,
+        228
+      ],
+      "log_start_utc": "2026-10-19T03:55:33Z",
+      "log_end_utc": "2026-10-19T03:56:00Z",
+      "runtime_log_bytes": 0,
+      "crash_messages": 0
+    },
+    {
+      "platform": "flint",
+      "install": "passed",
+      "default_render": "visually inspected; passed",
+      "size": [
+        144,
+        168
+      ],
+      "log_start_utc": "2026-10-19T03:56:05Z",
+      "log_end_utc": "2026-10-19T03:56:31Z",
+      "runtime_log_bytes": 0,
+      "crash_messages": 0
+    },
+    {
+      "platform": "gabbro",
+      "install": "passed",
+      "default_render": "visually inspected; passed",
+      "size": [
+        260,
+        260
+      ],
+      "log_start_utc": "2026-10-19T03:56:36Z",
+      "log_end_utc": "2026-10-19T03:57:02Z",
+      "runtime_log_bytes": 0,
+      "crash_messages": 0
+    }
+  ]
+}

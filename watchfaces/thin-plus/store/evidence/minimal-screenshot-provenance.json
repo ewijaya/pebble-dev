@@ -1,0 +1,207 @@
+{
+  "scratch_path": "/tmp/thin-plus-minimal-34579bur/thin-plus",
+  "scratch_data_restored": true,
+  "production_data_unchanged": true,
+  "production_pbw_unchanged": true,
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "captures": [
+    {
+      "platform": "emery",
+      "name": "emery-01-classic-minimal",
+      "theme": "classic",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "emery-01-classic-minimal.png",
+      "sha256": "a282f996c6e8cfc3393908390247a2e3cf071603037a7e9d3e6766024e186b61",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "emery",
+      "name": "emery-02-neon-date-only",
+      "theme": "neon",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": true,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "emery-02-neon-date-only.png",
+      "sha256": "13a240dbdd4064d787875a2a27941e7f6a3f1407359703b1e7c44df5eededa40",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "emery",
+      "name": "emery-03-ocean-steps-only",
+      "theme": "ocean",
+      "slots": [
+        "None",
+        "None",
+        "Steps"
+      ],
+      "date": false,
+      "seconds": true,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "emery-03-ocean-steps-only.png",
+      "sha256": "7c08d6c2f49f4427cc1d4ff2b2fbc6050e963045ed5ff8362967f100e45480c1",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "emery",
+      "name": "emery-04-paper-digital-only",
+      "theme": "paper",
+      "slots": [
+        "Time",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "emery-04-paper-digital-only.png",
+      "sha256": "d3aa05af60c74f1c837a98be02d6bacc1621e2f64673c3f57943914882a4feff",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "emery",
+      "name": "emery-05-sunset-battery-only",
+      "theme": "sunset",
+      "slots": [
+        "None",
+        "Battery",
+        "None"
+      ],
+      "date": false,
+      "seconds": true,
+      "thick": true,
+      "battery_markers": true,
+      "battery": 40,
+      "file": "emery-05-sunset-battery-only.png",
+      "sha256": "53da1860448139bd89bf35b662372cfe12b9ec5c741575d4062fbeed7b2cb78a",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "gabbro",
+      "name": "gabbro-classic-minimal",
+      "theme": "classic",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "gabbro-classic-minimal.png",
+      "sha256": "264b9135b6b7cf418a5b077b5eff5ed3f60056341e87a5944fadab735625db44",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "chalk",
+      "name": "chalk-classic-minimal",
+      "theme": "classic",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "chalk-classic-minimal.png",
+      "sha256": "c29ef5ecf2ac6de763e79db2aaa9169b4e305690cc20cb384c6e19988c04b9e2",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "basalt",
+      "name": "basalt-classic-minimal",
+      "theme": "classic",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "basalt-classic-minimal.png",
+      "sha256": "90d2e46af92ea1aa9ce5cff04082323b3d04f13d829a7cdf4b751c938c7ba506",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "aplite",
+      "name": "aplite-classic-minimal",
+      "theme": "classic",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "aplite-classic-minimal.png",
+      "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "diorite",
+      "name": "diorite-classic-minimal",
+      "theme": "classic",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "diorite-classic-minimal.png",
+      "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "flint",
+      "name": "flint-classic-minimal",
+      "theme": "classic",
+      "slots": [
+        "None",
+        "None",
+        "None"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "flint-classic-minimal.png",
+      "sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    }
+  ]
+}

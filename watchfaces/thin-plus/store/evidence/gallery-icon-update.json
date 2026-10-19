@@ -1,0 +1,114 @@
+{
+  "instructions": [
+    "Use minimalistic, medium-richness and super-rich screenshots.",
+    "Use a rectangular PT2-style store icon instead of a circular dial."
+  ],
+  "screenshot_selection": "../screenshot-selection.json",
+  "screenshot_counts": {
+    "emery": 5,
+    "basalt": 3,
+    "gabbro": 3,
+    "diorite": 3,
+    "chalk": 3,
+    "aplite": 3,
+    "flint": 3
+  },
+  "store_icons": [
+    {
+      "asset": "icon_small",
+      "local_path": "store/icons/thin-plus-80.png",
+      "downloaded_sha256": "3081ef519f082c4fd4b66ec45ceff733d3296a0006a459864529090d06e7d894",
+      "local_sha256": "0548b561741985fe09f9fe710c3964b544881e784e04b365b3ac3f636188961d",
+      "bytes": 904,
+      "bytes_match": false,
+      "dimensions": [
+        80,
+        80
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.26125,
+        0.27484375,
+        0.3246875
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "icon_large",
+      "local_path": "store/icons/thin-plus-144.png",
+      "downloaded_sha256": "9a40ef6723ce955372ae1b077453c603018790f30336413e11b64f41b85a33b1",
+      "local_sha256": "e6e23f82d151acc0c1ebcaaf8501aaccdab0f58402002d747723f9f4b77bd283",
+      "bytes": 1195,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        144
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.17525077160493827,
+        0.20032793209876543,
+        0.2609471450617284
+      ],
+      "alpha_matches": true
+    }
+  ],
+  "all_uploaded_images_visually_reviewed": true,
+  "public_platform_checks": [
+    {
+      "platform": "emery",
+      "screenshot_count": 5,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "gabbro",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "chalk",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "basalt",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "aplite",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "diorite",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "flint",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    }
+  ],
+  "public_page_check": {
+    "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+    "status": 200,
+    "exact_credit_present": true,
+    "old_credit_absent": true
+  },
+  "banner_tagline": "The Thin you love. More ways to make it yours.",
+  "credit": "Based on Thin by Chris Lewis.",
+  "pbw_unchanged": true,
+  "embedded_menu_icon_unchanged": true,
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "visible": false,
+  "unlisted": true,
+  "is_published": false,
+  "commit_push_tag_performed": false
+}

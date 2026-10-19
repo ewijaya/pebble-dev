@@ -1,0 +1,99 @@
+{
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "release_id": "c652f752f6254eb694d76511",
+  "credit": "Based on Thin by Chris Lewis.",
+  "tagline": "The Thin you love. More ways to make it yours.",
+  "dashboard_text_fields_audited": 9,
+  "dashboard_all_exact_credit": true,
+  "banner": {
+    "asset": "emery banner",
+    "local_path": "store/banner-emery-720x320.png",
+    "bytes": 3139,
+    "downloaded_sha256": "0a22a2fd2a040b2c6482a0ee07aa711a109278f14ed2244d0c90fef300c296f6",
+    "local_sha256": "c76821402b87f5e6462930383a1fffdea0e3df3420bc3ce18c109db0448a4f3d",
+    "dimensions": [
+      720,
+      320
+    ],
+    "visible_channel_mean_absolute_error_0_255": [
+      0.06274739583333333,
+      0.05171875,
+      0.053307291666666666
+    ],
+    "native_screenshot_preserved_locally": true,
+    "visually_verified": true
+  },
+  "visible": false,
+  "unlisted": true,
+  "is_published": false,
+  "public_checks": [
+    {
+      "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "exact_credit_present": false,
+      "old_credit_absent": true,
+      "minimal_copy_present": true,
+      "cache": {
+        "Date": "Mon, 19 Oct 2026 04:18:49 GMT",
+        "Age": "0",
+        "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS"
+      }
+    },
+    {
+      "url": "https://appstore-api.repebble.com/api/v1/apps/id/b0a4b28dbe9440c3b19f68e3?revision=1792383529",
+      "status": 200,
+      "exact_credit_present": true,
+      "old_credit_absent": true,
+      "minimal_copy_present": true,
+      "cache": {
+        "Age": "0",
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=300",
+        "Date": "Mon, 19 Oct 2026 04:18:49 GMT",
+        "X-Vercel-Cache": "MISS"
+      }
+    }
+  ],
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "local_text_audit": {
+    "README.md": "credit already ended with a full stop",
+    "store/listing.md": "description and release notes corrected",
+    "docs/PRD-appstore-release.md": "credit requirement corrected; minimal screenshots and selected tagline documented",
+    "store/tools/draw-banner.py": "exact chosen tagline, including both full stops",
+    "historical_evidence": "prior payloads and quoted user instructions retained as historical records"
+  },
+  "public_checks_latest": [
+    {
+      "url": "https://appstore-api.repebble.com/api/v1/apps/id/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "exact_credit_present": false,
+      "old_credit_absent": true,
+      "minimal_copy_present": false,
+      "cache": {
+        "Age": "462",
+        "Date": "Mon, 19 Oct 2026 04:12:36 GMT",
+        "X-Vercel-Cache": "STALE"
+      }
+    },
+    {
+      "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "exact_credit_present": false,
+      "old_credit_absent": true,
+      "minimal_copy_present": true,
+      "cache": {
+        "Date": "Mon, 19 Oct 2026 04:20:18 GMT",
+        "Age": "0",
+        "x-vercel-cache": "MISS"
+      }
+    }
+  ],
+  "public_checks_final": [
+    {
+      "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "exact_credit_present": true,
+      "old_credit_absent": true
+    }
+  ]
+}

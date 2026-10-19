@@ -1,0 +1,40 @@
+{
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "reason": "Creation skipped watchface icon fields; edit endpoint accepts them. Dashboard list renders icon_small, with a gray placeholder when null.",
+  "icons": [
+    {
+      "field": "icon_small",
+      "url": "/api/assets/icons/b0a4b28dbe9440c3b19f68e3/small/bd3da8b5-1d17-4415-bf84-25d9e83592a9.png",
+      "size": [
+        80,
+        80
+      ],
+      "downloaded_sha256": "5e2493a3486809c11d4c87b177e1986f44e4ecd7c75065fd37d9734e9a0d3a5b",
+      "visible_channel_mean_absolute_error_0_255": [
+        0.3125,
+        0.3109375,
+        0.3375
+      ]
+    },
+    {
+      "field": "icon_large",
+      "url": "/api/assets/icons/b0a4b28dbe9440c3b19f68e3/large/ab569d32-bb9f-49b4-a475-bd4200d9c308.png",
+      "size": [
+        144,
+        144
+      ],
+      "downloaded_sha256": "eab57ce7b2b5f4dcf84ce50b85d1b6a93990a2f2ef855c5c946119047de5996b",
+      "visible_channel_mean_absolute_error_0_255": [
+        0.2013888888888889,
+        0.22313850308641975,
+        0.2495659722222222
+      ]
+    }
+  ],
+  "dashboard_list_icon_verified": true,
+  "other_assets_and_release_unchanged": true,
+  "visible": false,
+  "unlisted": true,
+  "is_published": false,
+  "visually_verified": true
+}

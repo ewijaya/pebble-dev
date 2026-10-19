@@ -36,6 +36,7 @@ module.exports = [
         "type": "toggle",
         "label": "Show battery level (hour markers)",
         "messageKey": "EnableBattery",
+        "description": "Hour marks around the edge dim as the battery drains. Turn off to keep every mark in its normal color.",
         "defaultValue": true
       },
       {
@@ -79,6 +80,13 @@ module.exports = [
         "messageKey": "SlotBottom",
         "defaultValue": "1",
         "options": slotOptions
+      },
+      {
+        "type": "toggle",
+        "label": "Show battery percentage only below 20%",
+        "messageKey": "BatteryOnlyWhenLow",
+        "description": "Applies to top, left or bottom slots set to Battery. Hidden at 20% or higher. Hour markers are controlled separately.",
+        "defaultValue": false
       }
     ]
   },

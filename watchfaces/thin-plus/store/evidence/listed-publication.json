@@ -1,0 +1,19 @@
+{
+  "authorization": "confirm... make the list  listing publicly listed",
+  "gate_b": "Owner confirmed PT2 store-install/settings/theme test in response to the requested check.",
+  "gate_b_evidence_type": "owner-reported; not independently observed",
+  "gate_c": "explicitly authorized and completed",
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "release_id": "c652f752f6254eb694d76511",
+  "version": "1.0.0",
+  "visible": true,
+  "unlisted": false,
+  "is_published": true,
+  "other_metadata_assets_and_release_unchanged": true,
+  "public_url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+  "commit_push_tag_performed": false,
+  "public_api_visible": true,
+  "public_release_verified": true,
+  "public_pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "public_pbw_bytes": 519559
+}

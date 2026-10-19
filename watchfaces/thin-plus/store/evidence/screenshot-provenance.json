@@ -1,0 +1,187 @@
+{
+  "scratch_path": "/tmp/thin-plus-release-ecnlvz0q/thin-plus",
+  "scratch_data_restored": true,
+  "production_data_unchanged": true,
+  "captures": [
+    {
+      "file": "emery-01-classic.png",
+      "platform": "emery",
+      "theme": "classic",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "previous capture from restored scratch /tmp/thin-plus-release-t2dzre_1/thin-plus"
+    },
+    {
+      "file": "emery-02-neon.png",
+      "platform": "emery",
+      "theme": "neon",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "previous capture from restored scratch /tmp/thin-plus-release-t2dzre_1/thin-plus"
+    },
+    {
+      "file": "emery-03-ocean.png",
+      "platform": "emery",
+      "theme": "ocean",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "previous capture from restored scratch /tmp/thin-plus-release-t2dzre_1/thin-plus"
+    },
+    {
+      "file": "emery-04-paper.png",
+      "platform": "emery",
+      "theme": "paper",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "previous capture from restored scratch /tmp/thin-plus-release-t2dzre_1/thin-plus"
+    },
+    {
+      "file": "emery-05-sunset.png",
+      "platform": "emery",
+      "theme": "sunset",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    },
+    {
+      "file": "emery-06-sunset-thick-40.png",
+      "platform": "emery",
+      "theme": "sunset",
+      "thick_hands": true,
+      "battery_percent": 40,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    },
+    {
+      "file": "gabbro-classic.png",
+      "platform": "gabbro",
+      "theme": "classic",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    },
+    {
+      "file": "chalk-classic.png",
+      "platform": "chalk",
+      "theme": "classic",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    },
+    {
+      "file": "basalt-classic.png",
+      "platform": "basalt",
+      "theme": "classic",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    },
+    {
+      "file": "aplite-classic.png",
+      "platform": "aplite",
+      "theme": "classic",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": null,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    },
+    {
+      "file": "diorite-classic.png",
+      "platform": "diorite",
+      "theme": "classic",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    },
+    {
+      "file": "flint-classic.png",
+      "platform": "flint",
+      "theme": "classic",
+      "thick_hands": false,
+      "battery_percent": 80,
+      "steps_input": 6432,
+      "slots": [
+        "digital time",
+        "battery",
+        "steps"
+      ],
+      "capture": "native emulator PNG; no image edits; live emulator clock",
+      "source": "scratch copy with TEMP_TEST getter overrides"
+    }
+  ]
+}

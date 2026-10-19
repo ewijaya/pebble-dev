@@ -1,0 +1,14 @@
+{
+  "version": "1.1.0",
+  "release_id": "0e3dc4efd60e460586b8dff5",
+  "is_published": true,
+  "visible": true,
+  "unlisted": false,
+  "pbw_sha256": "15e75184f8381cc19a94fbbcd192323251a2ae9bd0cf5e1676d64b22c50131fd",
+  "pbw_bytes": 521806,
+  "verification": "../releases/1.1.0/publication-verification.json",
+  "previous_release_verification": "../releases/1.0.0/store-verification.json",
+  "artwork_verification": "../revisions/classic-red-center/verification.json",
+  "physical_pt2_status": "Pending owner check for 1.1.0; 1.0.0 confirmation is historical",
+  "canonical_page_verified": true
+}

@@ -1,0 +1,40 @@
+
+COMMAND: pebble kill
+
+COMMAND: pebble install --emulator basalt /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/dist/releases/1.1.0/thin-plus.pbw
+Installing app...
+App install succeeded.
+
+COMMAND: pebble send-app-message --emulator basalt --app-uuid 0e83e240-01b8-469b-a51b-b2a0e767fefb --int 10002=1 10003=1 10000=1 10001=1 10014=0 10020=0 10005=0 10006=11184810 10007=11141120 10018=16755200 10008=16777215 10019=5592405 10016=16777215 10017=16777215 10009=16755200 10010=16777215 --string 10011=0 10012=0 10013=1 10015=classic
+
+COMMAND: pebble screenshot --emulator basalt --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-defaults.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]   3.9 KiB/s 0:00:00
+N/A%[=                                                    ]  39.6 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-defaults.png
+
+COMMAND: pebble send-app-message --emulator basalt --app-uuid 0e83e240-01b8-469b-a51b-b2a0e767fefb --int 10002=0 10003=0 10000=0 10001=0 10014=0 10020=1 10005=0 10006=11184810 10007=11141120 10018=16755200 10008=16777215 10019=5592405 10016=16777215 10017=16777215 10009=16755200 10010=16777215 --string 10011=3 10012=3 10013=3 10015=classic
+
+COMMAND: pebble emu-battery --emulator basalt --percent 20
+
+COMMAND: pebble screenshot --emulator basalt --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-20-hidden.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]   4.9 KiB/s 0:00:00
+N/A%[=                                                    ]  50.0 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-20-hidden.png
+
+COMMAND: pebble emu-battery --emulator basalt --percent 10
+
+COMMAND: pebble screenshot --emulator basalt --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-10-visible.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]   5.1 KiB/s 0:00:00
+N/A%[=                                                    ]  51.6 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-10-visible.png
+
+COMMAND: pebble emu-battery --emulator basalt --percent 20
+
+COMMAND: pebble screenshot --emulator basalt --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-20-hidden-again.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]   4.6 KiB/s 0:00:00
+N/A%[=                                                    ]  46.5 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/basalt-20-hidden-again.png

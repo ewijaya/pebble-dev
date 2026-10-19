@@ -1,0 +1,23 @@
+Use case: ads-marketing / compositing. Produce ONE finished portrait 4:5 promotional carousel slide, 03 of 03, for Thin+. Match the elegant charcoal studio background, white clean sans-serif typography, orange plus accent, and realistic silver Pebble Time 2 cases of input 1.
+Input 1: slide 1, visual brand/style reference only.
+Input 2: actual Thin+ screenshot contact sheet with five labeled themes: Classic, Neon, Ocean, Paper, Sunset. Use their real color schemes and hand/marker designs, but remove date and complication text for this minimal seven-theme showcase.
+Input 3: actual Lime theme screenshot.
+Input 4: actual Mono theme screenshot.
+Input 5: official PT2 hardware reference, silver rectangular case with black strap, exactly three buttons on the right and ONE back button on the left. No invented lower-left extra button.
+Together these cover all seven actual themes. Treat them as screen-content references, not inspiration to invent new dials. Preserve the rectangular edge markers and colors. Normalize all screens to the same 10:10 analog hand position and seconds near 35, as in the Lime and Mono screenshots. Do not turn rectangular dial layouts into circular faces.
+Scene and composition: show all SEVEN themes exactly once in a beautifully ordered editorial collection. One slightly larger Classic watch centered on a top row, three watches on a second row (Neon, Ocean, Sunset), three watches on a third row (Lime, Mono, Paper). Silver cases and black straps throughout; the screen colors supply the variety. Use nearly frontal views, consistent scale within rows, ample spacing, natural soft shadows, legible watchfaces and discreet consistent labels directly below each corresponding watch. Keep the straps short/curved behind the cases so every screen gets adequate space. The grouping should fill the image without feeling cluttered.
+Exact screen appearance:
+Classic: black background, gray/white hour and minute hands, DARK RED center and seconds, orange seconds tip.
+Neon: black background, cyan hour/minute hands, magenta seconds.
+Ocean: deep blue background, cyan hour/minute hands, orange seconds.
+Sunset: dark burgundy background, warm orange hour/minute hands, coral-red seconds.
+Lime: black background, green hour/minute hands, pink-red seconds.
+Mono: black background, gray/white hands and WHITE seconds; white center.
+Paper: white background, dark gray/black hands and markers, red seconds with blue tip, black center.
+All seven show only hands and markers, no complication numbers, dates or dial numerals. Maintain authentic e-paper colors as shown in the captures, no luminous neon screen glow.
+Typography: top small "Thin+" with orange plus. Large headline "One face." and "Seven moods." on two lines.
+Theme labels exactly: "Classic", "Neon", "Ocean", "Sunset", "Lime", "Mono", "Paper".
+Bottom small "Free on the Pebble App Store".
+Fine print exactly "Based on Thin by Chris Lewis." including final period.
+Small slide number "03 / 03".
+No other text. Maintain 4:5 portrait layout, balanced margins, faithful non-mirrored PT2 hardware. No fake performance claims, no props or extra watches.

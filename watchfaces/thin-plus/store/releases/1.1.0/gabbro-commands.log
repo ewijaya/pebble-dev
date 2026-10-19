@@ -1,0 +1,51 @@
+
+COMMAND: pebble kill
+
+COMMAND: pebble install --emulator gabbro /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/dist/releases/1.1.0/thin-plus.pbw
+Installing app...
+App install succeeded.
+
+COMMAND: pebble send-app-message --emulator gabbro --app-uuid 0e83e240-01b8-469b-a51b-b2a0e767fefb --int 10002=1 10003=1 10000=1 10001=1 10014=0 10020=0 10005=0 10006=11184810 10007=11141120 10018=16755200 10008=16777215 10019=5592405 10016=16777215 10017=16777215 10009=16755200 10010=16777215 --string 10011=0 10012=0 10013=1 10015=classic
+
+COMMAND: pebble screenshot --emulator gabbro --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-defaults.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]  22.7 KiB/s 0:00:00
+N/A%[=                                                    ] 205.8 KiB/s 0:00:00
+N/A%[=                                                    ] 222.5 KiB/s 0:00:00
+N/A%[=                                                    ] 172.0 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-defaults.png
+
+COMMAND: pebble send-app-message --emulator gabbro --app-uuid 0e83e240-01b8-469b-a51b-b2a0e767fefb --int 10002=0 10003=0 10000=0 10001=0 10014=0 10020=1 10005=0 10006=11184810 10007=11141120 10018=16755200 10008=16777215 10019=5592405 10016=16777215 10017=16777215 10009=16755200 10010=16777215 --string 10011=3 10012=3 10013=3 10015=classic
+
+COMMAND: pebble emu-battery --emulator gabbro --percent 20
+
+COMMAND: pebble screenshot --emulator gabbro --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-20-hidden.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]  23.1 KiB/s 0:00:00
+N/A%[=                                                    ] 208.2 KiB/s 0:00:00
+N/A%[=                                                    ] 219.4 KiB/s 0:00:00
+N/A%[=                                                    ] 165.1 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-20-hidden.png
+
+COMMAND: pebble emu-battery --emulator gabbro --percent 19
+
+COMMAND: pebble screenshot --emulator gabbro --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-19-visible.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]  22.9 KiB/s 0:00:00
+N/A%[=                                                    ] 153.9 KiB/s 0:00:00
+N/A%[=                                                    ] 188.2 KiB/s 0:00:00
+N/A%[=                                                    ] 190.6 KiB/s 0:00:00
+N/A%[=                                                    ] 153.8 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-19-visible.png
+
+COMMAND: pebble emu-battery --emulator gabbro --percent 20
+
+COMMAND: pebble screenshot --emulator gabbro --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-20-hidden-again.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]  22.6 KiB/s 0:00:00
+N/A%[=                                                    ] 158.4 KiB/s 0:00:00
+N/A%[=                                                    ] 185.9 KiB/s 0:00:00
+N/A%[=                                                    ] 190.2 KiB/s 0:00:00
+N/A%[=                                                    ] 193.6 KiB/s 0:00:00
+N/A%[=                                                    ] 147.7 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/releases/1.1.0/gabbro-20-hidden-again.png

@@ -1,0 +1,14 @@
+{
+  "http_status": 200,
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "authorization": "User: \"can you do all that progammatically from your side?\" following Gate A approval and the hidden/unlisted setup/upload/read-only-verification handoff.",
+  "requested_visibility": "unlisted",
+  "requested_is_published": false,
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "verification": "passed metadata, seven platform descriptions, 11 screenshot dimensions/order and visual review, banner visual review, and exact PBW SHA-256",
+  "release_id": "c652f752f6254eb694d76511",
+  "verified_visibility": "unlisted",
+  "verified_is_published": false,
+  "dashboard_url": "https://developer.repebble.com/dashboard/apps/b0a4b28dbe9440c3b19f68e3/edit",
+  "credit_update_applied": true
+}

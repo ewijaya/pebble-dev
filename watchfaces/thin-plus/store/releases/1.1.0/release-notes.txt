@@ -1,0 +1,10 @@
+Battery information when you need it.
+
+- New optional setting: show battery percentage only below 20%. Applies to any top, left or bottom complication set to Battery. At 20% or higher, those slots stay blank; below 20%, their percentages appear.
+- The option defaults to off, preserving existing settings and behavior.
+- Battery changes immediately refresh the selected battery complications.
+- Added a clearer explanation of the separate hour-marker battery indicator.
+
+Supports all seven Pebble platforms.
+
+Based on Thin by Chris Lewis.

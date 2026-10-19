@@ -1,0 +1,12 @@
+Use case: ads-marketing / compositing. Make ONE finished portrait 4:5 promotional carousel slide, 02 of 03, for Thin+. Match the typography, charcoal studio setting, warm orange plus branding, photoreal silver metal and black silicone styling of input image 1. This is a polished product mockup, with authentic Pebble Time 2 geometry and faithful actual watchface displays.
+Input 1: previous slide, STYLE AND LAYOUT FAMILY reference only; do not duplicate its headline or mixed themes.
+Input 2: official Pebble Time 2 hardware reference; use silver case, black silicone strap. Three textured buttons are on the RIGHT edge of every watch, one back button on the left; no mirror-flipped hardware.
+Inputs 3,4,5: actual native Thin+ screen captures in order minimal Classic, medium Classic, rich Classic. Preserve these display contents closely. All have black background, gray hands with white tips, dark-red center and seconds hand with orange tip. Same approximately 10:10 analog time in all three. Screen 3 has only hands and rectangular edge hour marks, absolutely no complications/date. Screen 4 adds date on the right (Mon / 19 / Oct) and 6432 at bottom, leaving top and left empty. Screen 5 adds 10:10 at top, 80% at left, 6432 at bottom and date on right. Do not add extra widgets.
+Composition: three equally prominent, large, almost-front-facing silver PT2 watches, side by side across the middle of the portrait composition, with their curved black straps naturally behind them. Make the screens clear and large enough to compare at a glance. Their size, angle, time and colors should match so the information density is the only meaningful difference. Natural ground shadows, gently lit silver cases, black e-paper displays, restrained reflections.
+Type matches slide 1: exact top small brand "Thin+" with orange plus. Big headline across two lines: "How minimal" / "is your minimal?"
+Directly under the corresponding watches, balanced white labels: "Minimal" / "A little more" / "Fully loaded".
+Small supporting line below labels: "Choose what you show."
+Bottom: "Free on the Pebble App Store"
+Fine print exactly: "Based on Thin by Chris Lewis."
+Small slide number: "02 / 03".
+No other copy. No invented feature badges, no colored screen frames, no circular cases, no excessively bright displays or science-fiction effects. Keep real bezel thickness and rectangular display proportions (200:228).

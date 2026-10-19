@@ -1,6 +1,7 @@
 #include "slots.h"
 
 #define VALUE_HEIGHT scl_y_pp({.o = 170, .c = 160, .e = 145, .g = 140})
+#define LOW_BATTERY_PERCENT 20
 
 static void get_slot_text(SlotType type, char *value, size_t size) {
   switch (type) {
@@ -39,6 +40,8 @@ static void get_slot_text(SlotType type, char *value, size_t size) {
 static void draw_slot(GContext *ctx, uint32_t key, GRect value_rect) {
   const SlotType type = data_get_slot(key);
   if (type == SlotTypeNone) return;
+  if (type == SlotTypeBattery && data_get_enable(MESSAGE_KEY_BatteryOnlyWhenLow) &&
+      battery_state_service_peek().charge_percent >= LOW_BATTERY_PERCENT) return;
   if ((type == SlotTypeSteps || type == SlotTypeHeartRate) && !health_is_health_available()) return;
 
   static char s_value[16];

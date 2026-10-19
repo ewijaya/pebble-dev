@@ -1,0 +1,273 @@
+
+COMMAND: pebble build
+
+up to date, audited 4 packages in 562ms
+
+found 0 vulnerabilities
+
+up to date, audited 4 packages in 852ms
+
+found 0 vulnerabilities
+Setting top to                           : /tmp/thin-plus-release-t2dzre_1/thin-plus 
+Setting out to                           : /tmp/thin-plus-release-t2dzre_1/thin-plus/build 
+Checking for program 'webpack'           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/node_modules/.bin/webpack 
+Found Pebble SDK for gabbro in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/gabbro 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for flint in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/flint 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for emery in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/emery 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for diorite in:         : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/diorite 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for chalk in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/chalk 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for basalt in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/basalt 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for aplite in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/aplite 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+'configure' finished successfully (0.259s)
+Waf: Entering directory `/tmp/thin-plus-release-t2dzre_1/thin-plus/build'
+[1/3] Creating message_key_json:  -> build/js/message_keys.json
+[2/3] Creating message_key_definitions:  -> build/src/message_keys.auto.c
+[3/3] Creating message_key_header:  -> build/include/message_keys.auto.h
+[ 4/24] Compiling gabbro | reso: resources/fonts/Gotcha-Gothic.ttf -> build/gabbro/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso
+[ 5/24] Compiling gabbro | reso: resources/images/menu_icon.png -> build/gabbro/resources/images/menu_icon.png.MENU_ICON.reso
+[ 6/24] Creating gabbro | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/gabbro/appinfo.auto.c:  -> build/gabbro/appinfo.auto.c
+[ 7/24] Compiling gabbro | subst: /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/common/pebble_app.ld.template -> build/gabbro/pebble_app.ld.auto
+[ 8/24] Compiling gabbro | c: build/src/message_keys.auto.c -> build/src/message_keys.auto.c.51.o
+[ 9/24] Creating gabbro | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/appinfo.json:  -> build/appinfo.json
+[10/24] Processing gabbro | resource_ball: build/gabbro/resources/images/menu_icon.png.MENU_ICON.reso build/gabbro/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso -> build/gabbro/system_resources.resball
+[11/24] Compiling gabbro | generate_resource_id_definitions: build/gabbro/system_resources.resball -> build/gabbro/src/resource_ids.auto.c
+[12/24] Compiling gabbro | generate_pbpack: build/gabbro/system_resources.resball -> build/gabbro/app_resources.pbpack
+[13/24] Compiling gabbro | generate_resource_id_header: build/gabbro/system_resources.resball -> build/gabbro/src/resource_ids.auto.h
+[14/24] Compiling gabbro | c: src/c/modules/comm.c -> build/src/c/modules/comm.c.51.o
+[15/24] Compiling gabbro | c: src/c/main.c -> build/src/c/main.c.51.o
+[16/24] Compiling gabbro | c: src/c/modules/health.c -> build/src/c/modules/health.c.51.o
+[17/24] Compiling gabbro | c: src/c/windows/main_window.c -> build/src/c/windows/main_window.c.51.o
+[18/24] Compiling gabbro | c: src/c/modules/data.c -> build/src/c/modules/data.c.51.o
+[19/24] Compiling gabbro | c: build/gabbro/src/resource_ids.auto.c -> build/gabbro/src/resource_ids.auto.c.51.o
+[20/24] Compiling gabbro | c: src/c/modules/slots.c -> build/src/c/modules/slots.c.51.o
+[21/24] Compiling gabbro | c: src/c/modules/scalable.c -> build/src/c/modules/scalable.c.51.o
+[22/24] Compiling gabbro | c: build/gabbro/appinfo.auto.c -> build/gabbro/appinfo.auto.c.51.o
+[23/24] Linking gabbro | cprogram: build/src/c/main.c.51.o build/src/c/modules/comm.c.51.o build/src/c/modules/data.c.51.o build/src/c/modules/health.c.51.o build/src/c/modules/scalable.c.51.o build/src/c/modules/slots.c.51.o build/src/c/windows/main_window.c.51.o build/gabbro/appinfo.auto.c.51.o build/gabbro/src/resource_ids.auto.c.51.o build/src/message_keys.auto.c.51.o -> build/gabbro/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/gabbro/pebble-app.elf has a LOAD segment with RWX permissions
+
+[24/24] Processing gabbro | memory_usage_report: build/gabbro/pebble-app.elf build/gabbro/app_resources.pbpack
+-------------------------------------------------------
+GABBRO APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10815 bytes / 128.0KB
+Free RAM available (heap):      120257 bytes
+------------------------------------------------------- 
+[25/45] Compiling flint | reso: resources/fonts/Gotcha-Gothic.ttf -> build/flint/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso
+[26/45] Compiling flint | reso: resources/images/menu_icon.png -> build/flint/resources/images/menu_icon.png.MENU_ICON.reso
+[27/45] Creating flint | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/flint/appinfo.auto.c:  -> build/flint/appinfo.auto.c
+[28/45] Compiling flint | subst: /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/common/pebble_app.ld.template -> build/flint/pebble_app.ld.auto
+[29/45] Compiling flint | c: build/src/message_keys.auto.c -> build/src/message_keys.auto.c.52.o
+[31/45] Processing flint | resource_ball: build/flint/resources/images/menu_icon.png.MENU_ICON.reso build/flint/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso -> build/flint/system_resources.resball
+[32/45] Compiling flint | generate_resource_id_definitions: build/flint/system_resources.resball -> build/flint/src/resource_ids.auto.c
+[33/45] Compiling flint | generate_pbpack: build/flint/system_resources.resball -> build/flint/app_resources.pbpack
+[34/45] Compiling flint | generate_resource_id_header: build/flint/system_resources.resball -> build/flint/src/resource_ids.auto.h
+[35/45] Compiling flint | c: build/flint/src/resource_ids.auto.c -> build/flint/src/resource_ids.auto.c.52.o
+[36/45] Compiling flint | c: src/c/modules/comm.c -> build/src/c/modules/comm.c.52.o
+[37/45] Compiling flint | c: src/c/modules/scalable.c -> build/src/c/modules/scalable.c.52.o
+[38/45] Compiling flint | c: src/c/main.c -> build/src/c/main.c.52.o
+[39/45] Compiling flint | c: src/c/modules/health.c -> build/src/c/modules/health.c.52.o
+[40/45] Compiling flint | c: build/flint/appinfo.auto.c -> build/flint/appinfo.auto.c.52.o
+[41/45] Compiling flint | c: src/c/modules/slots.c -> build/src/c/modules/slots.c.52.o
+[42/45] Compiling flint | c: src/c/windows/main_window.c -> build/src/c/windows/main_window.c.52.o
+[43/45] Compiling flint | c: src/c/modules/data.c -> build/src/c/modules/data.c.52.o
+[44/45] Linking flint | cprogram: build/src/c/main.c.52.o build/src/c/modules/comm.c.52.o build/src/c/modules/data.c.52.o build/src/c/modules/health.c.52.o build/src/c/modules/scalable.c.52.o build/src/c/modules/slots.c.52.o build/src/c/windows/main_window.c.52.o build/flint/appinfo.auto.c.52.o build/flint/src/resource_ids.auto.c.52.o build/src/message_keys.auto.c.52.o -> build/flint/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/flint/pebble-app.elf has a LOAD segment with RWX permissions
+
+[45/45] Processing flint | memory_usage_report: build/flint/pebble-app.elf build/flint/app_resources.pbpack
+-------------------------------------------------------
+FLINT APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10763 bytes / 64.0KB
+Free RAM available (heap):      54773 bytes
+------------------------------------------------------- 
+[46/66] Compiling emery | reso: resources/fonts/Gotcha-Gothic.ttf -> build/emery/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso
+[47/66] Compiling emery | reso: resources/images/menu_icon.png -> build/emery/resources/images/menu_icon.png.MENU_ICON.reso
+[48/66] Creating emery | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/emery/appinfo.auto.c:  -> build/emery/appinfo.auto.c
+[49/66] Compiling emery | subst: /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/common/pebble_app.ld.template -> build/emery/pebble_app.ld.auto
+[50/66] Compiling emery | c: build/src/message_keys.auto.c -> build/src/message_keys.auto.c.53.o
+[52/66] Processing emery | resource_ball: build/emery/resources/images/menu_icon.png.MENU_ICON.reso build/emery/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso -> build/emery/system_resources.resball
+[53/66] Compiling emery | generate_resource_id_definitions: build/emery/system_resources.resball -> build/emery/src/resource_ids.auto.c
+[54/66] Compiling emery | generate_pbpack: build/emery/system_resources.resball -> build/emery/app_resources.pbpack
+[55/66] Compiling emery | generate_resource_id_header: build/emery/system_resources.resball -> build/emery/src/resource_ids.auto.h
+[56/66] Compiling emery | c: src/c/modules/comm.c -> build/src/c/modules/comm.c.53.o
+[57/66] Compiling emery | c: src/c/modules/scalable.c -> build/src/c/modules/scalable.c.53.o
+[58/66] Compiling emery | c: src/c/modules/health.c -> build/src/c/modules/health.c.53.o
+[59/66] Compiling emery | c: src/c/main.c -> build/src/c/main.c.53.o
+[60/66] Compiling emery | c: build/emery/appinfo.auto.c -> build/emery/appinfo.auto.c.53.o
+[61/66] Compiling emery | c: src/c/modules/slots.c -> build/src/c/modules/slots.c.53.o
+[62/66] Compiling emery | c: src/c/modules/data.c -> build/src/c/modules/data.c.53.o
+[63/66] Compiling emery | c: src/c/windows/main_window.c -> build/src/c/windows/main_window.c.53.o
+[64/66] Compiling emery | c: build/emery/src/resource_ids.auto.c -> build/emery/src/resource_ids.auto.c.53.o
+[65/66] Linking emery | cprogram: build/src/c/main.c.53.o build/src/c/modules/comm.c.53.o build/src/c/modules/data.c.53.o build/src/c/modules/health.c.53.o build/src/c/modules/scalable.c.53.o build/src/c/modules/slots.c.53.o build/src/c/windows/main_window.c.53.o build/emery/appinfo.auto.c.53.o build/emery/src/resource_ids.auto.c.53.o build/src/message_keys.auto.c.53.o -> build/emery/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/emery/pebble-app.elf has a LOAD segment with RWX permissions
+
+[66/66] Processing emery | memory_usage_report: build/emery/pebble-app.elf build/emery/app_resources.pbpack
+-------------------------------------------------------
+EMERY APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10859 bytes / 128.0KB
+Free RAM available (heap):      120213 bytes
+------------------------------------------------------- 
+[67/87] Compiling diorite | reso: resources/fonts/Gotcha-Gothic.ttf -> build/diorite/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso
+[68/87] Compiling diorite | reso: resources/images/menu_icon.png -> build/diorite/resources/images/menu_icon.png.MENU_ICON.reso
+[69/87] Creating diorite | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/diorite/appinfo.auto.c:  -> build/diorite/appinfo.auto.c
+[70/87] Compiling diorite | subst: /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/common/pebble_app.ld.template -> build/diorite/pebble_app.ld.auto
+[71/87] Compiling diorite | c: build/src/message_keys.auto.c -> build/src/message_keys.auto.c.54.o
+[73/87] Processing diorite | resource_ball: build/diorite/resources/images/menu_icon.png.MENU_ICON.reso build/diorite/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso -> build/diorite/system_resources.resball
+[74/87] Compiling diorite | generate_resource_id_definitions: build/diorite/system_resources.resball -> build/diorite/src/resource_ids.auto.c
+[75/87] Compiling diorite | generate_pbpack: build/diorite/system_resources.resball -> build/diorite/app_resources.pbpack
+[76/87] Compiling diorite | generate_resource_id_header: build/diorite/system_resources.resball -> build/diorite/src/resource_ids.auto.h
+[77/87] Compiling diorite | c: build/diorite/src/resource_ids.auto.c -> build/diorite/src/resource_ids.auto.c.54.o
+[78/87] Compiling diorite | c: src/c/modules/comm.c -> build/src/c/modules/comm.c.54.o
+[79/87] Compiling diorite | c: src/c/modules/scalable.c -> build/src/c/modules/scalable.c.54.o
+[80/87] Compiling diorite | c: src/c/modules/health.c -> build/src/c/modules/health.c.54.o
+[81/87] Compiling diorite | c: src/c/main.c -> build/src/c/main.c.54.o
+[82/87] Compiling diorite | c: build/diorite/appinfo.auto.c -> build/diorite/appinfo.auto.c.54.o
+[83/87] Compiling diorite | c: src/c/modules/slots.c -> build/src/c/modules/slots.c.54.o
+[84/87] Compiling diorite | c: src/c/windows/main_window.c -> build/src/c/windows/main_window.c.54.o
+[85/87] Compiling diorite | c: src/c/modules/data.c -> build/src/c/modules/data.c.54.o
+[86/87] Linking diorite | cprogram: build/src/c/main.c.54.o build/src/c/modules/comm.c.54.o build/src/c/modules/data.c.54.o build/src/c/modules/health.c.54.o build/src/c/modules/scalable.c.54.o build/src/c/modules/slots.c.54.o build/src/c/windows/main_window.c.54.o build/diorite/appinfo.auto.c.54.o build/diorite/src/resource_ids.auto.c.54.o build/src/message_keys.auto.c.54.o -> build/diorite/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/diorite/pebble-app.elf has a LOAD segment with RWX permissions
+
+[87/87] Processing diorite | memory_usage_report: build/diorite/pebble-app.elf build/diorite/app_resources.pbpack
+-------------------------------------------------------
+DIORITE APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10763 bytes / 64.0KB
+Free RAM available (heap):      54773 bytes
+------------------------------------------------------- 
+[ 88/108] Compiling chalk | reso: resources/fonts/Gotcha-Gothic.ttf -> build/chalk/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso
+[ 89/108] Compiling chalk | reso: resources/images/menu_icon.png -> build/chalk/resources/images/menu_icon.png.MENU_ICON.reso
+[ 90/108] Creating chalk | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/chalk/appinfo.auto.c:  -> build/chalk/appinfo.auto.c
+[ 91/108] Compiling chalk | subst: /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/common/pebble_app.ld.template -> build/chalk/pebble_app.ld.auto
+[ 92/108] Compiling chalk | c: build/src/message_keys.auto.c -> build/src/message_keys.auto.c.55.o
+[ 94/108] Processing chalk | resource_ball: build/chalk/resources/images/menu_icon.png.MENU_ICON.reso build/chalk/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso -> build/chalk/system_resources.resball
+[ 95/108] Compiling chalk | generate_resource_id_definitions: build/chalk/system_resources.resball -> build/chalk/src/resource_ids.auto.c
+[ 96/108] Compiling chalk | generate_pbpack: build/chalk/system_resources.resball -> build/chalk/app_resources.pbpack
+[ 97/108] Compiling chalk | generate_resource_id_header: build/chalk/system_resources.resball -> build/chalk/src/resource_ids.auto.h
+[ 98/108] Compiling chalk | c: src/c/modules/comm.c -> build/src/c/modules/comm.c.55.o
+[ 99/108] Compiling chalk | c: src/c/modules/scalable.c -> build/src/c/modules/scalable.c.55.o
+[100/108] Compiling chalk | c: src/c/modules/health.c -> build/src/c/modules/health.c.55.o
+[101/108] Compiling chalk | c: build/chalk/appinfo.auto.c -> build/chalk/appinfo.auto.c.55.o
+[102/108] Compiling chalk | c: src/c/main.c -> build/src/c/main.c.55.o
+[103/108] Compiling chalk | c: build/chalk/src/resource_ids.auto.c -> build/chalk/src/resource_ids.auto.c.55.o
+[104/108] Compiling chalk | c: src/c/modules/slots.c -> build/src/c/modules/slots.c.55.o
+[105/108] Compiling chalk | c: src/c/windows/main_window.c -> build/src/c/windows/main_window.c.55.o
+[106/108] Compiling chalk | c: src/c/modules/data.c -> build/src/c/modules/data.c.55.o
+[107/108] Linking chalk | cprogram: build/src/c/main.c.55.o build/src/c/modules/comm.c.55.o build/src/c/modules/data.c.55.o build/src/c/modules/health.c.55.o build/src/c/modules/scalable.c.55.o build/src/c/modules/slots.c.55.o build/src/c/windows/main_window.c.55.o build/chalk/appinfo.auto.c.55.o build/chalk/src/resource_ids.auto.c.55.o build/src/message_keys.auto.c.55.o -> build/chalk/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/chalk/pebble-app.elf has a LOAD segment with RWX permissions
+
+[108/108] Processing chalk | memory_usage_report: build/chalk/pebble-app.elf build/chalk/app_resources.pbpack
+-------------------------------------------------------
+CHALK APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10807 bytes / 64.0KB
+Free RAM available (heap):      54729 bytes
+------------------------------------------------------- 
+[109/129] Compiling basalt | reso: resources/fonts/Gotcha-Gothic.ttf -> build/basalt/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso
+[110/129] Compiling basalt | reso: resources/images/menu_icon.png -> build/basalt/resources/images/menu_icon.png.MENU_ICON.reso
+[111/129] Creating basalt | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/basalt/appinfo.auto.c:  -> build/basalt/appinfo.auto.c
+[112/129] Compiling basalt | subst: /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/common/pebble_app.ld.template -> build/basalt/pebble_app.ld.auto
+[113/129] Compiling basalt | c: build/src/message_keys.auto.c -> build/src/message_keys.auto.c.56.o
+[115/129] Processing basalt | resource_ball: build/basalt/resources/images/menu_icon.png.MENU_ICON.reso build/basalt/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso -> build/basalt/system_resources.resball
+[116/129] Compiling basalt | generate_resource_id_definitions: build/basalt/system_resources.resball -> build/basalt/src/resource_ids.auto.c
+[117/129] Compiling basalt | generate_pbpack: build/basalt/system_resources.resball -> build/basalt/app_resources.pbpack
+[118/129] Compiling basalt | generate_resource_id_header: build/basalt/system_resources.resball -> build/basalt/src/resource_ids.auto.h
+[119/129] Compiling basalt | c: src/c/modules/comm.c -> build/src/c/modules/comm.c.56.o
+[120/129] Compiling basalt | c: src/c/modules/scalable.c -> build/src/c/modules/scalable.c.56.o
+[121/129] Compiling basalt | c: src/c/modules/health.c -> build/src/c/modules/health.c.56.o
+[122/129] Compiling basalt | c: build/basalt/appinfo.auto.c -> build/basalt/appinfo.auto.c.56.o
+[123/129] Compiling basalt | c: src/c/main.c -> build/src/c/main.c.56.o
+[124/129] Compiling basalt | c: build/basalt/src/resource_ids.auto.c -> build/basalt/src/resource_ids.auto.c.56.o
+[125/129] Compiling basalt | c: src/c/modules/slots.c -> build/src/c/modules/slots.c.56.o
+[126/129] Compiling basalt | c: src/c/windows/main_window.c -> build/src/c/windows/main_window.c.56.o
+[127/129] Compiling basalt | c: src/c/modules/data.c -> build/src/c/modules/data.c.56.o
+[128/129] Linking basalt | cprogram: build/src/c/main.c.56.o build/src/c/modules/comm.c.56.o build/src/c/modules/data.c.56.o build/src/c/modules/health.c.56.o build/src/c/modules/scalable.c.56.o build/src/c/modules/slots.c.56.o build/src/c/windows/main_window.c.56.o build/basalt/appinfo.auto.c.56.o build/basalt/src/resource_ids.auto.c.56.o build/src/message_keys.auto.c.56.o -> build/basalt/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/basalt/pebble-app.elf has a LOAD segment with RWX permissions
+
+[129/129] Processing basalt | memory_usage_report: build/basalt/pebble-app.elf build/basalt/app_resources.pbpack
+-------------------------------------------------------
+BASALT APP MEMORY USAGE
+Total size of resources:        19240 bytes / 256.0KB
+Total footprint in RAM:         10843 bytes / 64.0KB
+Free RAM available (heap):      54693 bytes
+------------------------------------------------------- 
+[130/150] Compiling aplite | reso: resources/fonts/Gotcha-Gothic.ttf -> build/aplite/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso
+[131/150] Compiling aplite | reso: resources/images/menu_icon.png -> build/aplite/resources/images/menu_icon.png.MENU_ICON.reso
+[132/150] Creating aplite | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/aplite/appinfo.auto.c:  -> build/aplite/appinfo.auto.c
+[133/150] Compiling aplite | subst: /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/common/pebble_app.ld.template -> build/aplite/pebble_app.ld.auto
+[134/150] Compiling aplite | c: build/src/message_keys.auto.c -> build/src/message_keys.auto.c.57.o
+[136/150] Processing aplite | resource_ball: build/aplite/resources/images/menu_icon.png.MENU_ICON.reso build/aplite/resources/fonts/Gotcha-Gothic.ttf.GOTCHA_GOTHIC_32.reso -> build/aplite/system_resources.resball
+[137/150] Compiling aplite | generate_resource_id_definitions: build/aplite/system_resources.resball -> build/aplite/src/resource_ids.auto.c
+[138/150] Compiling aplite | generate_pbpack: build/aplite/system_resources.resball -> build/aplite/app_resources.pbpack
+[139/150] Compiling aplite | generate_resource_id_header: build/aplite/system_resources.resball -> build/aplite/src/resource_ids.auto.h
+[140/150] Compiling aplite | c: build/aplite/src/resource_ids.auto.c -> build/aplite/src/resource_ids.auto.c.57.o
+[141/150] Compiling aplite | c: src/c/modules/comm.c -> build/src/c/modules/comm.c.57.o
+[142/150] Compiling aplite | c: src/c/modules/scalable.c -> build/src/c/modules/scalable.c.57.o
+[143/150] Compiling aplite | c: src/c/main.c -> build/src/c/main.c.57.o
+[144/150] Compiling aplite | c: src/c/modules/health.c -> build/src/c/modules/health.c.57.o
+[145/150] Compiling aplite | c: build/aplite/appinfo.auto.c -> build/aplite/appinfo.auto.c.57.o
+[146/150] Compiling aplite | c: src/c/modules/slots.c -> build/src/c/modules/slots.c.57.o
+[147/150] Compiling aplite | c: src/c/windows/main_window.c -> build/src/c/windows/main_window.c.57.o
+[148/150] Compiling aplite | c: src/c/modules/data.c -> build/src/c/modules/data.c.57.o
+[149/150] Linking aplite | cprogram: build/src/c/main.c.57.o build/src/c/modules/comm.c.57.o build/src/c/modules/data.c.57.o build/src/c/modules/health.c.57.o build/src/c/modules/scalable.c.57.o build/src/c/modules/slots.c.57.o build/src/c/windows/main_window.c.57.o build/aplite/appinfo.auto.c.57.o build/aplite/src/resource_ids.auto.c.57.o build/src/message_keys.auto.c.57.o -> build/aplite/pebble-app.elf
+/home/ubuntu/.local/share/pebble-sdk/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: /tmp/thin-plus-release-t2dzre_1/thin-plus/build/aplite/pebble-app.elf has a LOAD segment with RWX permissions
+
+[150/150] Processing aplite | memory_usage_report: build/aplite/pebble-app.elf build/aplite/app_resources.pbpack
+-------------------------------------------------------
+APLITE APP MEMORY USAGE
+Total size of resources:        19204 bytes / 128.0KB
+Total footprint in RAM:         10663 bytes / 24.0KB
+Free RAM available (heap):      13913 bytes
+------------------------------------------------------- 
+[151/166] Compiling gabbro | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/gabbro/pebble-app.raw.bin: build/gabbro/pebble-app.elf -> build/gabbro/pebble-app.raw.bin
+[152/166] Compiling flint | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/flint/pebble-app.raw.bin: build/flint/pebble-app.elf -> build/flint/pebble-app.raw.bin
+[153/166] Compiling emery | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/emery/pebble-app.raw.bin: build/emery/pebble-app.elf -> build/emery/pebble-app.raw.bin
+[154/166] Compiling diorite | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/diorite/pebble-app.raw.bin: build/diorite/pebble-app.elf -> build/diorite/pebble-app.raw.bin
+[155/166] Compiling chalk | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/chalk/pebble-app.raw.bin: build/chalk/pebble-app.elf -> build/chalk/pebble-app.raw.bin
+[156/166] Compiling basalt | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/basalt/pebble-app.raw.bin: build/basalt/pebble-app.elf -> build/basalt/pebble-app.raw.bin
+[157/166] Compiling aplite | /tmp/thin-plus-release-t2dzre_1/thin-plus/build/aplite/pebble-app.raw.bin: build/aplite/pebble-app.elf -> build/aplite/pebble-app.raw.bin
+[158/166] Processing merge_js: src/pkjs/config.js src/pkjs/custom-clay.js src/pkjs/index.js -> build/pebble-js-app.js build/pebble-js-app.js.map
+[159/166] Processing gabbro | inject-metadata: build/gabbro/pebble-app.raw.bin build/gabbro/pebble-app.elf build/gabbro/app_resources.pbpack -> build/gabbro/pebble-app.bin
+[160/166] Processing flint | inject-metadata: build/flint/pebble-app.raw.bin build/flint/pebble-app.elf build/flint/app_resources.pbpack -> build/flint/pebble-app.bin
+[161/166] Processing emery | inject-metadata: build/emery/pebble-app.raw.bin build/emery/pebble-app.elf build/emery/app_resources.pbpack -> build/emery/pebble-app.bin
+[162/166] Processing diorite | inject-metadata: build/diorite/pebble-app.raw.bin build/diorite/pebble-app.elf build/diorite/app_resources.pbpack -> build/diorite/pebble-app.bin
+[163/166] Processing chalk | inject-metadata: build/chalk/pebble-app.raw.bin build/chalk/pebble-app.elf build/chalk/app_resources.pbpack -> build/chalk/pebble-app.bin
+[164/166] Processing basalt | inject-metadata: build/basalt/pebble-app.raw.bin build/basalt/pebble-app.elf build/basalt/app_resources.pbpack -> build/basalt/pebble-app.bin
+[165/166] Processing aplite | inject-metadata: build/aplite/pebble-app.raw.bin build/aplite/pebble-app.elf build/aplite/app_resources.pbpack -> build/aplite/pebble-app.bin
+[166/166] Creating app_bundle:  -> build/thin-plus.pbw
+Waf: Leaving directory `/tmp/thin-plus-release-t2dzre_1/thin-plus/build'
+'build' finished successfully (6.009s)
+
+COMMAND: pebble kill
+
+COMMAND: pebble install --emulator emery build/thin-plus.pbw
+Installing app...
+App install succeeded.
+
+COMMAND: pebble emu-battery --emulator emery --percent 80
+
+COMMAND: pebble emu-steps --emulator emery 6432
+
+COMMAND: pebble emu-tap --emulator emery
+
+COMMAND: pebble screenshot --emulator emery --no-open /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/screenshots/emery-01-classic.png
+N/A%[=                                                      ]   0.0 B/s 0:00:00
+N/A%[=                                                    ]  22.4 KiB/s 0:00:00
+N/A%[=                                                    ] 185.2 KiB/s 0:00:00
+N/A%[=                                                    ] 149.9 KiB/s 0:00:00
+Saved screenshot to /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/store/screenshots/emery-01-classic.png

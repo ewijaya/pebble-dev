@@ -1,0 +1,2 @@
+PASS: python3 tests/test_low_battery.py (production data.c and slots.c, ASan/UBSan).
+PASS: node --check src/pkjs/config.js.

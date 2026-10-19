@@ -102,6 +102,7 @@ static void bt_handler(bool connected) {
 
 static void batt_handler(BatteryChargeState state) {
   layer_mark_dirty(s_canvas_layer);
+  layer_mark_dirty(s_slots_layer);
 }
 
 /************************** AnimationImplementation ***************************/

@@ -1,0 +1,103 @@
+{
+  "source_commit": "56012e58e2e6f7fe6aea894c352ad45c451ef85f",
+  "pbw_bytes": 519451,
+  "pbw_sha256": "b1560a238bdac280641cf9f2085a5d45425a6ab6eefcaa3ebfeb89ac09881502",
+  "appinfo": {
+    "sdkVersion": "3",
+    "resources": {
+      "media": [
+        {
+          "menuIcon": true,
+          "type": "bitmap",
+          "name": "MENU_ICON",
+          "file": "images/menu_icon.png"
+        },
+        {
+          "type": "font",
+          "name": "GOTCHA_GOTHIC_32",
+          "file": "fonts/Gotcha-Gothic.ttf"
+        }
+      ]
+    },
+    "projectType": "native",
+    "uuid": "0e83e240-01b8-469b-a51b-b2a0e767fefb",
+    "messageKeys": {
+      "EnableBattery": 10000,
+      "EnableSecondHand": 10001,
+      "EnableDate": 10002,
+      "EnableBT": 10003,
+      "EnableSteps": 10004,
+      "ColorBackground": 10005,
+      "ColorHourMinutes": 10006,
+      "ColorSeconds": 10007,
+      "ColorNotches": 10008,
+      "ColorMonthDay": 10009,
+      "ColorDate": 10010,
+      "SlotTop": 10011,
+      "SlotLeft": 10012,
+      "SlotBottom": 10013,
+      "EnableThickHands": 10014,
+      "Theme": 10015,
+      "ColorHandTips": 10016,
+      "ColorCenterDot": 10017,
+      "ColorSecondTip": 10018,
+      "ColorBatteryEmpty": 10019
+    },
+    "enableMultiJS": true,
+    "displayName": "Thin+",
+    "watchapp": {
+      "onlyShownOnCommunication": false,
+      "hiddenApp": false,
+      "watchface": true
+    },
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite",
+      "emery",
+      "flint",
+      "gabbro"
+    ],
+    "capabilities": [
+      "configurable"
+    ],
+    "name": "thin-plus",
+    "shortName": "Thin+",
+    "longName": "Thin+",
+    "versionLabel": "1.0.0",
+    "companyName": "Edward Wijaya",
+    "appKeys": {
+      "EnableBattery": 10000,
+      "EnableSecondHand": 10001,
+      "EnableDate": 10002,
+      "EnableBT": 10003,
+      "EnableSteps": 10004,
+      "ColorBackground": 10005,
+      "ColorHourMinutes": 10006,
+      "ColorSeconds": 10007,
+      "ColorNotches": 10008,
+      "ColorMonthDay": 10009,
+      "ColorDate": 10010,
+      "SlotTop": 10011,
+      "SlotLeft": 10012,
+      "SlotBottom": 10013,
+      "EnableThickHands": 10014,
+      "Theme": 10015,
+      "ColorHandTips": 10016,
+      "ColorCenterDot": 10017,
+      "ColorSecondTip": 10018,
+      "ColorBatteryEmpty": 10019
+    }
+  },
+  "zip_integrity": "passed",
+  "platform_binaries": [
+    "aplite",
+    "basalt",
+    "chalk",
+    "diorite",
+    "emery",
+    "flint",
+    "gabbro"
+  ]
+}

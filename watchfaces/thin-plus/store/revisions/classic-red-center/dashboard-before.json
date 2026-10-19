@@ -1,0 +1,165 @@
+{
+  "id": "b0a4b28dbe9440c3b19f68e3",
+  "app_uuid": "0e83e240-01b8-469b-a51b-b2a0e767fefb",
+  "title": "Thin+",
+  "type": "watchface",
+  "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+  "category_id": "528d3ef2dc7b5f580700000a",
+  "hearts": 0,
+  "visible": true,
+  "unlisted": false,
+  "dmca_takedown": false,
+  "timeline_enabled": false,
+  "icon_small": "/api/assets/icons/b0a4b28dbe9440c3b19f68e3/small/4be14f67-967e-4f13-90bc-c847e436a14b.png",
+  "icon_large": "/api/assets/icons/b0a4b28dbe9440c3b19f68e3/large/7b6373ac-4f3a-4da9-a834-af106c48ad1a.png",
+  "website": null,
+  "source": "https://github.com/ewijaya/pebble-dev/tree/watchface/thin-plus/watchfaces/thin-plus",
+  "created_at": "2026-10-19T04:01:49.082",
+  "updated_at": "2026-10-19T04:30:16.21",
+  "published_date": null,
+  "category_name": "Faces",
+  "supported_platforms": [
+    "aplite",
+    "basalt",
+    "chalk",
+    "diorite",
+    "emery",
+    "flint",
+    "gabbro"
+  ],
+  "releases": [
+    {
+      "id": "c652f752f6254eb694d76511",
+      "version": "1.0.0",
+      "release_notes": "First release of Thin+.\n\nAdds smooth hands with aligned tips, an optional thicker-hand style, a second hand that appears briefly after launch or a wrist flick, three configurable complication slots, seven themes and individual color controls. Includes the original Thin's hour-marker battery display. Supports all seven Pebble platforms.\n\nBased on Thin by Chris Lewis.",
+      "published_date": "2026-10-19T04:27:32.008",
+      "created_at": "2026-10-19T04:01:49.132",
+      "pbw_url": "/api/assets/pbw/b0a4b28dbe9440c3b19f68e3/1.0.0/b4f857c8-b265-46e5-99e2-f2cd9b2d69fb.pbw",
+      "pbw_size": 519559,
+      "compatibility": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ],
+      "capabilities": [
+        "configurable"
+      ],
+      "is_published": true
+    }
+  ],
+  "assets": [
+    {
+      "id": 41864,
+      "platform": "emery",
+      "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+      "screenshots": [
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/emery/62a8f73f-2e91-430b-8e96-87149472d8c4.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/emery/a9e55df3-7b05-41ef-9ffe-b6bf362bb3b8.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/emery/9836d425-1e14-4199-9b5e-598f60882616.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/emery/1d8d72dc-d3e1-4209-8e47-bfeaf4f65f55.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/emery/8f77d346-9f48-4370-bc3c-70a9cac6bd41.png"
+      ],
+      "headers": [],
+      "banner": "/api/assets/banners/b0a4b28dbe9440c3b19f68e3/emery/eb1560df-18ee-4fcf-8720-e1d25edd4e16.png"
+    },
+    {
+      "id": 41861,
+      "platform": "basalt",
+      "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+      "screenshots": [
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/basalt/46144528-ee81-4a0a-a65a-6f7989f7e1e4.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/basalt/5bd20a2b-491d-4922-95e5-3cfffe5d8d4d.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/basalt/e18bbee4-c540-4f60-9e7a-aa3fa0fb7799.png"
+      ],
+      "headers": [],
+      "banner": null
+    },
+    {
+      "id": 41866,
+      "platform": "gabbro",
+      "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+      "screenshots": [
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/gabbro/065e5be7-ae4d-4519-a36b-7cb3484a7fb0.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/gabbro/211d7e36-ac37-4767-817c-5907ae7c2827.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/gabbro/e8d96976-3d1d-4ae4-abaa-c9ded63893fc.png"
+      ],
+      "headers": [],
+      "banner": null
+    },
+    {
+      "id": 41863,
+      "platform": "diorite",
+      "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+      "screenshots": [
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/diorite/e94878b2-7180-4631-9bb3-42b06248b5b0.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/diorite/9a23afde-baae-4d88-af2c-c564fcd32b64.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/diorite/c92b4d5d-fceb-4485-a739-d0e7a943e169.png"
+      ],
+      "headers": [],
+      "banner": null
+    },
+    {
+      "id": 41862,
+      "platform": "chalk",
+      "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+      "screenshots": [
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/chalk/da00d663-13c9-4c21-a71d-e177c37f355a.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/chalk/0b50456e-7280-44d1-8e69-6642de614730.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/chalk/d5c9c9c7-8648-471d-a1c3-6930f7c58dd8.png"
+      ],
+      "headers": [],
+      "banner": null
+    },
+    {
+      "id": 41860,
+      "platform": "aplite",
+      "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+      "screenshots": [
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/aplite/9bf07d3a-cc64-4a08-b744-0e64dedf2706.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/aplite/1525f690-8967-4296-bc1e-67cbd495aa9e.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/aplite/6837e5c6-9051-4275-8627-0eca09e62ef5.png"
+      ],
+      "headers": [],
+      "banner": null
+    },
+    {
+      "id": 41865,
+      "platform": "flint",
+      "description": "Thin, plus: a clean analog watchface with splashes of color and the information you choose.\n\nKeep it minimal: hide the date and leave any or all complication slots empty.\n\n- Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.\n- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.\n- Three complication slots\u2014top, left and bottom\u2014show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.\n- Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.\n- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.\n- Hour markers double as a battery indicator.\n- Optional date and disconnected indicator.\n\nAvailable for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.\n\nBased on Thin by Chris Lewis.\nOriginal Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d",
+      "screenshots": [
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/flint/e6a32908-4506-4ac6-b2f9-383c076c8fbb.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/flint/46122315-6d62-42f5-9c02-9663c46b7e5d.png",
+        "/api/assets/screenshots/b0a4b28dbe9440c3b19f68e3/flint/bb65fe5d-112b-4c10-9288-e8d288179fe0.png"
+      ],
+      "headers": [],
+      "banner": null
+    }
+  ],
+  "companion_apps": [],
+  "latest_release": {
+    "id": "c652f752f6254eb694d76511",
+    "version": "1.0.0",
+    "release_notes": "First release of Thin+.\n\nAdds smooth hands with aligned tips, an optional thicker-hand style, a second hand that appears briefly after launch or a wrist flick, three configurable complication slots, seven themes and individual color controls. Includes the original Thin's hour-marker battery display. Supports all seven Pebble platforms.\n\nBased on Thin by Chris Lewis.",
+    "published_date": "2026-10-19T04:27:32.008",
+    "created_at": "2026-10-19T04:01:49.132",
+    "pbw_url": "/api/assets/pbw/b0a4b28dbe9440c3b19f68e3/1.0.0/b4f857c8-b265-46e5-99e2-f2cd9b2d69fb.pbw",
+    "pbw_size": 519559,
+    "compatibility": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite",
+      "emery",
+      "flint",
+      "gabbro"
+    ],
+    "capabilities": [
+      "configurable"
+    ],
+    "is_published": true
+  }
+}

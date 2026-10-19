@@ -1,0 +1,86 @@
+{
+  "version": "1.1.0",
+  "release_id": "0e3dc4efd60e460586b8dff5",
+  "is_published": true,
+  "visible": true,
+  "unlisted": false,
+  "public_pbw_bytes": 521806,
+  "public_pbw_sha256": "15e75184f8381cc19a94fbbcd192323251a2ae9bd0cf5e1676d64b22c50131fd",
+  "platforms": [
+    {
+      "platform": "aplite",
+      "version": "1.1.0",
+      "release_id": "0e3dc4efd60e460586b8dff5",
+      "visible": true,
+      "description_matches": true,
+      "gallery_order_preserved": true
+    },
+    {
+      "platform": "basalt",
+      "version": "1.1.0",
+      "release_id": "0e3dc4efd60e460586b8dff5",
+      "visible": true,
+      "description_matches": true,
+      "gallery_order_preserved": true
+    },
+    {
+      "platform": "chalk",
+      "version": "1.1.0",
+      "release_id": "0e3dc4efd60e460586b8dff5",
+      "visible": true,
+      "description_matches": true,
+      "gallery_order_preserved": true
+    },
+    {
+      "platform": "diorite",
+      "version": "1.1.0",
+      "release_id": "0e3dc4efd60e460586b8dff5",
+      "visible": true,
+      "description_matches": true,
+      "gallery_order_preserved": true
+    },
+    {
+      "platform": "emery",
+      "version": "1.1.0",
+      "release_id": "0e3dc4efd60e460586b8dff5",
+      "visible": true,
+      "description_matches": true,
+      "gallery_order_preserved": true
+    },
+    {
+      "platform": "flint",
+      "version": "1.1.0",
+      "release_id": "0e3dc4efd60e460586b8dff5",
+      "visible": true,
+      "description_matches": true,
+      "gallery_order_preserved": true
+    },
+    {
+      "platform": "gabbro",
+      "version": "1.1.0",
+      "release_id": "0e3dc4efd60e460586b8dff5",
+      "visible": true,
+      "description_matches": true,
+      "gallery_order_preserved": true
+    }
+  ],
+  "canonical_page": {
+    "status": 200,
+    "version_present": true,
+    "release_id_present": true,
+    "new_feature_present": true,
+    "exact_credit_present": true
+  },
+  "physical_pt2_check": "Pending owner store-install/settings/battery-option test",
+  "git": "No commit, push or tag performed",
+  "canonical_followup_checks": [
+    {
+      "status": 200,
+      "version_present": true,
+      "release_id_present": true,
+      "new_feature_present": true,
+      "exact_credit_present": true
+    }
+  ],
+  "canonical_page_note": "Canonical HTML reflects new feature."
+}

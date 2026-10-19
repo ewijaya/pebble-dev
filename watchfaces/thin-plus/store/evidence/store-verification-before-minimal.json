@@ -1,0 +1,589 @@
+{
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "release_id": "c652f752f6254eb694d76511",
+  "dashboard_url": "https://developer.repebble.com/dashboard/apps/b0a4b28dbe9440c3b19f68e3/edit",
+  "app_uuid": "0e83e240-01b8-469b-a51b-b2a0e767fefb",
+  "title": "Thin+",
+  "type": "watchface",
+  "category": "Faces",
+  "visibility": "unlisted",
+  "visible": false,
+  "unlisted": true,
+  "version": "1.0.0",
+  "is_published": false,
+  "description_and_platform_descriptions_match": true,
+  "release_notes_match": true,
+  "source_matches": true,
+  "website_empty": true,
+  "supported_platforms": [
+    "aplite",
+    "basalt",
+    "chalk",
+    "diorite",
+    "emery",
+    "flint",
+    "gabbro"
+  ],
+  "screenshot_counts": {
+    "aplite": 1,
+    "basalt": 1,
+    "chalk": 1,
+    "diorite": 1,
+    "emery": 5,
+    "flint": 1,
+    "gabbro": 1
+  },
+  "screenshot_order_verified_by_decoded_pixels": false,
+  "store_icons": "not retained by watchface API; icon fields are for watchapps/plugins; approved 25x25 icon remains embedded in verified PBW",
+  "download_checks": [
+    {
+      "asset": "pbwFile",
+      "local_path": "build/thin-plus.pbw",
+      "bytes": 519559,
+      "downloaded_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+      "local_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+      "bytes_match": true
+    },
+    {
+      "asset": "aplite screenshot 1",
+      "local_path": "store/screenshots/aplite-classic.png",
+      "bytes": 782,
+      "downloaded_sha256": "6ee007a15dfdbf5641a882cdb4a953e86999bb1a468e66cc93949257cc573acd",
+      "local_sha256": "a24ad417f1f5282afa64eb3481ce536049468ea775aac6c215d6c4116052fc38",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": true,
+      "channel_diff_extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible_changed_pixel_percent": 0.0
+    },
+    {
+      "asset": "basalt screenshot 1",
+      "local_path": "store/screenshots/basalt-classic.png",
+      "bytes": 971,
+      "downloaded_sha256": "24e9b6f96737f116154337133c85a1da22b508c9650c17aa7c455d79e653b37e",
+      "local_sha256": "616bf5ee5419440a672e9c371da0d9bfb4213611e31a2ca7ea0064cd709117d8",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          60
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.0021494708994708994,
+        0.01773313492063492,
+        0.007688492063492063,
+        0.0
+      ],
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0021494708994708994,
+        0.01773313492063492,
+        0.007688492063492063
+      ],
+      "visible_changed_pixel_percent": 0.11987433862433862
+    },
+    {
+      "asset": "chalk screenshot 1",
+      "local_path": "store/screenshots/chalk-classic.png",
+      "bytes": 1625,
+      "downloaded_sha256": "9846732f4fc01d3fa28b02012040b8b12e8fc2248af823c5ee4940a584db2dbd",
+      "local_sha256": "20d23fd7e0278ab9a11f6bc151bcec1048426172b8c15db43bec3eb7d0c10753",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          76
+        ],
+        [
+          0,
+          105
+        ],
+        [
+          0,
+          113
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        15.50070987654321,
+        21.418333333333333,
+        23.054567901234567,
+        0.0
+      ],
+      "dimensions": [
+        180,
+        180
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.000462962962962963,
+        0.0035185185185185185,
+        0.008148148148148147
+      ],
+      "visible_changed_pixel_percent": 0.05864197530864197
+    },
+    {
+      "asset": "diorite screenshot 1",
+      "local_path": "store/screenshots/diorite-classic.png",
+      "bytes": 808,
+      "downloaded_sha256": "732330cab3fe89b578331c9b4193688b6559163c01bf0d795364c2bde9480c7c",
+      "local_sha256": "2d9507a648e610f3dd741ec3098275ed32aefa9045ca57cc9277316e3731ece2",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": true,
+      "channel_diff_extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible_changed_pixel_percent": 0.0
+    },
+    {
+      "asset": "emery screenshot 1",
+      "local_path": "store/screenshots/emery-01-classic.png",
+      "bytes": 1295,
+      "downloaded_sha256": "0993eb83f05c8ac461e326e58a96c481c38b384ef98d7ddd9a198e1270c7a2d8",
+      "local_sha256": "45040a370b2142ddf36b418a97250b630414081723e4ad534e76d09fe1f2307a",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          41
+        ],
+        [
+          0,
+          49
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.0010087719298245614,
+        0.015504385964912281,
+        0.023333333333333334,
+        0.0
+      ],
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0010087719298245614,
+        0.015504385964912281,
+        0.023333333333333334
+      ],
+      "visible_changed_pixel_percent": 1.3662280701754386
+    },
+    {
+      "asset": "emery screenshot 2",
+      "local_path": "store/screenshots/emery-02-neon.png",
+      "bytes": 1424,
+      "downloaded_sha256": "913cd3c83b80b557b2b945062db0cbb763ae80ca14b6c034ade735aeeab3e81b",
+      "local_sha256": "073db32697426c21ad367306e0a6ea5066d30aeba08530485f96b594bfe1929e",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          43
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.008508771929824561,
+        0.00743421052631579,
+        0.0077631578947368425,
+        0.0
+      ],
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.008508771929824561,
+        0.00743421052631579,
+        0.0077631578947368425
+      ],
+      "visible_changed_pixel_percent": 0.6008771929824561
+    },
+    {
+      "asset": "emery screenshot 3",
+      "local_path": "store/screenshots/emery-03-ocean.png",
+      "bytes": 1326,
+      "downloaded_sha256": "dee1c3a2cf8d22bf21f861f03f3fda0b9271e4fb89c57f4e93846702809ff800",
+      "local_sha256": "b49ad18c077b6030ff2d6945736b44bbea770ddc87fac2aa776d010d25bf9709",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          55
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.0004385964912280702,
+        0.0017105263157894738,
+        0.01287280701754386,
+        0.0
+      ],
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0004385964912280702,
+        0.0017105263157894738,
+        0.01287280701754386
+      ],
+      "visible_changed_pixel_percent": 0.5131578947368421
+    },
+    {
+      "asset": "emery screenshot 4",
+      "local_path": "store/screenshots/emery-04-paper.png",
+      "bytes": 1424,
+      "downloaded_sha256": "b23fa3ba2060f3bef497c6982de3b9de811444484643134070410f4c9c784900",
+      "local_sha256": "7bf647bef5ed9dcf60c0319fd94cf8fe8ffa7b610301fff40d5d83cb8caeaea2",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          74
+        ],
+        [
+          0,
+          45
+        ],
+        [
+          0,
+          63
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.006228070175438596,
+        0.004561403508771929,
+        0.009802631578947368,
+        0.0
+      ],
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.006228070175438596,
+        0.004561403508771929,
+        0.009802631578947368
+      ],
+      "visible_changed_pixel_percent": 0.02631578947368421
+    },
+    {
+      "asset": "emery screenshot 5",
+      "local_path": "store/screenshots/emery-06-sunset-thick-40.png",
+      "bytes": 1430,
+      "downloaded_sha256": "1696ca2048f64f760a791cf9bd313d6ae04f582040dc7d8b91e5694a489497c6",
+      "local_sha256": "1aa8dd6d488435e15938be0f2b9ac611eb5b27cefdc18ff47cd95a70991d3453",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        8.771929824561403e-05,
+        0.0014912280701754386,
+        0.012587719298245615,
+        0.0
+      ],
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        8.771929824561403e-05,
+        0.0014912280701754386,
+        0.012587719298245615
+      ],
+      "visible_changed_pixel_percent": 0.34649122807017546
+    },
+    {
+      "asset": "emery banner",
+      "local_path": "store/banner-emery-720x320.png",
+      "bytes": 3314,
+      "downloaded_sha256": "bd6c7cfd4d1197868b3e7765a9916064818797a35f00bf8ce1a5a36b7a457f2e",
+      "local_sha256": "e900d7a78e9b59f86fb5ab931b72cf08700be2f505c7b03abeaf2323c1a90072",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          49
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.04009548611111111,
+        0.03778211805555556,
+        0.04862413194444445,
+        0.0
+      ],
+      "dimensions": [
+        720,
+        320
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.04009548611111111,
+        0.03778211805555556,
+        0.04862413194444445
+      ],
+      "visible_changed_pixel_percent": 1.6588541666666667
+    },
+    {
+      "asset": "flint screenshot 1",
+      "local_path": "store/screenshots/flint-classic.png",
+      "bytes": 879,
+      "downloaded_sha256": "9458353836e15f7f712b12483569a4bbc11696a4fb9b92e4f080df64c35f5c6e",
+      "local_sha256": "e56181de53a8888d425ba8567717c14e03876ea98a9ce1dde58a50a0c2ed5e03",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": true,
+      "channel_diff_extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible_changed_pixel_percent": 0.0
+    },
+    {
+      "asset": "gabbro screenshot 1",
+      "local_path": "store/screenshots/gabbro-classic.png",
+      "bytes": 2578,
+      "downloaded_sha256": "87e4b601e9777b36629564c45fecf448e8dc5f5b7bc47d6c951cbff3c303e3eb",
+      "local_sha256": "8127db90ea4f648661383be559b8dffba2e85ccb6ccdc7288411dcda21876a15",
+      "bytes_match": false,
+      "format": "PNG",
+      "decoded_pixels_match": false,
+      "channel_diff_extrema": [
+        [
+          0,
+          179
+        ],
+        [
+          0,
+          150
+        ],
+        [
+          0,
+          142
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "channel_diff_mean": [
+        16.327736686390534,
+        22.54310650887574,
+        24.24914201183432,
+        0.0
+      ],
+      "dimensions": [
+        260,
+        260
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0010798816568047336,
+        0.011420118343195266,
+        0.005266272189349113
+      ],
+      "visible_changed_pixel_percent": 0.40976331360946744
+    }
+  ],
+  "pending": [
+    "explicit release-publication approval before an installable store release",
+    "PT2 install from store and settings/theme check (Gate B)",
+    "explicit listed visibility approval (Gate C)",
+    "commit/push/tag authorization"
+  ],
+  "store_image_processing": "PNG files were re-encoded by the server. Transparent RGB values and a small number of visible colors changed; alpha, native dimensions and composition are preserved. Maximum per-channel visible mean error is below 0.06/255 for every screenshot/banner.",
+  "dashboard_account_author": "Edward",
+  "dashboard_account_author_note": "Existing linked developer account name; not changed globally. PBW companyName remains Edward Wijaya.",
+  "screenshot_order_verified_by_visual_review": true,
+  "all_uploaded_images_visually_reviewed": true,
+  "credit": "Based on Thin by Chris Lewis",
+  "credit_update_verified_on_all_platforms_and_release_notes": true
+}

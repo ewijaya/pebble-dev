@@ -1,0 +1,89 @@
+{
+  "status": "Live artwork verified",
+  "dashboard_fields_preserved": true,
+  "emery_order_verified": true,
+  "screenshots": [
+    {
+      "screenshot": 1,
+      "dimensions": [
+        200,
+        228
+      ],
+      "mean_channel_error": [
+        0.00013157894736842105,
+        0.0008771929824561404,
+        0.005657894736842106,
+        0.0
+      ]
+    },
+    {
+      "screenshot": 2,
+      "dimensions": [
+        200,
+        228
+      ],
+      "mean_channel_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "screenshot": 3,
+      "dimensions": [
+        200,
+        228
+      ],
+      "mean_channel_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "screenshot": 4,
+      "dimensions": [
+        200,
+        228
+      ],
+      "mean_channel_error": [
+        0.005175438596491228,
+        0.03706140350877193,
+        0.031140350877192982,
+        0.0
+      ]
+    },
+    {
+      "screenshot": 5,
+      "dimensions": [
+        200,
+        228
+      ],
+      "mean_channel_error": [
+        0.0007894736842105263,
+        0.0075,
+        0.024078947368421054,
+        0.0
+      ]
+    }
+  ],
+  "banner_mean_channel_error": [
+    0.06005642361111111,
+    0.058506944444444445,
+    0.06278211805555556
+  ],
+  "public_assets_match_dashboard": true,
+  "public_pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "public_version": "1.0.0",
+  "visible": true,
+  "unlisted": false,
+  "canonical_page": {
+    "new_banner_url_present": true,
+    "new_first_screenshot_url_present": true,
+    "exact_credit_present": true
+  },
+  "physical_watch_test": "No new physical test; artwork-only update of existing release",
+  "downloaded_images_visually_reviewed": true
+}

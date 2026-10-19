@@ -1,0 +1,23 @@
+Use case: ads-marketing / compositing.
+Create ONE finished portrait 4:5 image, slide 1 of a three-slide Reddit carousel promoting the real Pebble watchface Thin+. Aim for restrained, exceptionally desirable product photography and editorial design, faithful hardware, realistic e-paper screens, no fantasy technology.
+
+Input images:
+1: official Pebble Time 2 product render showing four watches. Use ONLY the silver rectangular watch with black silicone strap (upper right) as the hardware identity and geometry reference. Preserve real bezel width, softly rounded rectangular metal case, three textured right-side buttons, black silicone band, attachment geometry.
+2: official close-up silver PT2 reference for metal surface, buttons, screen glass and reflections.
+3: ACTUAL Thin+ Classic screenshot, black screen, thin gray analog hands with white tips, dark-red center dot and dark-red seconds hand with orange tip; no text/complications. This is the large hero watch screen; faithfully insert its design.
+4: actual Ocean Thin+ screen for smaller supporting watch.
+5: actual Paper Thin+ screen for smaller supporting watch.
+These are supporting compositing inputs. Replace the unrelated original watch displays with the Thin+ screens. Do not copy the original digital/post/message screen.
+
+Scene: sophisticated charcoal-black studio background, subtle ground shadow, soft silver highlights. Three silver PT2 watches with black straps, dominant almost-front-facing Classic watch in the center, two smaller supporting watches Ocean and Paper arranged at its lower sides. Natural physically plausible proportions, legible screens, realistic gently curved straps. Hero occupies most of the image below the headline. No props, hands, people, glowing screens, lens flare, neon environment, floating particles, extra logos, fabricated measurements, circular watch housings or Apple Watch parts.
+
+Typography: crisp refined sans serif, white with a small warm orange plus accent. Exact copy only, generous breathing room and clear hierarchy.
+Top small brand: "Thin+" (Thin white, plus orange).
+Large headline, deliberate balanced line breaks:
+"The Thin you love."
+"More ways to make it yours."
+Bottom small: "Free on the Pebble App Store"
+Bottom fine print, exactly with final full stop: "Based on Thin by Chris Lewis."
+Subtle slide number "01 / 03".
+Do not add theme labels, features, URLs or any other promotional copy to this slide.
+Keep every screen a rectangular 200:228 content area inside the real bezel. The Classic dial markers follow the rectangular screen perimeter; no enclosing circle or dial numerals. Its center is dark red, never white or bright pink. Honor original Thin+ screen detail and realistic e-paper saturation. The result should look like a carefully art-directed product mockup, not a generic AI smartwatch advertisement.

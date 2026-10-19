@@ -1,0 +1,339 @@
+{
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "release_id": "c652f752f6254eb694d76511",
+  "dashboard_url": "https://developer.repebble.com/dashboard/apps/b0a4b28dbe9440c3b19f68e3/edit",
+  "app_uuid": "0e83e240-01b8-469b-a51b-b2a0e767fefb",
+  "title": "Thin+",
+  "type": "watchface",
+  "category": "Faces",
+  "visibility": "unlisted",
+  "visible": false,
+  "unlisted": true,
+  "version": "1.0.0",
+  "is_published": false,
+  "description_and_platform_descriptions_match": true,
+  "release_notes_match": true,
+  "source_matches": true,
+  "website_empty": true,
+  "supported_platforms": [
+    "aplite",
+    "basalt",
+    "chalk",
+    "diorite",
+    "emery",
+    "flint",
+    "gabbro"
+  ],
+  "screenshot_counts": {
+    "aplite": 1,
+    "basalt": 1,
+    "chalk": 1,
+    "diorite": 1,
+    "emery": 5,
+    "flint": 1,
+    "gabbro": 1
+  },
+  "screenshot_order_verified_by_decoded_pixels": false,
+  "store_icons": "Approved 80\u00d780 and 144\u00d7144 icons saved through edit endpoint; dashboard list URL and downloaded images verified.",
+  "download_checks": [
+    {
+      "asset": "pbwFile",
+      "local_path": "build/thin-plus.pbw",
+      "downloaded_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+      "local_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+      "bytes": 519559,
+      "bytes_match": true
+    },
+    {
+      "asset": "emery screenshot 1",
+      "local_path": "store/screenshots/emery-01-classic-minimal.png",
+      "downloaded_sha256": "97cda89d16601cfc74410e913fe98f660633a6a453271dd764aa2c6d33695f4b",
+      "local_sha256": "a282f996c6e8cfc3393908390247a2e3cf071603037a7e9d3e6766024e186b61",
+      "bytes": 706,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 2",
+      "local_path": "store/screenshots/emery-02-neon-date-only.png",
+      "downloaded_sha256": "c6b0ce7b70b530ae4a4d80d1b1a04a19e2df4ca0e983500974cb59e626bc566d",
+      "local_sha256": "13a240dbdd4064d787875a2a27941e7f6a3f1407359703b1e7c44df5eededa40",
+      "bytes": 931,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.01037280701754386,
+        0.0003508771929824561,
+        0.0005043859649122807
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 3",
+      "local_path": "store/screenshots/emery-03-ocean-steps-only.png",
+      "downloaded_sha256": "13af63988a34dadfb6df0e297ac028e6d7ab6f105fca8e00826994aad6792a0c",
+      "local_sha256": "7c08d6c2f49f4427cc1d4ff2b2fbc6050e963045ed5ff8362967f100e45480c1",
+      "bytes": 902,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.002017543859649123,
+        0.0027850877192982454,
+        0.01081140350877193
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 4",
+      "local_path": "store/screenshots/emery-04-paper-digital-only.png",
+      "downloaded_sha256": "f6f15a14051c11b8465a9f7c9fd9a367948e36cd18b5a5b04cb9fdb08fe7d4ee",
+      "local_sha256": "d3aa05af60c74f1c837a98be02d6bacc1621e2f64673c3f57943914882a4feff",
+      "bytes": 800,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 5",
+      "local_path": "store/screenshots/emery-05-sunset-battery-only.png",
+      "downloaded_sha256": "e762305f55a3e519a527324fd6cb7c3607ea2f0a840e04f56c44e1f49a0bc554",
+      "local_sha256": "53da1860448139bd89bf35b662372cfe12b9ec5c741575d4062fbeed7b2cb78a",
+      "bytes": 948,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.003442982456140351,
+        0.01962719298245614
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery banner",
+      "local_path": "store/banner-emery-720x320.png",
+      "bytes": 3139,
+      "downloaded_sha256": "0a22a2fd2a040b2c6482a0ee07aa711a109278f14ed2244d0c90fef300c296f6",
+      "local_sha256": "c76821402b87f5e6462930383a1fffdea0e3df3420bc3ce18c109db0448a4f3d",
+      "dimensions": [
+        720,
+        320
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.06274739583333333,
+        0.05171875,
+        0.053307291666666666
+      ],
+      "native_screenshot_preserved_locally": true,
+      "visually_verified": true
+    },
+    {
+      "asset": "basalt screenshot 1",
+      "local_path": "store/screenshots/basalt-classic-minimal.png",
+      "downloaded_sha256": "643981bb5ecbef903eb058433bb9466706eca4131b00ec76110d623d9eb83437",
+      "local_sha256": "90d2e46af92ea1aa9ce5cff04082323b3d04f13d829a7cdf4b751c938c7ba506",
+      "bytes": 471,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "aplite screenshot 1",
+      "local_path": "store/screenshots/aplite-classic-minimal.png",
+      "downloaded_sha256": "6e691d659d6cb93a6105f784a6ab4b3906c8ebbe005343ace0c541b30229d5be",
+      "local_sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "bytes": 364,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "diorite screenshot 1",
+      "local_path": "store/screenshots/diorite-classic-minimal.png",
+      "downloaded_sha256": "6e691d659d6cb93a6105f784a6ab4b3906c8ebbe005343ace0c541b30229d5be",
+      "local_sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "bytes": 364,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "gabbro screenshot 1",
+      "local_path": "store/screenshots/gabbro-classic-minimal.png",
+      "downloaded_sha256": "e7c22ccd7e311696c588252d8873506e8941f0be92ce39834b49d32400ac3f37",
+      "local_sha256": "264b9135b6b7cf418a5b077b5eff5ed3f60056341e87a5944fadab735625db44",
+      "bytes": 1557,
+      "bytes_match": false,
+      "dimensions": [
+        260,
+        260
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "chalk screenshot 1",
+      "local_path": "store/screenshots/chalk-classic-minimal.png",
+      "downloaded_sha256": "2ffbb9635f01211d46783d23b34f049094fc18d99e07275c28e077559da98faf",
+      "local_sha256": "c29ef5ecf2ac6de763e79db2aaa9169b4e305690cc20cb384c6e19988c04b9e2",
+      "bytes": 1096,
+      "bytes_match": false,
+      "dimensions": [
+        180,
+        180
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "flint screenshot 1",
+      "local_path": "store/screenshots/flint-classic-minimal.png",
+      "downloaded_sha256": "6e691d659d6cb93a6105f784a6ab4b3906c8ebbe005343ace0c541b30229d5be",
+      "local_sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "bytes": 364,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    }
+  ],
+  "pending": [
+    "explicit release-publication approval before an installable store release",
+    "PT2 install from store and settings/theme check (Gate B)",
+    "explicit listed visibility approval (Gate C)",
+    "commit/push/tag authorization"
+  ],
+  "store_image_processing": "Server re-encodes PNGs. Native dimensions are preserved; all screenshots are below 0.1/255 mean visible difference per channel, and the new banner is below 0.07/255.",
+  "dashboard_account_author": "Edward",
+  "dashboard_account_author_note": "Existing linked developer account name; not changed globally. PBW companyName remains Edward Wijaya.",
+  "screenshot_order_verified_by_visual_review": true,
+  "all_uploaded_images_visually_reviewed": true,
+  "credit": "Based on Thin by Chris Lewis.",
+  "credit_update_verified_on_all_platforms_and_release_notes": true,
+  "screenshot_revision": "minimal layouts requested by Edward",
+  "banner_revision": "The Thin you love. More ways to make it yours.",
+  "screenshot_order_verified_by_image_comparison": true,
+  "public_credit_checks": [
+    {
+      "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "exact_credit_present": false,
+      "old_credit_absent": true,
+      "minimal_copy_present": true,
+      "cache": {
+        "Date": "Mon, 19 Oct 2026 04:18:49 GMT",
+        "Age": "0",
+        "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS"
+      }
+    },
+    {
+      "url": "https://appstore-api.repebble.com/api/v1/apps/id/b0a4b28dbe9440c3b19f68e3?revision=1792383529",
+      "status": 200,
+      "exact_credit_present": true,
+      "old_credit_absent": true,
+      "minimal_copy_present": true,
+      "cache": {
+        "Age": "0",
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=300",
+        "Date": "Mon, 19 Oct 2026 04:18:49 GMT",
+        "X-Vercel-Cache": "MISS"
+      }
+    }
+  ],
+  "public_screenshot_refresh": "Minimal screenshot description is now present on the public page. Latest full-stop credit and banner verified in dashboard and fresh public API; public HTML cache may lag.",
+  "icon_checks": [
+    {
+      "field": "icon_small",
+      "url": "/api/assets/icons/b0a4b28dbe9440c3b19f68e3/small/bd3da8b5-1d17-4415-bf84-25d9e83592a9.png",
+      "size": [
+        80,
+        80
+      ],
+      "downloaded_sha256": "5e2493a3486809c11d4c87b177e1986f44e4ecd7c75065fd37d9734e9a0d3a5b",
+      "visible_channel_mean_absolute_error_0_255": [
+        0.3125,
+        0.3109375,
+        0.3375
+      ]
+    },
+    {
+      "field": "icon_large",
+      "url": "/api/assets/icons/b0a4b28dbe9440c3b19f68e3/large/ab569d32-bb9f-49b4-a475-bd4200d9c308.png",
+      "size": [
+        144,
+        144
+      ],
+      "downloaded_sha256": "eab57ce7b2b5f4dcf84ce50b85d1b6a93990a2f2ef855c5c946119047de5996b",
+      "visible_channel_mean_absolute_error_0_255": [
+        0.2013888888888889,
+        0.22313850308641975,
+        0.2495659722222222
+      ]
+    }
+  ]
+}

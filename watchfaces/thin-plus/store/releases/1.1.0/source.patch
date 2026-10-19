@@ -1,0 +1,172 @@
+diff --git a/watchfaces/thin-plus/package-lock.json b/watchfaces/thin-plus/package-lock.json
+index 5cf8013..6eae384 100644
+--- a/watchfaces/thin-plus/package-lock.json
++++ b/watchfaces/thin-plus/package-lock.json
+@@ -1,12 +1,12 @@
+ {
+   "name": "thin-plus",
+-  "version": "1.0.0",
++  "version": "1.1.0",
+   "lockfileVersion": 2,
+   "requires": true,
+   "packages": {
+     "": {
+       "name": "thin-plus",
+-      "version": "1.0.0",
++      "version": "1.1.0",
+       "dependencies": {
+         "@rebble/clay": "^1.0.8",
+         "pebble-packet": "^1.6.0",
+diff --git a/watchfaces/thin-plus/package.json b/watchfaces/thin-plus/package.json
+index 193517d..b68ac35 100644
+--- a/watchfaces/thin-plus/package.json
++++ b/watchfaces/thin-plus/package.json
+@@ -1,5 +1,5 @@
+ {
+-  "version": "1.0.0",
++  "version": "1.1.0",
+   "author": "Edward Wijaya",
+   "private": true,
+   "dependencies": {
+@@ -49,7 +49,8 @@
+       "ColorHandTips",
+       "ColorCenterDot",
+       "ColorSecondTip",
+-      "ColorBatteryEmpty"
++      "ColorBatteryEmpty",
++      "BatteryOnlyWhenLow"
+     ],
+     "enableMultiJS": true,
+     "displayName": "Thin+",
+diff --git a/watchfaces/thin-plus/resources/images/menu_icon.png b/watchfaces/thin-plus/resources/images/menu_icon.png
+index b4c089e6e2112dd2069db8acc34552c8a061d6b0..c36576a97fa30f04ecd9147d6aeea25c83d0e4b3 100644
+GIT binary patch
+delta 179
+zcmV;k08Ia&0>lB38Gi-<006}4g<}8!0E<aPK~#90-Bm#fz%U5YvHySBorE%~OLQ%4
+zIkqMtSW=O{K#?Icvrs@4(n!TK19T=Oubk%zEU#iPavu3zgXrvFMekzN>xxoj>F7I_
+zfIMx=#P59u*<HzGW`?4*cpBwu0I)ZSNIy-)-=9RJmnPy)D=dMji`IwsR#`$Mraq$C
+hGZXN*OaJ&!;R4PWw{K_Dt<(Sj002ovPDHLkV1gceP=^2j
+
+delta 272
+zcmX@YxPWPbWIYoD1A}+BkO`1tNq6*hWMJ6X&;2Kn7072S4sv&5ym?Zm9>`Hh_6YK2
+zV5m}KU}$JzVE6?TYIwoGP-?)y@G60U!D<ErgLuK5U4b@03C;qK$YKTtJ!KGPtXOJa
+z1{7p3@$_|Nf62is!X>!n>jovDP?@Joy<>>Q>8GKNd<PUbnp6M(H?r2zE0o@rk^fC&
+zsY7$tH37kC32I-YJJ?Q?J68zZVf<+zJ0(hl?Ou89M4N4LQ=-+cq>J2Ibw^*{*L<3F
+zzS)|SQ$oJ6?umaBzQvtsXVzBz`FkB^-q9|s`}1b$UGABzSBnq+uVCCER=7Eaf3`Eo
+OsSKX3elF{r5}E+MWLrA`
+
+diff --git a/watchfaces/thin-plus/src/c/modules/comm.c b/watchfaces/thin-plus/src/c/modules/comm.c
+index ebc5bff..8abb9b3 100644
+--- a/watchfaces/thin-plus/src/c/modules/comm.c
++++ b/watchfaces/thin-plus/src/c/modules/comm.c
+@@ -15,6 +15,13 @@ static void in_recv_handler(DictionaryIterator *iter, void *context) {
+   data_set_enable(MESSAGE_KEY_EnableDate, packet_get_boolean(iter, MESSAGE_KEY_EnableDate));
+   data_set_enable(MESSAGE_KEY_EnableBT, packet_get_boolean(iter, MESSAGE_KEY_EnableBT));
+   data_set_enable(MESSAGE_KEY_EnableBattery, packet_get_boolean(iter, MESSAGE_KEY_EnableBattery));
++  // Older settings pages do not send this optional key.
++  if (dict_find(iter, MESSAGE_KEY_BatteryOnlyWhenLow)) {
++    data_set_enable(
++      MESSAGE_KEY_BatteryOnlyWhenLow,
++      packet_get_boolean(iter, MESSAGE_KEY_BatteryOnlyWhenLow)
++    );
++  }
+   data_set_enable(
+     MESSAGE_KEY_EnableSecondHand,
+     packet_get_boolean(iter, MESSAGE_KEY_EnableSecondHand)
+diff --git a/watchfaces/thin-plus/src/c/modules/data.c b/watchfaces/thin-plus/src/c/modules/data.c
+index 4e795a2..85117f1 100644
+--- a/watchfaces/thin-plus/src/c/modules/data.c
++++ b/watchfaces/thin-plus/src/c/modules/data.c
+@@ -27,6 +27,7 @@ typedef struct {
+   GColor color_center_dot;
+   GColor color_second_tip;
+   GColor color_battery_empty;
++  bool battery_only_when_low;
+ } AppConfig;
+ 
+ // Cache for speed
+@@ -57,6 +58,7 @@ void data_init() {
+   s_app_config.color_center_dot = GColorClear;
+   s_app_config.color_second_tip = GColorClear;
+   s_app_config.color_battery_empty = GColorClear;
++  s_app_config.battery_only_when_low = false;
+ 
+   if(!persist_exists(SK_AppConfig)) {
+     // Set defaults
+@@ -116,6 +118,8 @@ void data_set_enable(uint32_t key, bool b) {
+     s_app_config.enable_steps = b;
+   } else if (key == MESSAGE_KEY_EnableThickHands) {
+     s_app_config.enable_thick_hands = b;
++  } else if (key == MESSAGE_KEY_BatteryOnlyWhenLow) {
++    s_app_config.battery_only_when_low = b;
+   }
+ }
+ 
+@@ -132,6 +136,8 @@ bool data_get_enable(uint32_t key) {
+     return s_app_config.enable_steps;
+   } else if (key == MESSAGE_KEY_EnableThickHands) {
+     return s_app_config.enable_thick_hands;
++  } else if (key == MESSAGE_KEY_BatteryOnlyWhenLow) {
++    return s_app_config.battery_only_when_low;
+   }
+ 
+   return false;
+diff --git a/watchfaces/thin-plus/src/c/modules/slots.c b/watchfaces/thin-plus/src/c/modules/slots.c
+index 7a1be91..16f84bc 100644
+--- a/watchfaces/thin-plus/src/c/modules/slots.c
++++ b/watchfaces/thin-plus/src/c/modules/slots.c
+@@ -1,6 +1,7 @@
+ #include "slots.h"
+ 
+ #define VALUE_HEIGHT scl_y_pp({.o = 170, .c = 160, .e = 145, .g = 140})
++#define LOW_BATTERY_PERCENT 20
+ 
+ static void get_slot_text(SlotType type, char *value, size_t size) {
+   switch (type) {
+@@ -39,6 +40,8 @@ static void get_slot_text(SlotType type, char *value, size_t size) {
+ static void draw_slot(GContext *ctx, uint32_t key, GRect value_rect) {
+   const SlotType type = data_get_slot(key);
+   if (type == SlotTypeNone) return;
++  if (type == SlotTypeBattery && data_get_enable(MESSAGE_KEY_BatteryOnlyWhenLow) &&
++      battery_state_service_peek().charge_percent >= LOW_BATTERY_PERCENT) return;
+   if ((type == SlotTypeSteps || type == SlotTypeHeartRate) && !health_is_health_available()) return;
+ 
+   static char s_value[16];
+diff --git a/watchfaces/thin-plus/src/c/windows/main_window.c b/watchfaces/thin-plus/src/c/windows/main_window.c
+index e00a5a9..a29de62 100644
+--- a/watchfaces/thin-plus/src/c/windows/main_window.c
++++ b/watchfaces/thin-plus/src/c/windows/main_window.c
+@@ -102,6 +102,7 @@ static void bt_handler(bool connected) {
+ 
+ static void batt_handler(BatteryChargeState state) {
+   layer_mark_dirty(s_canvas_layer);
++  layer_mark_dirty(s_slots_layer);
+ }
+ 
+ /************************** AnimationImplementation ***************************/
+diff --git a/watchfaces/thin-plus/src/pkjs/config.js b/watchfaces/thin-plus/src/pkjs/config.js
+index 0ec96e8..7016e36 100644
+--- a/watchfaces/thin-plus/src/pkjs/config.js
++++ b/watchfaces/thin-plus/src/pkjs/config.js
+@@ -36,6 +36,7 @@ module.exports = [
+         "type": "toggle",
+         "label": "Show battery level (hour markers)",
+         "messageKey": "EnableBattery",
++        "description": "Hour marks around the edge dim as the battery drains. Turn off to keep every mark in its normal color.",
+         "defaultValue": true
+       },
+       {
+@@ -79,6 +80,13 @@ module.exports = [
+         "messageKey": "SlotBottom",
+         "defaultValue": "1",
+         "options": slotOptions
++      },
++      {
++        "type": "toggle",
++        "label": "Show battery percentage only below 20%",
++        "messageKey": "BatteryOnlyWhenLow",
++        "description": "Applies to top, left or bottom slots set to Battery. Hidden at 20% or higher. Hour markers are controlled separately.",
++        "defaultValue": false
+       }
+     ]
+   },

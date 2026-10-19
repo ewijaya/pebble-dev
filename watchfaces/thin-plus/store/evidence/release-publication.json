@@ -1,0 +1,21 @@
+{
+  "authorization": "okay relese them",
+  "action": "Publish existing Thin+ 1.0.0 release, preserving unlisted visibility for Gate B.",
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "release_id": "c652f752f6254eb694d76511",
+  "version": "1.0.0",
+  "is_published": true,
+  "published_date": "2026-10-19T04:27:32.008",
+  "visible": false,
+  "unlisted": true,
+  "assets_and_metadata_unchanged": true,
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "public_url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+  "gate_b": "pending PT2 store install, settings open and theme change",
+  "gate_c": "pending explicit listed-visibility approval",
+  "commit_push_tag_performed": false,
+  "public_release_verified": true,
+  "public_pbw_url": "https://appstore-api.repebble.com/api/assets/pbw/b0a4b28dbe9440c3b19f68e3/1.0.0/b4f857c8-b265-46e5-99e2-f2cd9b2d69fb.pbw",
+  "public_pbw_bytes": 519559,
+  "public_pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517"
+}

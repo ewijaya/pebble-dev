@@ -1,0 +1,135 @@
+{
+  "scratch_path": "/tmp/thin-plus-medium-vsqksbbs/thin-plus",
+  "scratch_data_restored": true,
+  "production_data_unchanged": true,
+  "production_pbw_unchanged": true,
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "captures": [
+    {
+      "platform": "emery",
+      "name": "emery-03-ocean-medium",
+      "theme": "ocean",
+      "slots": [
+        "Time",
+        "None",
+        "Steps"
+      ],
+      "date": false,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "emery-03-ocean-medium.png",
+      "sha256": "2ce3c1abbcacbed014ba0eb1009378eb945165ee776684a52d051f5e9dd73164",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "gabbro",
+      "name": "gabbro-classic-medium",
+      "theme": "classic",
+      "slots": [
+        "Time",
+        "None",
+        "None"
+      ],
+      "date": true,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "gabbro-classic-medium.png",
+      "sha256": "a5f6f1b0e8552dfd74567e90a3ea89395e600f0af469620451f2d1e24648ef59",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "chalk",
+      "name": "chalk-classic-medium",
+      "theme": "classic",
+      "slots": [
+        "Time",
+        "None",
+        "None"
+      ],
+      "date": true,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "chalk-classic-medium.png",
+      "sha256": "b410079cecdda8ecb60e616305e43f90c75968849fdfda710856f182870d2825",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "basalt",
+      "name": "basalt-classic-medium",
+      "theme": "classic",
+      "slots": [
+        "Time",
+        "None",
+        "None"
+      ],
+      "date": true,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "basalt-classic-medium.png",
+      "sha256": "c9037216b413fb1fd3545dbae479eaebbe53aaa6c22814af4ea0843eea383275",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "aplite",
+      "name": "aplite-classic-medium",
+      "theme": "classic",
+      "slots": [
+        "Time",
+        "None",
+        "None"
+      ],
+      "date": true,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "aplite-classic-medium.png",
+      "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "diorite",
+      "name": "diorite-classic-medium",
+      "theme": "classic",
+      "slots": [
+        "Time",
+        "None",
+        "None"
+      ],
+      "date": true,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "diorite-classic-medium.png",
+      "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    },
+    {
+      "platform": "flint",
+      "name": "flint-classic-medium",
+      "theme": "classic",
+      "slots": [
+        "Time",
+        "None",
+        "None"
+      ],
+      "date": true,
+      "seconds": false,
+      "thick": false,
+      "battery_markers": false,
+      "battery": 80,
+      "file": "flint-classic-medium.png",
+      "sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "capture": "native, unscaled emulator PNG; scratch getter overrides; live emulator clock"
+    }
+  ]
+}

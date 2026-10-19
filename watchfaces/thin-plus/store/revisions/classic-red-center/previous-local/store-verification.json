@@ -1,0 +1,669 @@
+{
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "release_id": "c652f752f6254eb694d76511",
+  "dashboard_url": "https://developer.repebble.com/dashboard/apps/b0a4b28dbe9440c3b19f68e3/edit",
+  "app_uuid": "0e83e240-01b8-469b-a51b-b2a0e767fefb",
+  "title": "Thin+",
+  "type": "watchface",
+  "category": "Faces",
+  "visibility": "listed",
+  "visible": true,
+  "unlisted": false,
+  "version": "1.0.0",
+  "is_published": true,
+  "description_and_platform_descriptions_match": true,
+  "release_notes_match": true,
+  "source_matches": true,
+  "website_empty": true,
+  "supported_platforms": [
+    "aplite",
+    "basalt",
+    "chalk",
+    "diorite",
+    "emery",
+    "flint",
+    "gabbro"
+  ],
+  "screenshot_counts": {
+    "emery": 5,
+    "basalt": 3,
+    "gabbro": 3,
+    "diorite": 3,
+    "chalk": 3,
+    "aplite": 3,
+    "flint": 3
+  },
+  "screenshot_order_verified_by_decoded_pixels": false,
+  "store_icons": "Rectangular PT2-style outline, saved and downloaded at 80\u00d780 and 144\u00d7144.",
+  "download_checks": [
+    {
+      "asset": "pbwFile",
+      "local_path": "build/thin-plus.pbw",
+      "downloaded_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+      "local_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+      "bytes": 519559,
+      "bytes_match": true
+    },
+    {
+      "asset": "emery screenshot 1",
+      "local_path": "store/screenshots/emery-01-classic-minimal.png",
+      "downloaded_sha256": "97cda89d16601cfc74410e913fe98f660633a6a453271dd764aa2c6d33695f4b",
+      "local_sha256": "a282f996c6e8cfc3393908390247a2e3cf071603037a7e9d3e6766024e186b61",
+      "bytes": 706,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 2",
+      "local_path": "store/screenshots/emery-02-neon-date-only.png",
+      "downloaded_sha256": "c6b0ce7b70b530ae4a4d80d1b1a04a19e2df4ca0e983500974cb59e626bc566d",
+      "local_sha256": "13a240dbdd4064d787875a2a27941e7f6a3f1407359703b1e7c44df5eededa40",
+      "bytes": 931,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.01037280701754386,
+        0.0003508771929824561,
+        0.0005043859649122807
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 3",
+      "local_path": "store/screenshots/emery-03-ocean-medium.png",
+      "downloaded_sha256": "58c0ba2b88d70f378bf9b35d0167c04db83d858a0cc4359c1e90606851269563",
+      "local_sha256": "2ce3c1abbcacbed014ba0eb1009378eb945165ee776684a52d051f5e9dd73164",
+      "bytes": 921,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.009495614035087719,
+        0.017609649122807016,
+        0.005526315789473684
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 4",
+      "local_path": "store/screenshots/emery-04-paper-rich.png",
+      "downloaded_sha256": "b23fa3ba2060f3bef497c6982de3b9de811444484643134070410f4c9c784900",
+      "local_sha256": "7bf647bef5ed9dcf60c0319fd94cf8fe8ffa7b610301fff40d5d83cb8caeaea2",
+      "bytes": 1424,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.006228070175438596,
+        0.004561403508771929,
+        0.009802631578947368
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery screenshot 5",
+      "local_path": "store/screenshots/emery-05-sunset-rich.png",
+      "downloaded_sha256": "1696ca2048f64f760a791cf9bd313d6ae04f582040dc7d8b91e5694a489497c6",
+      "local_sha256": "1aa8dd6d488435e15938be0f2b9ac611eb5b27cefdc18ff47cd95a70991d3453",
+      "bytes": 1430,
+      "bytes_match": false,
+      "dimensions": [
+        200,
+        228
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        8.771929824561403e-05,
+        0.0014912280701754386,
+        0.012587719298245615
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "emery banner",
+      "local_path": "store/banner-emery-720x320.png",
+      "downloaded_sha256": "0a22a2fd2a040b2c6482a0ee07aa711a109278f14ed2244d0c90fef300c296f6",
+      "local_sha256": "c76821402b87f5e6462930383a1fffdea0e3df3420bc3ce18c109db0448a4f3d",
+      "bytes": 3139,
+      "bytes_match": false,
+      "dimensions": [
+        720,
+        320
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.06274739583333333,
+        0.05171875,
+        0.053307291666666666
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "basalt screenshot 1",
+      "local_path": "store/screenshots/basalt-classic-minimal.png",
+      "downloaded_sha256": "643981bb5ecbef903eb058433bb9466706eca4131b00ec76110d623d9eb83437",
+      "local_sha256": "90d2e46af92ea1aa9ce5cff04082323b3d04f13d829a7cdf4b751c938c7ba506",
+      "bytes": 471,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "basalt screenshot 2",
+      "local_path": "store/screenshots/basalt-classic-medium.png",
+      "downloaded_sha256": "5065c6b612329a72a2e593f83c1de8b55eed1605a1227cc4d269469004f4221b",
+      "local_sha256": "c9037216b413fb1fd3545dbae479eaebbe53aaa6c22814af4ea0843eea383275",
+      "bytes": 701,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "basalt screenshot 3",
+      "local_path": "store/screenshots/basalt-classic-rich.png",
+      "downloaded_sha256": "24e9b6f96737f116154337133c85a1da22b508c9650c17aa7c455d79e653b37e",
+      "local_sha256": "616bf5ee5419440a672e9c371da0d9bfb4213611e31a2ca7ea0064cd709117d8",
+      "bytes": 971,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0021494708994708994,
+        0.01773313492063492,
+        0.007688492063492063
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "gabbro screenshot 1",
+      "local_path": "store/screenshots/gabbro-classic-minimal.png",
+      "downloaded_sha256": "e7c22ccd7e311696c588252d8873506e8941f0be92ce39834b49d32400ac3f37",
+      "local_sha256": "264b9135b6b7cf418a5b077b5eff5ed3f60056341e87a5944fadab735625db44",
+      "bytes": 1557,
+      "bytes_match": false,
+      "dimensions": [
+        260,
+        260
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "gabbro screenshot 2",
+      "local_path": "store/screenshots/gabbro-classic-medium.png",
+      "downloaded_sha256": "977df4538c49ef2ae9d452fe6939db8675df2ff9008a34ec3c09f202ee4d28d6",
+      "local_sha256": "a5f6f1b0e8552dfd74567e90a3ea89395e600f0af469620451f2d1e24648ef59",
+      "bytes": 2001,
+      "bytes_match": false,
+      "dimensions": [
+        260,
+        260
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "gabbro screenshot 3",
+      "local_path": "store/screenshots/gabbro-classic-rich.png",
+      "downloaded_sha256": "87e4b601e9777b36629564c45fecf448e8dc5f5b7bc47d6c951cbff3c303e3eb",
+      "local_sha256": "8127db90ea4f648661383be559b8dffba2e85ccb6ccdc7288411dcda21876a15",
+      "bytes": 2578,
+      "bytes_match": false,
+      "dimensions": [
+        260,
+        260
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0010798816568047336,
+        0.011420118343195266,
+        0.005266272189349113
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "diorite screenshot 1",
+      "local_path": "store/screenshots/diorite-classic-minimal.png",
+      "downloaded_sha256": "6e691d659d6cb93a6105f784a6ab4b3906c8ebbe005343ace0c541b30229d5be",
+      "local_sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "bytes": 364,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "diorite screenshot 2",
+      "local_path": "store/screenshots/diorite-classic-medium.png",
+      "downloaded_sha256": "e71ff679db794f33721ca7b63c38389a297d61ba73b3db02932b8da6a53058f7",
+      "local_sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "bytes": 595,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "diorite screenshot 3",
+      "local_path": "store/screenshots/diorite-classic-rich.png",
+      "downloaded_sha256": "732330cab3fe89b578331c9b4193688b6559163c01bf0d795364c2bde9480c7c",
+      "local_sha256": "2d9507a648e610f3dd741ec3098275ed32aefa9045ca57cc9277316e3731ece2",
+      "bytes": 808,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "chalk screenshot 1",
+      "local_path": "store/screenshots/chalk-classic-minimal.png",
+      "downloaded_sha256": "2ffbb9635f01211d46783d23b34f049094fc18d99e07275c28e077559da98faf",
+      "local_sha256": "c29ef5ecf2ac6de763e79db2aaa9169b4e305690cc20cb384c6e19988c04b9e2",
+      "bytes": 1096,
+      "bytes_match": false,
+      "dimensions": [
+        180,
+        180
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "chalk screenshot 2",
+      "local_path": "store/screenshots/chalk-classic-medium.png",
+      "downloaded_sha256": "09a1003047c12ba6896af80e5f03b7f9b22ecb5d70ea66ad697472f4fc2b6037",
+      "local_sha256": "b410079cecdda8ecb60e616305e43f90c75968849fdfda710856f182870d2825",
+      "bytes": 1374,
+      "bytes_match": false,
+      "dimensions": [
+        180,
+        180
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "chalk screenshot 3",
+      "local_path": "store/screenshots/chalk-classic-rich.png",
+      "downloaded_sha256": "9846732f4fc01d3fa28b02012040b8b12e8fc2248af823c5ee4940a584db2dbd",
+      "local_sha256": "20d23fd7e0278ab9a11f6bc151bcec1048426172b8c15db43bec3eb7d0c10753",
+      "bytes": 1625,
+      "bytes_match": false,
+      "dimensions": [
+        180,
+        180
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.000462962962962963,
+        0.0035185185185185185,
+        0.008148148148148147
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "aplite screenshot 1",
+      "local_path": "store/screenshots/aplite-classic-minimal.png",
+      "downloaded_sha256": "6e691d659d6cb93a6105f784a6ab4b3906c8ebbe005343ace0c541b30229d5be",
+      "local_sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "bytes": 364,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "aplite screenshot 2",
+      "local_path": "store/screenshots/aplite-classic-medium.png",
+      "downloaded_sha256": "e71ff679db794f33721ca7b63c38389a297d61ba73b3db02932b8da6a53058f7",
+      "local_sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "bytes": 595,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "aplite screenshot 3",
+      "local_path": "store/screenshots/aplite-classic-rich.png",
+      "downloaded_sha256": "6ee007a15dfdbf5641a882cdb4a953e86999bb1a468e66cc93949257cc573acd",
+      "local_sha256": "a24ad417f1f5282afa64eb3481ce536049468ea775aac6c215d6c4116052fc38",
+      "bytes": 782,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "flint screenshot 1",
+      "local_path": "store/screenshots/flint-classic-minimal.png",
+      "downloaded_sha256": "6e691d659d6cb93a6105f784a6ab4b3906c8ebbe005343ace0c541b30229d5be",
+      "local_sha256": "e08d1b6942a8db3c54545bf4769b67bdfb772176ab6c4d9c1f4ad7e504fb8ca2",
+      "bytes": 364,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "flint screenshot 2",
+      "local_path": "store/screenshots/flint-classic-medium.png",
+      "downloaded_sha256": "e71ff679db794f33721ca7b63c38389a297d61ba73b3db02932b8da6a53058f7",
+      "local_sha256": "2841b9d44dad8a2a0c186fdb7a664ad2affb3e04fe92c0ed94d3008a605b478c",
+      "bytes": 595,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "flint screenshot 3",
+      "local_path": "store/screenshots/flint-classic-rich.png",
+      "downloaded_sha256": "9458353836e15f7f712b12483569a4bbc11696a4fb9b92e4f080df64c35f5c6e",
+      "local_sha256": "e56181de53a8888d425ba8567717c14e03876ea98a9ce1dde58a50a0c2ed5e03",
+      "bytes": 879,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        168
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "icon_small",
+      "local_path": "store/icons/thin-plus-80.png",
+      "downloaded_sha256": "3081ef519f082c4fd4b66ec45ceff733d3296a0006a459864529090d06e7d894",
+      "local_sha256": "0548b561741985fe09f9fe710c3964b544881e784e04b365b3ac3f636188961d",
+      "bytes": 904,
+      "bytes_match": false,
+      "dimensions": [
+        80,
+        80
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.26125,
+        0.27484375,
+        0.3246875
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "icon_large",
+      "local_path": "store/icons/thin-plus-144.png",
+      "downloaded_sha256": "9a40ef6723ce955372ae1b077453c603018790f30336413e11b64f41b85a33b1",
+      "local_sha256": "e6e23f82d151acc0c1ebcaaf8501aaccdab0f58402002d747723f9f4b77bd283",
+      "bytes": 1195,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        144
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.17525077160493827,
+        0.20032793209876543,
+        0.2609471450617284
+      ],
+      "alpha_matches": true
+    }
+  ],
+  "pending": [
+    "commit/push/tag authorization"
+  ],
+  "store_image_processing": "Server re-encodes PNGs. Native dimensions and alpha match. Screenshots/banner mean visible error is below 0.1/255 per channel; store icons below 1/255.",
+  "dashboard_account_author": "Edward",
+  "dashboard_account_author_note": "Existing linked developer account name; not changed globally. PBW companyName remains Edward Wijaya.",
+  "screenshot_order_verified_by_visual_review": true,
+  "all_uploaded_images_visually_reviewed": true,
+  "credit": "Based on Thin by Chris Lewis.",
+  "credit_update_verified_on_all_platforms_and_release_notes": true,
+  "screenshot_revision": "Minimal, medium and rich: 5 Emery + 3 per other platform",
+  "banner_revision": "The Thin you love. More ways to make it yours.",
+  "screenshot_order_verified_by_image_comparison": true,
+  "public_credit_checks": [
+    {
+      "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "exact_credit_present": true,
+      "old_credit_absent": true
+    }
+  ],
+  "public_screenshot_refresh": "Fresh public API responses for every platform contain the current gallery and store icon URLs. The exact public page URL contains the full-stop credit.",
+  "icon_checks": [
+    {
+      "asset": "icon_small",
+      "local_path": "store/icons/thin-plus-80.png",
+      "downloaded_sha256": "3081ef519f082c4fd4b66ec45ceff733d3296a0006a459864529090d06e7d894",
+      "local_sha256": "0548b561741985fe09f9fe710c3964b544881e784e04b365b3ac3f636188961d",
+      "bytes": 904,
+      "bytes_match": false,
+      "dimensions": [
+        80,
+        80
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.26125,
+        0.27484375,
+        0.3246875
+      ],
+      "alpha_matches": true
+    },
+    {
+      "asset": "icon_large",
+      "local_path": "store/icons/thin-plus-144.png",
+      "downloaded_sha256": "9a40ef6723ce955372ae1b077453c603018790f30336413e11b64f41b85a33b1",
+      "local_sha256": "e6e23f82d151acc0c1ebcaaf8501aaccdab0f58402002d747723f9f4b77bd283",
+      "bytes": 1195,
+      "bytes_match": false,
+      "dimensions": [
+        144,
+        144
+      ],
+      "visible_channel_mean_absolute_error_0_255": [
+        0.17525077160493827,
+        0.20032793209876543,
+        0.2609471450617284
+      ],
+      "alpha_matches": true
+    }
+  ],
+  "public_platform_checks": [
+    {
+      "platform": "emery",
+      "screenshot_count": 5,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "gabbro",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "chalk",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "basalt",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "aplite",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "diorite",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    },
+    {
+      "platform": "flint",
+      "screenshot_count": 3,
+      "exact_credit": true,
+      "list_icons_present": true
+    }
+  ],
+  "public_page_check": {
+    "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+    "status": 200,
+    "exact_credit_present": true,
+    "old_credit_absent": true
+  },
+  "published_date": "2026-10-19T04:27:32.008",
+  "public_release_verification": {
+    "authorization": "okay relese them",
+    "action": "Publish existing Thin+ 1.0.0 release, preserving unlisted visibility for Gate B.",
+    "app_id": "b0a4b28dbe9440c3b19f68e3",
+    "release_id": "c652f752f6254eb694d76511",
+    "version": "1.0.0",
+    "is_published": true,
+    "published_date": "2026-10-19T04:27:32.008",
+    "visible": false,
+    "unlisted": true,
+    "assets_and_metadata_unchanged": true,
+    "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+    "public_url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+    "gate_b": "pending PT2 store install, settings open and theme change",
+    "gate_c": "pending explicit listed-visibility approval",
+    "commit_push_tag_performed": false,
+    "public_release_verified": true,
+    "public_pbw_url": "https://appstore-api.repebble.com/api/assets/pbw/b0a4b28dbe9440c3b19f68e3/1.0.0/b4f857c8-b265-46e5-99e2-f2cd9b2d69fb.pbw",
+    "public_pbw_bytes": 519559,
+    "public_pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517"
+  },
+  "gate_b": "complete, owner-confirmed PT2 store-install/settings/theme test",
+  "gate_c": "complete, explicitly authorized",
+  "listed_verification": {
+    "authorization": "confirm... make the list  listing publicly listed",
+    "gate_b": "Owner confirmed PT2 store-install/settings/theme test in response to the requested check.",
+    "gate_b_evidence_type": "owner-reported; not independently observed",
+    "gate_c": "explicitly authorized and completed",
+    "app_id": "b0a4b28dbe9440c3b19f68e3",
+    "release_id": "c652f752f6254eb694d76511",
+    "version": "1.0.0",
+    "visible": true,
+    "unlisted": false,
+    "is_published": true,
+    "other_metadata_assets_and_release_unchanged": true,
+    "public_url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+    "commit_push_tag_performed": false,
+    "public_api_visible": true,
+    "public_release_verified": true,
+    "public_pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+    "public_pbw_bytes": 519559
+  }
+}

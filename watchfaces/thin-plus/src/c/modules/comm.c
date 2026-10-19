@@ -15,6 +15,13 @@ static void in_recv_handler(DictionaryIterator *iter, void *context) {
   data_set_enable(MESSAGE_KEY_EnableDate, packet_get_boolean(iter, MESSAGE_KEY_EnableDate));
   data_set_enable(MESSAGE_KEY_EnableBT, packet_get_boolean(iter, MESSAGE_KEY_EnableBT));
   data_set_enable(MESSAGE_KEY_EnableBattery, packet_get_boolean(iter, MESSAGE_KEY_EnableBattery));
+  // Older settings pages do not send this optional key.
+  if (dict_find(iter, MESSAGE_KEY_BatteryOnlyWhenLow)) {
+    data_set_enable(
+      MESSAGE_KEY_BatteryOnlyWhenLow,
+      packet_get_boolean(iter, MESSAGE_KEY_BatteryOnlyWhenLow)
+    );
+  }
   data_set_enable(
     MESSAGE_KEY_EnableSecondHand,
     packet_get_boolean(iter, MESSAGE_KEY_EnableSecondHand)

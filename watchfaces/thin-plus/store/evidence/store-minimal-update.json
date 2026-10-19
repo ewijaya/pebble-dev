@@ -1,0 +1,42 @@
+{
+  "instruction": "Replace all-filled complication screenshots with minimal/selective layouts; remove permission wording from public listing.",
+  "app_id": "b0a4b28dbe9440c3b19f68e3",
+  "captures": 11,
+  "capture_provenance": "minimal-screenshot-provenance.json",
+  "native_dimensions_and_upload_order_verified": true,
+  "downloaded_images_visually_reviewed": true,
+  "pbw_sha256": "b5fe248bf60447b144b71ee5078db23933780916a865271d3a924967e1cae517",
+  "production_source_and_pbw_unchanged": true,
+  "banner_unchanged_pending_tagline_selection": true,
+  "visibility": "unlisted",
+  "is_published": false,
+  "public_credit_checks": [
+    {
+      "url": "https://apps.repebble.com/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "old_credit_absent": true,
+      "short_credit_present": true,
+      "minimal_copy_present": false,
+      "cache": {
+        "Date": "Mon, 19 Oct 2026 04:14:06 GMT",
+        "Age": "0",
+        "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS"
+      }
+    },
+    {
+      "url": "https://appstore-api.repebble.com/api/v1/apps/id/b0a4b28dbe9440c3b19f68e3",
+      "status": 200,
+      "old_credit_absent": true,
+      "short_credit_present": true,
+      "minimal_copy_present": false,
+      "cache": {
+        "Age": "90",
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=300",
+        "Date": "Mon, 19 Oct 2026 04:12:36 GMT",
+        "X-Vercel-Cache": "HIT"
+      }
+    }
+  ],
+  "commit_push_tag_performed": false
+}

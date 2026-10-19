@@ -1,0 +1,36 @@
+
+up to date, audited 4 packages in 532ms
+
+found 0 vulnerabilities
+
+up to date, audited 4 packages in 494ms
+
+found 0 vulnerabilities
+Setting top to                           : /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus 
+Setting out to                           : /home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/build 
+Checking for program 'webpack'           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/node_modules/.bin/webpack 
+Found Pebble SDK for gabbro in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/gabbro 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for flint in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/flint 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for emery in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/emery 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for diorite in:         : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/diorite 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for chalk in:           : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/chalk 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for basalt in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/basalt 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+Found Pebble SDK for aplite in:          : /home/ubuntu/.local/share/pebble-sdk/SDKs/current/sdk-core/pebble/aplite 
+Checking for program 'gcc, cc'           : arm-none-eabi-gcc 
+Checking for program 'ar'                : arm-none-eabi-ar 
+'configure' finished successfully (0.312s)
+Waf: Entering directory `/home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/build'
+Waf: Leaving directory `/home/ubuntu/projects/pebble-dev/watchfaces/thin-plus/build'
+'build' finished successfully (0.162s)
