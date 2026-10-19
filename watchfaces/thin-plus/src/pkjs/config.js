@@ -90,6 +90,23 @@ module.exports = [
         "defaultValue": "Colors"
       },
       {
+        "type": "select",
+        "label": "Theme",
+        "messageKey": "Theme",
+        "defaultValue": "classic",
+        "description": "Choose Custom to pick each color yourself.",
+        "options": [
+          { "label": "Classic", "value": "classic" },
+          { "label": "Neon", "value": "neon" },
+          { "label": "Ocean", "value": "ocean" },
+          { "label": "Sunset", "value": "sunset" },
+          { "label": "Lime", "value": "lime" },
+          { "label": "Mono", "value": "mono" },
+          { "label": "Paper", "value": "paper" },
+          { "label": "Custom", "value": "custom" }
+        ]
+      },
+      {
         type: 'color',
         label: 'Background',
         messageKey: 'ColorBackground',
@@ -109,8 +126,20 @@ module.exports = [
       },
       {
         type: 'color',
-        label: 'Notches',
+        label: 'Hour markers',
         messageKey: 'ColorNotches',
+        defaultValue: 'FFFFFF'
+      },
+      {
+        type: 'color',
+        label: 'Hand tips',
+        messageKey: 'ColorHandTips',
+        defaultValue: 'FFFFFF'
+      },
+      {
+        type: 'color',
+        label: 'Center dot',
+        messageKey: 'ColorCenterDot',
         defaultValue: 'FFFFFF'
       },
       {

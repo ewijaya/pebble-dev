@@ -43,6 +43,14 @@ static void in_recv_handler(DictionaryIterator *iter, void *context) {
     GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorNotches))
   );
   data_set_color(
+    MESSAGE_KEY_ColorHandTips,
+    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorHandTips))
+  );
+  data_set_color(
+    MESSAGE_KEY_ColorCenterDot,
+    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorCenterDot))
+  );
+  data_set_color(
     MESSAGE_KEY_ColorMonthDay,
     GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorMonthDay))
   );

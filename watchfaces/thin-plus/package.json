@@ -44,7 +44,10 @@
       "SlotTop",
       "SlotLeft",
       "SlotBottom",
-      "EnableThickHands"
+      "EnableThickHands",
+      "Theme",
+      "ColorHandTips",
+      "ColorCenterDot"
     ],
     "enableMultiJS": true,
     "displayName": "Thin+",

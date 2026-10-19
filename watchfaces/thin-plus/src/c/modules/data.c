@@ -23,6 +23,8 @@ typedef struct {
   uint8_t slot_left;
   uint8_t slot_bottom;
   bool enable_thick_hands;
+  GColor color_hand_tips;
+  GColor color_center_dot;
 } AppConfig;
 
 // Cache for speed
@@ -49,6 +51,8 @@ void data_init() {
   s_app_config.slot_left = SlotTypeNone;
   s_app_config.slot_bottom = SlotTypeSteps;
   s_app_config.enable_thick_hands = false;
+  s_app_config.color_hand_tips = GColorClear;
+  s_app_config.color_center_dot = GColorClear;
 
   if(!persist_exists(SK_AppConfig)) {
     // Set defaults
@@ -73,6 +77,14 @@ void data_init() {
     } else {
       APP_LOG(APP_LOG_LEVEL_INFO, "App config loaded");
     }
+  }
+
+  // Hand tips used to share the notches color, and the center dot the hand tips
+  if (gcolor_equal(s_app_config.color_hand_tips, GColorClear)) {
+    s_app_config.color_hand_tips = s_app_config.color_notches;
+  }
+  if (gcolor_equal(s_app_config.color_center_dot, GColorClear)) {
+    s_app_config.color_center_dot = s_app_config.color_hand_tips;
   }
 }
 
@@ -128,6 +140,10 @@ void data_set_color(uint32_t key, GColor color) {
     s_app_config.color_month_day = color;
   } else if (key == MESSAGE_KEY_ColorDate) {
     s_app_config.color_date = color;
+  } else if (key == MESSAGE_KEY_ColorHandTips) {
+    s_app_config.color_hand_tips = color;
+  } else if (key == MESSAGE_KEY_ColorCenterDot) {
+    s_app_config.color_center_dot = color;
   }
 }
 
@@ -144,6 +160,10 @@ GColor data_get_color(uint32_t key) {
     return s_app_config.color_month_day;
   } else if (key == MESSAGE_KEY_ColorDate) {
     return s_app_config.color_date;
+  } else if (key == MESSAGE_KEY_ColorHandTips) {
+    return s_app_config.color_hand_tips;
+  } else if (key == MESSAGE_KEY_ColorCenterDot) {
+    return s_app_config.color_center_dot;
   }
 
   return GColorBlack;

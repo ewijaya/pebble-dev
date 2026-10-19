@@ -248,15 +248,15 @@ static void draw_proc(Layer *layer, GContext *ctx) {
   GColor bg_color = data_get_color(MESSAGE_KEY_ColorBackground);
   GColor hour_min_color = data_get_color(MESSAGE_KEY_ColorHourMinutes);
   GColor second_color = data_get_color(MESSAGE_KEY_ColorSeconds);
-  GColor notch_color = data_get_color(MESSAGE_KEY_ColorNotches);
+  GColor tip_color = data_get_color(MESSAGE_KEY_ColorHandTips);
   GColor month_day_color = data_get_color(MESSAGE_KEY_ColorMonthDay);
 
   // Draw hands
   graphics_context_set_antialiased(ctx, true);
   const bool thick = data_get_enable(MESSAGE_KEY_EnableThickHands);
   graphics_context_set_stroke_width(ctx, thick ? STROKE_WIDTH_THICK : STROKE_WIDTH);
-  draw_hand(ctx, center, minute_hand_end, HAND_LENGTH_MIN, hour_min_color, notch_color);
-  draw_hand(ctx, center, hour_hand_end, HAND_LENGTH_HOUR, hour_min_color, notch_color);
+  draw_hand(ctx, center, minute_hand_end, HAND_LENGTH_MIN, hour_min_color, tip_color);
+  draw_hand(ctx, center, hour_hand_end, HAND_LENGTH_HOUR, hour_min_color, tip_color);
 
   // Draw second hand
   if (s_show_seconds) {
@@ -265,7 +265,7 @@ static void draw_proc(Layer *layer, GContext *ctx) {
   }
 
   // Center
-  graphics_context_set_fill_color(ctx, notch_color);
+  graphics_context_set_fill_color(ctx, data_get_color(MESSAGE_KEY_ColorCenterDot));
   const int center_radius = thick ? 5 : 4;
   graphics_fill_circle(ctx, center, center_radius);
 
