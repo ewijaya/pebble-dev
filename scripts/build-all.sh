@@ -42,6 +42,7 @@ working_projects=$(cat <<EOF
 ./watchfaces/starfield-smooth/
 ./watchfaces/starfield-demo/
 ./watchfaces/thin/
+./watchfaces/thin-plus/
 ./watchfaces/time-dots-appstore/
 ./watchfaces/void-statues/
 
