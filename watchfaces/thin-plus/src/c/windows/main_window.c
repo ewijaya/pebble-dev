@@ -160,7 +160,7 @@ static void bg_update_proc(Layer *layer, GContext *ctx) {
         graphics_context_set_stroke_color(ctx, notch_color);
       } else {
         // Empty segment
-        graphics_context_set_stroke_color(ctx, PBL_IF_COLOR_ELSE(GColorDarkGray, GColorBlack));
+        graphics_context_set_stroke_color(ctx, data_get_color(MESSAGE_KEY_ColorBatteryEmpty));
       }
     } else {
       // No battery indicator, show all
@@ -249,7 +249,7 @@ static void draw_proc(Layer *layer, GContext *ctx) {
   GColor hour_min_color = data_get_color(MESSAGE_KEY_ColorHourMinutes);
   GColor second_color = data_get_color(MESSAGE_KEY_ColorSeconds);
   GColor tip_color = data_get_color(MESSAGE_KEY_ColorHandTips);
-  GColor month_day_color = data_get_color(MESSAGE_KEY_ColorMonthDay);
+  GColor second_tip_color = data_get_color(MESSAGE_KEY_ColorSecondTip);
 
   // Draw hands
   graphics_context_set_antialiased(ctx, true);
@@ -261,7 +261,7 @@ static void draw_proc(Layer *layer, GContext *ctx) {
   // Draw second hand
   if (s_show_seconds) {
     graphics_context_set_stroke_width(ctx, STROKE_WIDTH_SEC);
-    draw_hand(ctx, center, second_hand_end, HAND_LENGTH_SEC, second_color, month_day_color);
+    draw_hand(ctx, center, second_hand_end, HAND_LENGTH_SEC, second_color, second_tip_color);
   }
 
   // Center

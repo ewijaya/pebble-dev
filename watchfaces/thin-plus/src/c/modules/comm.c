@@ -51,6 +51,14 @@ static void in_recv_handler(DictionaryIterator *iter, void *context) {
     GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorCenterDot))
   );
   data_set_color(
+    MESSAGE_KEY_ColorSecondTip,
+    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorSecondTip))
+  );
+  data_set_color(
+    MESSAGE_KEY_ColorBatteryEmpty,
+    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorBatteryEmpty))
+  );
+  data_set_color(
     MESSAGE_KEY_ColorMonthDay,
     GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorMonthDay))
   );
@@ -66,5 +74,6 @@ void comm_init() {
   packet_init();
 
   app_message_register_inbox_received(in_recv_handler);
-  app_message_open(256, 256);
+  // Clay sends every setting in one message
+  app_message_open(512, 64);
 }

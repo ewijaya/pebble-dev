@@ -126,9 +126,21 @@ module.exports = [
       },
       {
         type: 'color',
+        label: 'Seconds hand tip',
+        messageKey: 'ColorSecondTip',
+        defaultValue: 'FFAA00'
+      },
+      {
+        type: 'color',
         label: 'Hour markers',
         messageKey: 'ColorNotches',
         defaultValue: 'FFFFFF'
+      },
+      {
+        type: 'color',
+        label: 'Hour markers (empty battery)',
+        messageKey: 'ColorBatteryEmpty',
+        defaultValue: '555555'
       },
       {
         type: 'color',

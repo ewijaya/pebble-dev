@@ -47,7 +47,9 @@
       "EnableThickHands",
       "Theme",
       "ColorHandTips",
-      "ColorCenterDot"
+      "ColorCenterDot",
+      "ColorSecondTip",
+      "ColorBatteryEmpty"
     ],
     "enableMultiJS": true,
     "displayName": "Thin+",

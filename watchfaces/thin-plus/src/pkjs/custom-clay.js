@@ -10,18 +10,20 @@ module.exports = function() {
     'ColorMonthDay',
     'ColorDate',
     'ColorHandTips',
-    'ColorCenterDot'
+    'ColorCenterDot',
+    'ColorSecondTip',
+    'ColorBatteryEmpty'
   ];
 
   // Same order as COLOR_KEYS
   var THEMES = {
-    classic: ['000000', 'AAAAAA', 'AA0000', 'FFFFFF', 'FFAA00', 'FFFFFF', 'FFFFFF', 'FFFFFF'],
-    neon: ['000000', '00FFFF', 'FF00FF', 'FFFFFF', 'FFFF00', 'FFFFFF', 'FFFFFF', 'FFFFFF'],
-    ocean: ['0000AA', '55FFFF', 'FFAA00', 'FFFFFF', 'FFFF00', 'FFFFFF', 'FFFFFF', 'FFFFFF'],
-    sunset: ['550000', 'FFAA00', 'FF5500', 'FFFFFF', 'FFFF00', 'FFAA55', 'FFFFFF', 'FFFFFF'],
-    lime: ['000000', '55FF00', 'FF0055', 'FFFFFF', 'AAFF00', 'FFFFFF', 'FFFFFF', 'FFFFFF'],
-    mono: ['000000', 'AAAAAA', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFFFF'],
-    paper: ['FFFFFF', '555555', 'FF0000', '000000', '0000FF', '000000', '000000', '000000']
+    classic: ['000000', 'AAAAAA', 'AA0000', 'FFFFFF', 'FFAA00', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFAA00', '555555'],
+    neon: ['000000', '00FFFF', 'FF00FF', 'FFFFFF', 'FFFF00', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFF00', '555555'],
+    ocean: ['0000AA', '55FFFF', 'FFAA00', 'FFFFFF', 'FFFF00', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFF00', '555555'],
+    sunset: ['550000', 'FFAA00', 'FF5500', 'FFFFFF', 'FFFF00', 'FFAA55', 'FFFFFF', 'FFFFFF', 'FFFF00', '555555'],
+    lime: ['000000', '55FF00', 'FF0055', 'FFFFFF', 'AAFF00', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'AAFF00', '555555'],
+    mono: ['000000', 'AAAAAA', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFFFF', 'FFFFFF', '555555'],
+    paper: ['FFFFFF', '555555', 'FF0000', '000000', '0000FF', '000000', '000000', '000000', '0000FF', 'AAAAAA']
   };
 
   clayConfig.on(clayConfig.EVENTS.AFTER_BUILD, function() {
@@ -31,7 +33,7 @@ module.exports = function() {
     });
 
     // Newer keys are skipped, settings saved before they existed hold the default
-    var NEWER_KEYS = ['ColorHandTips', 'ColorCenterDot'];
+    var NEWER_KEYS = ['ColorHandTips', 'ColorCenterDot', 'ColorSecondTip', 'ColorBatteryEmpty'];
 
     function matchesTheme(colors) {
       return colorItems.every(function(item, i) {

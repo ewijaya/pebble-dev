@@ -25,6 +25,8 @@ typedef struct {
   bool enable_thick_hands;
   GColor color_hand_tips;
   GColor color_center_dot;
+  GColor color_second_tip;
+  GColor color_battery_empty;
 } AppConfig;
 
 // Cache for speed
@@ -53,6 +55,8 @@ void data_init() {
   s_app_config.enable_thick_hands = false;
   s_app_config.color_hand_tips = GColorClear;
   s_app_config.color_center_dot = GColorClear;
+  s_app_config.color_second_tip = GColorClear;
+  s_app_config.color_battery_empty = GColorClear;
 
   if(!persist_exists(SK_AppConfig)) {
     // Set defaults
@@ -85,6 +89,12 @@ void data_init() {
   }
   if (gcolor_equal(s_app_config.color_center_dot, GColorClear)) {
     s_app_config.color_center_dot = s_app_config.color_hand_tips;
+  }
+  if (gcolor_equal(s_app_config.color_second_tip, GColorClear)) {
+    s_app_config.color_second_tip = s_app_config.color_month_day;
+  }
+  if (gcolor_equal(s_app_config.color_battery_empty, GColorClear)) {
+    s_app_config.color_battery_empty = PBL_IF_COLOR_ELSE(GColorDarkGray, GColorBlack);
   }
 }
 
@@ -144,6 +154,10 @@ void data_set_color(uint32_t key, GColor color) {
     s_app_config.color_hand_tips = color;
   } else if (key == MESSAGE_KEY_ColorCenterDot) {
     s_app_config.color_center_dot = color;
+  } else if (key == MESSAGE_KEY_ColorSecondTip) {
+    s_app_config.color_second_tip = color;
+  } else if (key == MESSAGE_KEY_ColorBatteryEmpty) {
+    s_app_config.color_battery_empty = color;
   }
 }
 
@@ -164,6 +178,10 @@ GColor data_get_color(uint32_t key) {
     return s_app_config.color_hand_tips;
   } else if (key == MESSAGE_KEY_ColorCenterDot) {
     return s_app_config.color_center_dot;
+  } else if (key == MESSAGE_KEY_ColorSecondTip) {
+    return s_app_config.color_second_tip;
+  } else if (key == MESSAGE_KEY_ColorBatteryEmpty) {
+    return s_app_config.color_battery_empty;
   }
 
   return GColorBlack;
