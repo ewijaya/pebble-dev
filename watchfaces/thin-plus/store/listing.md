@@ -1,6 +1,8 @@
 # Thin+ — current store listing
 
-Status: 1.1.0 is published and publicly listed after the owner explicitly requested a version bump and release. All seven platforms passed final-candidate emulator checks. Physical PT2 verification of 1.1.0 is pending. The historical 1.0.0 listing and approvals are preserved in `releases/1.0.0/listing.md`.
+Status: **1.2.0 published and publicly listed**. All seven emulators passed,
+and the owner approved all sideloaded PT2 checks. Store-flow confirmation is
+pending. [Release evidence](release-1.2.0.md).
 
 ## Fields
 
@@ -9,7 +11,7 @@ Status: 1.1.0 is published and publicly listed after the owner explicitly reques
 - **Category:** Faces
 - **Author:** Edward Wijaya
 - **Price:** Free
-- **Version:** 1.1.0
+- **Version:** 1.2.0
 - **Platforms:** aplite, basalt, chalk, diorite, emery, flint, gabbro
 - **Source:** https://github.com/ewijaya/pebble-dev/tree/watchface/thin-plus/watchfaces/thin-plus
 - **Website:** Leave empty.
@@ -21,20 +23,37 @@ Thin, plus: a clean analog watchface with splashes of color and the information 
 Keep it minimal: hide the date and leave any or all complication slots empty.
 
 - Smooth, anti-aliased hands with precisely aligned tips. Turn on thicker hour and minute hands for extra weight.
-- A battery-friendly second hand appears for 15 seconds after launch or a wrist flick. Otherwise, the face updates once a minute.
+- A second hand appears for 15 seconds after launch or a wrist flick. On Pebble Time 2, you can also enable a screen tap to show it. Tap detection is off by default and may use more battery.
 - Three complication slots—top, left and bottom—show steps, heart rate, battery percentage, digital time or nothing. Just the numbers, without labels.
 - Seven themes: Classic, Neon, Ocean, Sunset, Lime, Mono and Paper.
-- Custom colors for the background, hour/minute hands, hand tips, center dot, second hand and tip, hour markers and empty battery markers, day of month and date text.
-- Hour markers double as a battery indicator.
+- Custom colors for the background, hands and tips, center dot, date, battery hour markers, charging highlight and larger disconnect indicator.
+- Hour markers double as a battery indicator. An optional charging highlight changes the filled markers' color while charging.
 - Optional low-battery-only display: show selected battery percentages below 20%, and hide them at 20% or higher. Off by default; independent of the hour-marker battery indicator.
-- Optional date and disconnected indicator.
+- Optional date and disconnected indicator, with a choice of the original small indicator or a larger colored center ring. Disconnect vibration can be switched off.
+- Timeline Quick View hides the bottom complication during an event peek and restores it afterward on supported rectangular watches.
+- Hands open at the current time by default. Enable “Animate hands when the face opens” if you prefer the opening sweep.
 
-Available for all seven Pebble platforms. Colors and health readings depend on your watch's capabilities. Digital time follows your 12- or 24-hour preference.
+Available for all seven Pebble platforms. Settings adapt to your watch's capabilities; heart-rate slots stay blank when the sensor is unavailable. Digital time follows your 12- or 24-hour preference.
 
 Based on Thin by Chris Lewis.
 Original Thin: https://apps.repebble.com/thin_550ccb556caaed4e0100006d
 
-## Release notes — 1.1.0
+## Release notes — 1.2.0
+
+More control, with settings that fit your watch.
+
+- Timeline Quick View now hides and restores the bottom complication during an event peek.
+- Settings show options supported by your watch. Partial settings updates preserve omitted values, and opening settings preserves saved color overrides.
+- Optional larger disconnect ring with a customizable color, plus a disconnect vibration switch.
+- Optional screen tap to show seconds for 15 seconds on Pebble Time 2. Off by default; enabling touch detection may use more battery.
+- Optional charging color for filled battery hour markers.
+- Startup animation is now optional and defaults to off. Saved on/off choices are preserved.
+
+Supports all seven Pebble platforms. The new disconnect and charging visuals are off by default.
+
+Based on Thin by Chris Lewis.
+
+## Release notes — 1.1.0 (historical)
 
 Battery information when you need it.
 
@@ -78,14 +97,13 @@ The Emery banner uses the minimal Classic face and Edward's selected tagline: **
 
 ## Release status and remaining check
 
-The owner explicitly requested the 1.1.0 version bump and release. The candidate
-was uploaded as a draft, downloaded and checked byte-for-byte, then published.
-The existing publicly listed visibility and approved gallery, banner and icons
-were preserved. The description now includes the optional low-battery setting.
+Release **1.2.0** (`e62d92c454904747b53fe0ea`) is published and publicly listed.
+The public download matches the owner-tested candidate. The updated description
+and notes are verified in all seven public catalogs and the canonical page.
+Existing artwork and listed visibility were preserved.
 
-Release ID: `0e3dc4efd60e460586b8dff5`. Evidence: `releases/1.1.0/`.
+The owner approved all six checks on the sideloaded PT2 candidate. Installation
+from the store, opening settings and applying a theme remain to be confirmed for
+1.2.0. No commit, push or tag was performed for this release.
 
-PT2: the 1.0.0 store-install/settings/theme test was previously confirmed by the
-owner. For 1.1.0, installation from the store, settings/theme application and the
-new battery option still require the owner's physical check. No Git commit,
-push or tag was performed as part of this release.
+Evidence: `../dist/verification/1.2.0/publication/`.

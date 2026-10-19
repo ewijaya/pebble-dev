@@ -28,6 +28,13 @@ typedef struct {
   GColor color_second_tip;
   GColor color_battery_empty;
   bool battery_only_when_low;
+  bool vibrate_on_disconnect;
+  GColor color_disconnected;
+  bool enable_enhanced_bt;
+  bool tap_for_seconds;
+  GColor color_charging;
+  bool enable_charging_color;
+  bool enable_startup_anim;
 } AppConfig;
 
 // Cache for speed
@@ -59,6 +66,13 @@ void data_init() {
   s_app_config.color_second_tip = GColorClear;
   s_app_config.color_battery_empty = GColorClear;
   s_app_config.battery_only_when_low = false;
+  s_app_config.vibrate_on_disconnect = true;
+  s_app_config.color_disconnected = GColorClear;
+  s_app_config.enable_enhanced_bt = false;
+  s_app_config.tap_for_seconds = false;
+  s_app_config.color_charging = GColorClear;
+  s_app_config.enable_charging_color = false;
+  s_app_config.enable_startup_anim = false;
 
   if(!persist_exists(SK_AppConfig)) {
     // Set defaults
@@ -98,6 +112,12 @@ void data_init() {
   if (gcolor_equal(s_app_config.color_battery_empty, GColorClear)) {
     s_app_config.color_battery_empty = PBL_IF_COLOR_ELSE(GColorDarkGray, GColorBlack);
   }
+  if (gcolor_equal(s_app_config.color_disconnected, GColorClear)) {
+    s_app_config.color_disconnected = PBL_IF_COLOR_ELSE(GColorRed, GColorWhite);
+  }
+  if (gcolor_equal(s_app_config.color_charging, GColorClear)) {
+    s_app_config.color_charging = PBL_IF_COLOR_ELSE(GColorGreen, GColorWhite);
+  }
 }
 
 void data_deinit() {
@@ -120,6 +140,16 @@ void data_set_enable(uint32_t key, bool b) {
     s_app_config.enable_thick_hands = b;
   } else if (key == MESSAGE_KEY_BatteryOnlyWhenLow) {
     s_app_config.battery_only_when_low = b;
+  } else if (key == MESSAGE_KEY_VibrateOnDisconnect) {
+    s_app_config.vibrate_on_disconnect = b;
+  } else if (key == MESSAGE_KEY_EnableEnhancedBT) {
+    s_app_config.enable_enhanced_bt = b;
+  } else if (key == MESSAGE_KEY_TapForSeconds) {
+    s_app_config.tap_for_seconds = b;
+  } else if (key == MESSAGE_KEY_EnableChargingColor) {
+    s_app_config.enable_charging_color = b;
+  } else if (key == MESSAGE_KEY_EnableStartupAnim) {
+    s_app_config.enable_startup_anim = b;
   }
 }
 
@@ -138,6 +168,16 @@ bool data_get_enable(uint32_t key) {
     return s_app_config.enable_thick_hands;
   } else if (key == MESSAGE_KEY_BatteryOnlyWhenLow) {
     return s_app_config.battery_only_when_low;
+  } else if (key == MESSAGE_KEY_VibrateOnDisconnect) {
+    return s_app_config.vibrate_on_disconnect;
+  } else if (key == MESSAGE_KEY_EnableEnhancedBT) {
+    return s_app_config.enable_enhanced_bt;
+  } else if (key == MESSAGE_KEY_TapForSeconds) {
+    return s_app_config.tap_for_seconds;
+  } else if (key == MESSAGE_KEY_EnableChargingColor) {
+    return s_app_config.enable_charging_color;
+  } else if (key == MESSAGE_KEY_EnableStartupAnim) {
+    return s_app_config.enable_startup_anim;
   }
 
   return false;
@@ -164,6 +204,10 @@ void data_set_color(uint32_t key, GColor color) {
     s_app_config.color_second_tip = color;
   } else if (key == MESSAGE_KEY_ColorBatteryEmpty) {
     s_app_config.color_battery_empty = color;
+  } else if (key == MESSAGE_KEY_ColorDisconnected) {
+    s_app_config.color_disconnected = color;
+  } else if (key == MESSAGE_KEY_ColorCharging) {
+    s_app_config.color_charging = color;
   }
 }
 
@@ -188,6 +232,10 @@ GColor data_get_color(uint32_t key) {
     return s_app_config.color_second_tip;
   } else if (key == MESSAGE_KEY_ColorBatteryEmpty) {
     return s_app_config.color_battery_empty;
+  } else if (key == MESSAGE_KEY_ColorDisconnected) {
+    return s_app_config.color_disconnected;
+  } else if (key == MESSAGE_KEY_ColorCharging) {
+    return s_app_config.color_charging;
   }
 
   return GColorBlack;

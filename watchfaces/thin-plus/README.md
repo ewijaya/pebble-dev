@@ -60,3 +60,10 @@ See [behavior and test notes](docs/LOW-BATTERY-COMPLICATION.md).
 
 Based on [Thin by Chris Lewis](https://apps.repebble.com/thin_550ccb556caaed4e0100006d).
 Thin+ is maintained by Edward Wijaya.
+
+## Release 1.2.0
+
+Thin+ 1.2.0 is published on the Pebble App Store. This source snapshot is
+reconstructed from the saved release patch and verified against every original
+binary-input hash. See [release details](store/release-1.2.0.md) and
+[source inventory](docs/RELEASE-SOURCE-1.2.0.json).

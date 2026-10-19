@@ -50,3 +50,18 @@ bool health_step_data_is_available() {
   return health_is_health_available() && (HealthServiceAccessibilityMaskAvailable &
     health_service_metric_accessible(HealthMetricStepCount, time_start_of_today(), time(NULL)));
 }
+
+bool health_is_heart_rate_available() {
+  // These models never shipped with a heart-rate sensor. Their emulator can
+  // report an accessible metric despite having no sensor, so exclude them too.
+#if defined(PBL_PLATFORM_BASALT) || defined(PBL_PLATFORM_CHALK)
+  return false;
+#elif defined(PBL_HEALTH)
+  const time_t now = time(NULL);
+  return s_health_available &&
+    (health_service_metric_accessible(HealthMetricHeartRateBPM, now, now) &
+      HealthServiceAccessibilityMaskAvailable);
+#else
+  return false;
+#endif
+}

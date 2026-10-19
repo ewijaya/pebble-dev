@@ -44,6 +44,8 @@ static void draw_slot(GContext *ctx, uint32_t key, GRect value_rect) {
       battery_state_service_peek().charge_percent >= LOW_BATTERY_PERCENT) return;
   if ((type == SlotTypeSteps || type == SlotTypeHeartRate) && !health_is_health_available()) return;
 
+  if (type == SlotTypeHeartRate && !health_is_heart_rate_available()) return;
+
   static char s_value[16];
   get_slot_text(type, s_value, sizeof(s_value));
 
@@ -59,11 +61,13 @@ bool slots_uses(SlotType type) {
     data_get_slot(MESSAGE_KEY_SlotBottom) == type;
 }
 
-void slots_draw(GContext *ctx) {
+void slots_draw(GContext *ctx, bool bottom_visible) {
   graphics_context_set_text_color(ctx, data_get_color(MESSAGE_KEY_ColorDate));
 
   // Top, left mirrors the date column on the right, bottom
   draw_slot(ctx, MESSAGE_KEY_SlotTop, GRect(0, scl_y(130), PS_DISP_W, VALUE_HEIGHT));
   draw_slot(ctx, MESSAGE_KEY_SlotLeft, GRect(0, scl_y(420), scl_x(430), VALUE_HEIGHT));
-  draw_slot(ctx, MESSAGE_KEY_SlotBottom, GRect(0, scl_y(690), PS_DISP_W, VALUE_HEIGHT));
+  if (bottom_visible) {
+    draw_slot(ctx, MESSAGE_KEY_SlotBottom, GRect(0, scl_y(690), PS_DISP_W, VALUE_HEIGHT));
+  }
 }

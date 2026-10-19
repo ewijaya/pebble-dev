@@ -8,4 +8,4 @@
 
 bool slots_uses(SlotType type);
 
-void slots_draw(GContext *ctx);
+void slots_draw(GContext *ctx, bool bottom_visible);

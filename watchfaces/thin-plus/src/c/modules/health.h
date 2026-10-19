@@ -12,4 +12,6 @@ int health_get_step_count();
 
 int health_get_heart_rate();
 
+bool health_is_heart_rate_available();
+
 bool health_step_data_is_available();

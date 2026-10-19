@@ -9,70 +9,41 @@ static SlotType get_slot(DictionaryIterator *iter, uint32_t key) {
 }
 
 static void in_recv_handler(DictionaryIterator *iter, void *context) {
+  (void)context;
   APP_LOG(APP_LOG_LEVEL_INFO, "Config message received");
 
-  // Clay sends all keys at once
-  data_set_enable(MESSAGE_KEY_EnableDate, packet_get_boolean(iter, MESSAGE_KEY_EnableDate));
-  data_set_enable(MESSAGE_KEY_EnableBT, packet_get_boolean(iter, MESSAGE_KEY_EnableBT));
-  data_set_enable(MESSAGE_KEY_EnableBattery, packet_get_boolean(iter, MESSAGE_KEY_EnableBattery));
-  // Older settings pages do not send this optional key.
-  if (dict_find(iter, MESSAGE_KEY_BatteryOnlyWhenLow)) {
-    data_set_enable(
-      MESSAGE_KEY_BatteryOnlyWhenLow,
-      packet_get_boolean(iter, MESSAGE_KEY_BatteryOnlyWhenLow)
-    );
+  // Capability-filtered Clay pages and older pages may send only some keys.
+  // Missing means "leave the saved value alone", including false/zero values.
+  const uint32_t toggles[] = {
+    MESSAGE_KEY_EnableDate, MESSAGE_KEY_EnableBT, MESSAGE_KEY_EnableBattery,
+    MESSAGE_KEY_EnableSecondHand, MESSAGE_KEY_EnableSteps,
+    MESSAGE_KEY_EnableThickHands, MESSAGE_KEY_BatteryOnlyWhenLow,
+    MESSAGE_KEY_VibrateOnDisconnect, MESSAGE_KEY_EnableEnhancedBT, MESSAGE_KEY_TapForSeconds,
+    MESSAGE_KEY_EnableChargingColor, MESSAGE_KEY_EnableStartupAnim
+  };
+  const uint32_t slots[] = {
+    MESSAGE_KEY_SlotTop, MESSAGE_KEY_SlotLeft, MESSAGE_KEY_SlotBottom
+  };
+  const uint32_t colors[] = {
+    MESSAGE_KEY_ColorBackground, MESSAGE_KEY_ColorHourMinutes,
+    MESSAGE_KEY_ColorSeconds, MESSAGE_KEY_ColorNotches, MESSAGE_KEY_ColorHandTips,
+    MESSAGE_KEY_ColorCenterDot, MESSAGE_KEY_ColorSecondTip,
+    MESSAGE_KEY_ColorBatteryEmpty, MESSAGE_KEY_ColorMonthDay, MESSAGE_KEY_ColorDate,
+    MESSAGE_KEY_ColorDisconnected, MESSAGE_KEY_ColorCharging
+  };
+  for (size_t i = 0; i < ARRAY_LENGTH(toggles); i++) {
+    if (dict_find(iter, toggles[i])) {
+      data_set_enable(toggles[i], packet_get_boolean(iter, toggles[i]));
+    }
   }
-  data_set_enable(
-    MESSAGE_KEY_EnableSecondHand,
-    packet_get_boolean(iter, MESSAGE_KEY_EnableSecondHand)
-  );
-  data_set_enable(
-    MESSAGE_KEY_EnableThickHands,
-    packet_get_boolean(iter, MESSAGE_KEY_EnableThickHands)
-  );
-  data_set_slot(MESSAGE_KEY_SlotTop, get_slot(iter, MESSAGE_KEY_SlotTop));
-  data_set_slot(MESSAGE_KEY_SlotLeft, get_slot(iter, MESSAGE_KEY_SlotLeft));
-  data_set_slot(MESSAGE_KEY_SlotBottom, get_slot(iter, MESSAGE_KEY_SlotBottom));
-  data_set_color(
-    MESSAGE_KEY_ColorBackground,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorBackground))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorHourMinutes,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorHourMinutes))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorSeconds,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorSeconds))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorNotches,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorNotches))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorHandTips,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorHandTips))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorCenterDot,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorCenterDot))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorSecondTip,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorSecondTip))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorBatteryEmpty,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorBatteryEmpty))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorMonthDay,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorMonthDay))
-  );
-  data_set_color(
-    MESSAGE_KEY_ColorDate,
-    GColorFromHEX(packet_get_integer(iter, MESSAGE_KEY_ColorDate))
-  );
+  for (size_t i = 0; i < ARRAY_LENGTH(slots); i++) {
+    if (dict_find(iter, slots[i])) data_set_slot(slots[i], get_slot(iter, slots[i]));
+  }
+  for (size_t i = 0; i < ARRAY_LENGTH(colors); i++) {
+    if (dict_find(iter, colors[i])) {
+      data_set_color(colors[i], GColorFromHEX(packet_get_integer(iter, colors[i])));
+    }
+  }
 
   main_window_reload_config();
 }
@@ -81,6 +52,6 @@ void comm_init() {
   packet_init();
 
   app_message_register_inbox_received(in_recv_handler);
-  // Clay sends every setting in one message
+  // Room for a complete settings dictionary; partial updates are also accepted
   app_message_open(512, 64);
 }

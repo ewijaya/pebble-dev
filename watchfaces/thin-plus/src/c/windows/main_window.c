@@ -92,15 +92,34 @@ static void accel_tap_handler(AccelAxisType axis, int32_t direction) {
   show_seconds();
 }
 
+#if defined(PBL_TOUCH)
+static void touch_handler(const TouchEvent *event, void *context) {
+  if (event->type == TouchEvent_Liftoff) show_seconds();
+}
+
+static void update_touch_subscription() {
+  touch_service_unsubscribe();
+  if (data_get_enable(MESSAGE_KEY_TapForSeconds) &&
+      data_get_enable(MESSAGE_KEY_EnableSecondHand)) {
+    touch_service_subscribe(touch_handler, NULL);
+  }
+}
+#endif
+
 static void bt_handler(bool connected) {
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "Phone connected=%d, enhanced=%d, vibrate=%d", connected,
+    data_get_enable(MESSAGE_KEY_EnableEnhancedBT), data_get_enable(MESSAGE_KEY_VibrateOnDisconnect));
   // Notify disconnection
-  if (!connected && s_is_connected) vibes_long_pulse();
+  if (!connected && s_is_connected && data_get_enable(MESSAGE_KEY_VibrateOnDisconnect)) {
+    vibes_long_pulse();
+  }
 
   s_is_connected = connected;
   layer_mark_dirty(s_canvas_layer);
 }
 
 static void batt_handler(BatteryChargeState state) {
+  layer_mark_dirty(s_bg_layer);
   layer_mark_dirty(s_canvas_layer);
   layer_mark_dirty(s_slots_layer);
 }
@@ -158,7 +177,9 @@ static void bg_update_proc(Layer *layer, GContext *ctx) {
 
     if (data_get_enable(MESSAGE_KEY_EnableBattery)) {
       if (h < batt_hours) {
-        graphics_context_set_stroke_color(ctx, notch_color);
+        const bool highlight = state.is_charging && data_get_enable(MESSAGE_KEY_EnableChargingColor);
+        graphics_context_set_stroke_color(ctx,
+          highlight ? data_get_color(MESSAGE_KEY_ColorCharging) : notch_color);
       } else {
         // Empty segment
         graphics_context_set_stroke_color(ctx, data_get_color(MESSAGE_KEY_ColorBatteryEmpty));
@@ -184,8 +205,20 @@ static void bg_update_proc(Layer *layer, GContext *ctx) {
 #endif
 }
 
+#if defined(PBL_RECT) && !defined(PBL_PLATFORM_APLITE)
+static void unobstructed_did_change(void *context) {
+  layer_mark_dirty(s_slots_layer);
+}
+#endif
+
 static void slots_update_proc(Layer *layer, GContext *ctx) {
-  slots_draw(ctx);
+  bool bottom_visible = true;
+#if defined(PBL_RECT) && !defined(PBL_PLATFORM_APLITE)
+  Layer *root = window_get_root_layer(s_main_window);
+  bottom_visible = layer_get_unobstructed_bounds(root).size.h >= layer_get_bounds(root).size.h;
+#endif
+  // Keep the analog geometry, date and other slots fixed while a peek is open.
+  slots_draw(ctx, bottom_visible);
 }
 
 static GPoint make_hand_point(int quantity, int intervals, int len, GPoint center) {
@@ -272,8 +305,15 @@ static void draw_proc(Layer *layer, GContext *ctx) {
 
   // Draw black if disconnected
   if (data_get_enable(MESSAGE_KEY_EnableBT) && !s_is_connected) {
-    graphics_context_set_fill_color(ctx, bg_color);
-    graphics_fill_circle(ctx, center, center_radius - 1);
+    if (data_get_enable(MESSAGE_KEY_EnableEnhancedBT)) {
+      graphics_context_set_fill_color(ctx, data_get_color(MESSAGE_KEY_ColorDisconnected));
+      graphics_fill_circle(ctx, center, center_radius + 3);
+      graphics_context_set_fill_color(ctx, bg_color);
+      graphics_fill_circle(ctx, center, center_radius);
+    } else {
+      graphics_context_set_fill_color(ctx, bg_color);
+      graphics_fill_circle(ctx, center, center_radius - 1);
+    }
   }
 }
 
@@ -329,6 +369,12 @@ static void window_load(Window *window) {
 }
 
 static void window_unload(Window *window) {
+#if defined(PBL_TOUCH)
+  touch_service_unsubscribe();
+#endif
+#if defined(PBL_RECT) && !defined(PBL_PLATFORM_APLITE)
+  unobstructed_area_service_unsubscribe();
+#endif
   layer_destroy(s_canvas_layer);
   layer_destroy(s_bg_layer);
   layer_destroy(s_slots_layer);
@@ -366,12 +412,20 @@ void main_window_push() {
     .unload = window_unload,
   });
   window_stack_push(s_main_window, true);
+#if defined(PBL_RECT) && !defined(PBL_PLATFORM_APLITE)
+  unobstructed_area_service_subscribe((UnobstructedAreaHandlers) {
+    .did_change = unobstructed_did_change
+  }, NULL);
+#endif
 
   // Begin smooth animation
   static AnimationImplementation hands_impl = {
     .update = hands_update
   };
-  animate(ANIMATION_DURATION, ANIMATION_DELAY, &hands_impl, true);
+  s_animating = false;
+  if (data_get_enable(MESSAGE_KEY_EnableStartupAnim)) {
+    animate(ANIMATION_DURATION, ANIMATION_DELAY, &hands_impl, true);
+  }
 
   main_window_reload_config();
   show_seconds();
@@ -397,6 +451,10 @@ void main_window_reload_config() {
   }
   subscribe_tick();
 
+#if defined(PBL_TOUCH)
+  update_touch_subscription();
+#endif
+
   connection_service_unsubscribe();
   if (data_get_enable(MESSAGE_KEY_EnableBT)) {
     connection_service_subscribe((ConnectionHandlers) {
@@ -415,6 +473,7 @@ void main_window_reload_config() {
   GColor month_day_color = data_get_color(MESSAGE_KEY_ColorMonthDay);
 
   window_set_background_color(s_main_window, bg_color);
+  if (s_bg_layer) layer_mark_dirty(s_bg_layer);
   text_layer_set_text_color(s_weekday_layer, date_color);
   text_layer_set_text_color(s_day_in_month_layer, month_day_color);
   text_layer_set_text_color(s_month_layer, date_color);
