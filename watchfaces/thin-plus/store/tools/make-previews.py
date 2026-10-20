@@ -17,5 +17,5 @@ def sheet(names,title,path,cols=3):
         d.text((x+16,y+278),label,font=ImageFont.truetype(FONT,15),fill='#D5DBE4')
     im.save(ROOT/'store'/path)
 
-sheet([(f'emery-{i:02d}-{name}.png',label) for i,name,label in [(1,'classic-minimal','1 · Minimal / Classic'),(2,'neon-date-only','2 · Light / Neon'),(3,'ocean-medium','3 · Medium / Ocean'),(4,'paper-rich','4 · Rich / Paper'),(5,'sunset-rich','5 · Rich / Sunset / thick hands')]],'Thin+ · From minimal to fully loaded','preview-emery.png')
+sheet([('emery-01-classic-signature.png','1 · Signature / Classic + teal ring'),('emery-02-classic-minimal.png','2 · Minimal / Classic'),('emery-03-ocean-weather.png','3 · Weather / Ocean'),('emery-04-paper-second-time.png','4 · Second time zone / Paper'),('emery-05-sunset-fitness.png','5 · Fitness / Sunset')],'Thin+ 1.3.0 · Your face, your information','preview-emery.png')
 sheet([(p+'-classic-'+level+'.png',p.title()+' / '+level.title()) for p in ['gabbro','chalk','basalt','aplite','diorite','flint'] for level in ['minimal','medium','rich']],'Thin+ · Minimal, medium and rich on every platform','preview-platforms.png')

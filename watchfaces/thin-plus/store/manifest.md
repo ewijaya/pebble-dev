@@ -38,3 +38,16 @@ Listed visibility remains unchanged.
 Previous active manifest preserved at
 `../dist/verification/1.3.0/publication/pre-publication-store-manifest.md`.
 Historical release evidence and frozen PBWs are retained.
+
+## Gallery amendment — 2026-10-20
+
+The owner approved replacing only Emery's five screenshots with the 1.3.0
+feature gallery: Classic signature/teal ring first, pure Classic second,
+Ocean weather, Paper second time zone and Sunset fitness. Screenshot pixels
+come directly from the published binary's native SDK framebuffer. Inputs use
+simulated time, weather and activity values. No app source or PBW changed.
+
+Other platform galleries, icons, banner, listing copy, release and listed
+visibility were verified unchanged. Current selection and hashes are in
+[screenshot selection](screenshot-selection.json); earlier inventories remain
+historical. [Gallery verification](../dist/verification/1.3.0/gallery-refresh-2026-10-20/public-verification.json).

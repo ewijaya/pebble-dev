@@ -119,3 +119,13 @@ opening settings and applying a theme. Both sideload and store-flow checks are
 complete. Source is recorded by `thin-plus-v1.3.0`; the missing 1.2.0 source
 snapshot is recorded separately by `thin-plus-v1.2.0`. Each tag is checked
 against the original released build-input hashes.
+
+## Gallery amendment — 2026-10-20
+
+After publication, the owner approved and uploaded a new five-image Emery
+gallery showing the 1.3.0 features. The approved order is Classic signature
+with teal step ring, pure Classic, Ocean weather, Paper second time zone and
+Sunset fitness. These supersede the Emery images in the original presentation
+review above. Other platform images, icons, banner, listing copy and release
+remain as originally approved. See the current `screenshot-selection.json` and
+[gallery evidence](../dist/verification/1.3.0/gallery-refresh-2026-10-20/).

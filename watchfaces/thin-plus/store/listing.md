@@ -103,13 +103,18 @@ Dashboard requirements supplied by Edward on 2026-10-19 after reading the New Ap
 - Optional per-platform banner: exactly 720×320, PNG/JPEG, maximum 4.4 MB.
 - The in-app menu icon remains 25×25.
 
-Emery upload order (five files):
+Emery upload order (five files), refreshed with owner approval on 2026-10-20:
 
-1. `screenshots/emery-01-classic-minimal.png` — minimal Classic; visible seconds hand and dark-red center dot, with date and complications hidden.
-2. `screenshots/emery-02-neon-date-only.png` — light Neon; date only.
-3. `screenshots/emery-03-ocean-medium.png` — medium Ocean; digital time and steps, with date and left slot hidden.
-4. `screenshots/emery-04-paper-rich.png` — rich Paper; digital time, battery, steps and date.
-5. `screenshots/emery-05-sunset-rich.png` — rich Sunset; all complications, thicker hands and 40% battery markers.
+1. `screenshots/emery-01-classic-signature.png` — Classic signature; teal goal ring at 50%, 5,000 steps toward a custom 10,000 goal, day-only date, seconds hand and dark-red center dot. Top and left slots hidden.
+2. `screenshots/emery-02-classic-minimal.png` — pure Classic; seconds and dark-red dot, with date, ring and all complications hidden.
+3. `screenshots/emery-03-ocean-weather.png` — Ocean; weather, digital time and weekday/day date.
+4. `screenshots/emery-04-paper-second-time.png` — Paper; second time zone, battery and Full date, with the left slot empty.
+5. `screenshots/emery-05-sunset-fitness.png` — Sunset; distance, active calories, steps, Full date, partial goal ring and thicker hands.
+
+All five are native 200×228 captures of the unchanged published 1.3.0 binary.
+Time, health values and weather are simulated demonstration data. This gallery
+update preserves other platforms, icons, banner, copy, release and visibility.
+[Capture and upload evidence](../dist/verification/1.3.0/gallery-refresh-2026-10-20/).
 
 Each other platform uses its `*-classic-minimal.png`, `*-classic-medium.png`, and `*-classic-rich.png` images in that order. Medium shows digital time and date. Rich enables all complication slots, subject to platform capabilities. The final selection and provenance are recorded in `screenshot-selection.json`: 23 native images total. Superseded images remain in `evidence/previous-screenshots/` for the approval audit.
 
